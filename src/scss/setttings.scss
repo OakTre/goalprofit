@@ -24,6 +24,11 @@ img {
 	vertical-align: middle;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .list-rest {
 	padding: 0;
 	margin: 0;
@@ -40,9 +45,9 @@ img {
 
 .site-container {
 	width: 100%;
-	max-width: 1470px;
+	max-width: 1460px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 20px;
 }
 
 .page-wrapper {

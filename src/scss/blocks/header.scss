@@ -1,1 +1,35 @@
-//
+.header {
+	padding-top: 3rem;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 20px;
+	}
+
+	&_left {
+		grid-column: 6 span;
+	}
+
+	&_right {
+		grid-column: 6 span;
+		display: flex;
+		align-items: center;
+	}
+
+	&__button {
+		display: inline-block;
+		margin-left: auto;
+		background: url(../img/white-noise.png), var(--color-btn-bg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: var(--color-white);
+		font-weight: 600;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		padding: 0.6rem 1rem;
+		border-radius: 2rem;
+		cursor: pointer;
+	}
+}

@@ -1,31 +1,162 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
-    <title>Главная | Название сайта</title>
+    <title>Main | GoalProfit</title>
     <link rel="stylesheet" href="./css/vendor.min.css?v=0.0.0.0">
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home">
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container">
-          <h1>header</h1>
+        <div class="site-container header__container">
+          <div class="header_left">
+            <a class="logo" href="/">
+              <img src="img/logo.svg" alt="Logo">
+            </a>
+          </div>
+          <div class="header_right">
+            <nav class="nav">
+              <ul>
+                <li>
+                  <a href="/">About</a>
+                </li>
+                <li>
+                  <a href="/">Solutions</a>
+                </li>
+                <li>
+                  <a href="/">Customers</a>
+                </li>
+                <li>
+                  <a href="/">Blog &amp; News</a>
+                </li>
+                <li>
+                  <a href="/">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="button-reset header__button">	Get In Touch</button>
+          </div>
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
-          <div class="site-container">
-            <h1>Hero Heading</h1>
+        <section class="intro-block">
+          <div class="site-container intro-block__container intro-block__content">
+            <div class="intro-block_left">
+              <h1>	The World’s First Low Code Retail Optimization Platform</h1>
+              <button class="intro-block__btn button button-reset">	Request A Demo
+                <svg class="icon icon-button-arrow button__icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#button-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="intro-block_right">
+              <p>	Craft and data drive your merchandising decisions. Better pricing to Higher Profits.</p>
+              <img class="intro-block__img" src="img/intro-img.png" alt="Craft and data drive your merchandising decisions.">
+            </div>
           </div>
         </section>
       </main>
       <footer class="footer">
         <div class="site-container">
-          <h1>footer</h1>
+          <div class="footer__container">
+            <div class="footer__top-block">
+              <div class="footer__top-block-col">
+                <nav class="footer-nav">
+                  <ul>
+                    <li>
+                      <a href="/">About</a>
+                    </li>
+                    <li>
+                      <a href="/">Solutions</a>
+                    </li>
+                    <li>
+                      <a href="/">Customers</a>
+                    </li>
+                    <li>
+                      <a href="/">Blog &amp; News</a>
+                    </li>
+                    <li>
+                      <a href="/">Contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__top-block-col">
+                <span class="footer__legend">	Phone Number</span>
+                <a class="footer__contact-link _phone" href="tel:+05251565481258">	+0 (525) 156 548 1258</a>
+                <span class="footer__legend">	Email</span>
+                <a class="footer__contact-link _mail" href="mailto:hello@goalprofit.com">	hello@goalprofit.com</a>
+                <adress class="footer__adress">	2700 N 29th Ave, STE 109, Hollywood, FL 33020</adress>
+              </div>
+              <div class="footer__top-block-col">
+                <form class="form" action="/">
+                  <span class="form__heading second-font">	 Contact us</span>
+                  <label class="form__input-container">
+                    <input class="form__input" type="text" name="name" placeholder="name">
+                  </label>
+                  <label class="form__input-container">
+                    <input class="form__input" type="text" name="email" placeholder="Email">
+                  </label>
+                  <label class="form__input-container">
+                    <textarea class="form__textarea" name="qusetion" placeholder="Question"></textarea>
+                  </label>
+                  <div class="form__button-wrapper">
+                    <p>	By clicking 'Send' you agree to the
+                      <a href="/">	 Privacy Policy</a>
+                    </p>
+                    <button class="button-reset button form__button">	Send
+                      <svg class="icon icon-button-arrow form__button-icon button__icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#button-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="footer__bottom-block">
+              <div class="footer__bottom-block-col">
+                <a class="logo footer__logo" href="/">
+                  <img src="img/logo.svg" alt="Logo">
+                </a>
+                <p class="footer__about-comp">	GoalProfit is a global SaaS provider of a low code retail optimization platform empowering retailers to build customized intelligence applications</p>
+                <p class="footer__copyright">	© All Rights Reserved. GoalProfit Inc. TX, Austin</p>
+              </div>
+              <div class="footer__bottom-block-col">
+                <ul class="social">
+                  <li class="social__item">
+                    <a class="social__link" href="/" aria-label="whatsup">
+                      <svg class="icon icon-wt social__link-icon" width="30" height="30">
+                        <use xlink:href="img/sprite.svg#wt"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="/" aria-label="facebook">
+                      <svg class="icon icon-fb social__link-icon" width="30" height="30">
+                        <use xlink:href="img/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="/" aria-label="youtube">
+                      <svg class="icon icon-yt social__link-icon" width="30" height="30">
+                        <use xlink:href="img/sprite.svg#yt"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                <button class="button-reset button-scroll-top">
+                  <svg class="icon icon-arrow-top button-scroll-top__icon" width="31" height="40">
+                    <use xlink:href="img/sprite.svg#arrow-top"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

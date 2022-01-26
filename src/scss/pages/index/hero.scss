@@ -1,3 +1,42 @@
-.hero {
+.intro-block {
+	padding-top: 7.4rem;
+	margin-bottom: 9.4rem;
 
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-column: 20px;
+	}
+
+	&_left {
+		grid-column: 6 span;
+	}
+
+	&_right {
+		grid-column: 6 span;
+	}
+
+	&__content {
+		h1 {
+			font-weight: 700;
+			font-size: 6rem;
+			line-height: 6rem;
+			max-width: 62.4rem;
+			margin-bottom: 7.3rem;
+			font-family: var(--second-ff);
+		}
+
+		p {
+			font-size: 2rem;
+			line-height: 2.5rem;
+			max-width: 34rem;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 71.4rem;
+		height: 54.5rem;
+		object-fit: cover;
+	}
 }

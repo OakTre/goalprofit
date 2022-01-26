@@ -1,3 +1,15 @@
+- let nav_arr = ["About","Solutions","Customers","Blog & News","Contacts"]
+
 header.header
-	.site-container
-		h1 header
+	.site-container.header__container
+		.header_left
+			a.logo(href="/")
+				img(src="img/logo.svg", alt="Logo")
+		.header_right
+			nav.nav
+				ul
+					for item in nav_arr
+						li
+							a(href="/")=item
+			button.button-reset.header__button
+				|	Get In Touch

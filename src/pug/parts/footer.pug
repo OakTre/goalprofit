@@ -1,3 +1,65 @@
+- let nav_footer_arr = ["About","Solutions","Customers","Blog & News","Contacts"]
+
 footer.footer
 	.site-container
-		h1 footer
+		.footer__container
+			.footer__top-block
+				.footer__top-block-col
+					nav.footer-nav
+						ul
+							for item in nav_footer_arr
+								li
+									a(href="/")=item
+				.footer__top-block-col
+					span.footer__legend
+						|	Phone Number
+					a.footer__contact-link._phone(href="tel:+05251565481258")
+						|	+0 (525) 156 548 1258
+					span.footer__legend
+						|	Email
+					a.footer__contact-link._mail(href="mailto:hello@goalprofit.com")
+						|	hello@goalprofit.com
+
+					adress.footer__adress
+						|	2700 N 29th Ave, STE 109, Hollywood, FL 33020
+
+				.footer__top-block-col
+					form.form(action="/")
+						span.form__heading.second-font
+							|	 Contact us
+						label.form__input-container
+							input.form__input(type="text" name="name" placeholder="name")
+						label.form__input-container
+							input.form__input(type="text" name="email" placeholder="Email")
+						label.form__input-container
+							textarea.form__textarea(name="qusetion" placeholder="Question")
+						.form__button-wrapper
+							p
+								|	By clicking 'Send' you agree to the
+								a(href="/")
+									|	 Privacy Policy
+							button.button-reset.button.form__button
+								|	Send
+								+icon("button-arrow")(width="20" height="20" class="form__button-icon button__icon")
+
+			.footer__bottom-block
+				.footer__bottom-block-col
+					a.logo.footer__logo(href="/")
+						img(src="img/logo.svg", alt="Logo")
+					p.footer__about-comp
+						|	GoalProfit is a global SaaS provider of a low code retail optimization platform empowering retailers to build customized intelligence applications
+					p.footer__copyright
+						|	© All Rights Reserved. GoalProfit Inc. TX, Austin
+				.footer__bottom-block-col
+					ul.social
+						li.social__item
+							a.social__link(href="/" aria-label="whatsup")
+								+icon("wt")(width="30" height="30" class="social__link-icon")
+						li.social__item
+							a.social__link(href="/" aria-label="facebook")
+								+icon("fb")(width="30" height="30" class="social__link-icon")
+						li.social__item
+							a.social__link(href="/" aria-label="youtube")
+								+icon("yt")(width="30" height="30" class="social__link-icon")
+					button.button-reset.button-scroll-top
+						+icon("arrow-top")(width="31" height="40" class="button-scroll-top__icon")
