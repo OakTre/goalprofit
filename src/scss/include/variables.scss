@@ -1,0 +1,22 @@
+:root {
+	// Typography
+	--main-ff: "Inter", sans-serif;
+	--second-ff: "RobotoMono", sans-serif;
+
+	// colors
+	--color-dark: #000;
+	--color-white: #fff;
+	--color-btn-bg: linear-gradient(91.83deg, #095092 0%, #00a7e5 100%);
+	--color-light-blue: #00a7e5;
+	--color-blue: #0578B9;
+	--color-card-grey: #CDCDD1;
+	--color-bg: #DDDDE2;
+}
+
+$breakpoint-xxs: 480px;
+$breakpoint-xs: 575px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1199px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1680px;
