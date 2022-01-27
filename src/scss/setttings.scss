@@ -29,6 +29,14 @@ a {
 	text-decoration: none;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--second-ff);
+}
+
 .list-rest {
 	padding: 0;
 	margin: 0;

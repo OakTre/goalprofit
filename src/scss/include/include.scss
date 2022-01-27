@@ -61,6 +61,12 @@
 	font-family: var(--second-ff);
 }
 
+.second-title {
+	font-family: var(--second-ff);
+	font-size: 4rem;
+	line-height: 4.5rem;
+}
+
 .button {
 	display: flex;
 	align-items: center;
@@ -69,6 +75,7 @@
 	background: var(--color-btn-bg);
 	padding: 1.6rem 1.5rem;
 	color: var(--color-white);
+	font-weight: 600;
 	font-size: 1.4rem;
 	line-height: 1.7rem;
 	border-radius: 1rem;
@@ -76,6 +83,24 @@
 
 	&__icon {
 		fill: var(--color-white);
+	}
+
+	&_white {
+		background: var(--color-white);
+		color: var(--color-blue);
+
+		.button__icon {
+			fill: var(--color-blue);
+		}
+	}
+
+	&_white-black {
+		background: var(--color-white);
+		color: var(--color-dark);
+
+		.button__icon {
+			fill: var(--color-dark);
+		}
 	}
 }
 
@@ -160,7 +185,41 @@
 	}
 
 	&__button {
+		font-weight: 600;
 		min-width: 14.9rem;
+	}
+
+	&._white {
+		.form__input {
+			border-color: var(--color-white);
+			color: var(--color-white);
+
+			&::placeholder {
+				color: var(--color-white);
+			}
+		}
+
+		.form__textarea {
+			border-color: var(--color-white);
+			color: var(--color-white);
+
+			&::placeholder {
+				color: var(--color-white);
+			}
+		}
+
+		.form__button-wrapper p {
+			color: var(--color-white);
+		}
+
+		.form__button {
+			background: var(--color-white);
+			color: var(--color-dark);
+		}
+
+		.form__button-icon {
+			fill: var(--color-dark);
+		}
 	}
 }
 

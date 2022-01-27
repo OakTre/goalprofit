@@ -1,0 +1,47 @@
+- let cards_arr = ["Business intelligence for Retailers", "Dynamic Rules-Based Pricing", "Price optimization", "Image items calculation"]
+
+
+section.retailers
+	.site-container.retailers__container
+		.retailers__heading-wrapper.retailers__content
+			.retailers__left-block
+				h2
+					|	Made for Retailers by Retailers
+			.retailers__right-block
+				p
+					b
+						|	GoalProfit is a suite of SaaS applications for category
+					|	managers, pricing analysts, trade marketing, and merchandising executives.
+
+				button.button-reset.button.button_white-black.retailers__btn
+					|	Read More
+					+icon("button-arrow")(width="20" height="20" class="button__icon")
+		ul.cards
+			for item in cards_arr
+				li.cards__item
+					.cards__item-left
+						h3
+							|	Business intelligence for Retailers
+
+						p
+							|	Get full visibility on business performance
+
+						ul
+							li
+								|	500+ pre-configured analytical metrics to better understand your performance and identify gaps
+							li
+								|	Get a helicopter view on your products, prices, and sales channels intel with actionable insights
+							li
+								|	Predictive and Prescriptive Recommendations
+							li
+								|	Anticipate what is changing and how it impacts your business
+
+						button.button-reset.button.cards__item-btn
+							|	Request A Demo
+							+icon("plus")(width="20" height="20" class="button__icon")
+					.cards__item-right
+						img.cards__item-img(src="img/cards-img.png", alt="Business intelligence for Retailers")
+					.cards__item-bottom
+						span.cards__item-legend=item
+
+

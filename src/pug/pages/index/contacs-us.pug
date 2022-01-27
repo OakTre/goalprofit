@@ -1,0 +1,31 @@
+section.contact-us
+	.site-container.contact-us__container
+		.contact-us__feautures-block
+			video(src="" class="contact-us__video-bg")
+			button.button-reset.contact-us__play-btn
+				+icon("triangle")(width="85" height="85" class="contact-us__play-btn-icon")
+			.contact-us__content
+				h2
+					|	It’s a retail revolution. The “Build or Buy” dilemma is finally solved.
+				p
+					|	At GoalProfit, we change the way retail software is built, so you can rapidly create and deploy data-intensive intelligence applications that evolve with your business.
+		.contact-us__form-block.lazy(data-bg="img/contact-us-bg.webp" data-bg-fallback="img/contact-us-bg.png")
+			span.contact-us__legend.second-title
+				|	Contact us
+			p.contact-us__form-text
+				|	If you are a retailer, we will prepare a free tailored-made demonstration.
+			form.form._white.contact-us__form(action="/")
+				label.form__input-container
+					input.form__input(type="text" name="name" placeholder="name")
+				label.form__input-container
+					input.form__input(type="text" name="email" placeholder="Email")
+				label.form__input-container
+					textarea.form__textarea(name="qusetion" placeholder="Question")
+				.form__button-wrapper
+					p
+						|	By clicking 'Send' you agree to the
+						a(href="/")
+							|	 Privacy Policy
+					button.button-reset.button.form__button
+						|	Send
+						+icon("button-arrow")(width="20" height="20" class="form__button-icon button__icon")

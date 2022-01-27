@@ -1,0 +1,146 @@
+.cards {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	counter-reset: section;
+
+	&__item {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 20px;
+		background-color: var(--color-white);
+		padding: 3rem 2.7rem 1.5rem 2.7rem;
+		border-radius: 2rem;
+		align-items: flex-end;
+
+		&:not(:first-child) {
+			position: absolute;
+		}
+
+		&:nth-child(2) {
+			top: 4rem;
+			left: 0;
+			z-index: 3;
+		}
+
+		&:nth-child(3) {
+			top: 8rem;
+			z-index: 2;
+		}
+
+		&:nth-child(4) {
+			top: 12rem;
+			z-index: 1;
+		}
+
+		&:nth-child(5) {
+			top: 16rem;
+			z-index: 0;
+		}
+
+		&:nth-child(6) {
+			top: 20rem;
+			z-index: -1;
+		}
+
+		&:nth-child(7) {
+			top: 24rem;
+			z-index: -2;
+		}
+
+		&:nth-child(2n) {
+			background-color: #CDCDD1;
+		}
+
+		&::before {
+			position: absolute;
+			left: 2.7rem;
+			bottom: 1.6rem;
+			font-weight: 500;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+			counter-increment: section;
+			content: counter(section);
+		}
+
+		h3 {
+			font-weight: 700;
+			font-size: 3rem;
+			line-height: 3.5rem;
+			font-family: var(--second-ff);
+			margin-bottom: 6rem;
+		}
+
+		p {
+			font-weight: 600;
+			font-size: 2rem;
+			line-height: 2.5rem;
+			margin-bottom: 3.2rem;
+			max-width: 38.3rem;
+		}
+
+		ul {
+			max-width: 34rem;
+			margin-bottom: 3.7rem;
+
+			li {
+				position: relative;
+				padding-left: 1.9rem;
+				margin-bottom: 2rem;
+				font-size: 1.6rem;
+				line-height: 1.9rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&::before {
+					position: absolute;
+					top: .6rem;
+					left: 0.2rem;
+					width: 0.5rem;
+					height: 0.5rem;
+					background-color: var(--color-blue);
+					border-radius: 50%;
+					content: "";
+				}
+			}
+		}
+	}
+
+	&__item-left {
+		grid-column: 4 span;
+	}
+
+	&__item-right {
+		grid-column: 8 span;
+		display: block;
+		align-items: center;
+	}
+
+	&__item-bottom {
+		grid-column: 12 span;
+		padding-top: 6.3rem;
+	}
+
+	&__item-legend {
+		font-weight: 500;
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		padding-left: 2.3rem;
+		text-transform: capitalize;
+	}
+
+	&__item-img {
+		width: 83rem;
+		height: 46.6rem;
+		display: block;
+		object-fit: cover;
+		margin-left: 4rem;
+		filter: drop-shadow(10px 10px 54px rgba(0, 0, 0, 0.15));
+		border: 4px solid #282828;
+		border-radius: 10px;
+	}
+}
