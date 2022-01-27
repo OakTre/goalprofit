@@ -14,11 +14,12 @@ section.retailers
 					|	managers, pricing analysts, trade marketing, and merchandising executives.
 
 				button.button-reset.button.button_white-black.retailers__btn
-					|	Read More
+					span(data-text="Read More")
+						|	Read More
 					+icon("button-arrow")(width="20" height="20" class="button__icon")
-		ul.cards
+		ul.cards.first
 			for item in cards_arr
-				li.cards__item
+				li.cards__item.first__item
 					.cards__item-left
 						h3
 							|	Business intelligence for Retailers
@@ -37,8 +38,9 @@ section.retailers
 								|	Anticipate what is changing and how it impacts your business
 
 						button.button-reset.button.cards__item-btn
-							|	Request A Demo
-							+icon("plus")(width="20" height="20" class="button__icon")
+							span(data-text="Request A Demo")
+								|	Request A Demo
+							+icon("plus")(width="20" height="20" class="button__icon button__icon-plus")
 					.cards__item-right
 						img.cards__item-img(src="img/cards-img.png", alt="Business intelligence for Retailers")
 					.cards__item-bottom

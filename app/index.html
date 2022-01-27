@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-home">
+    <div class="preloader"></div>
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container header__container">
+        <div class="site-container header__container js-start-anim-header">
           <div class="header_left">
             <a class="logo" href="/">
               <img src="img/logo.svg" alt="Logo">
@@ -44,25 +45,30 @@
       </header>
       <main class="page-main main">
         <section class="intro-block">
-          <div class="site-container intro-block__container intro-block__content">
-            <div class="intro-block_left">
-              <h1>	The World’s First Low Code Retail Optimization Platform</h1>
-              <button class="intro-block__btn button button-reset">	Request A Demo
-                <svg class="icon icon-plus button__icon" width="20" height="20">
-                  <use xlink:href="img/sprite.svg#plus"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="intro-block_right">
-              <p>	Craft and data drive your merchandising decisions. Better pricing to Higher Profits.</p>
-              <img class="intro-block__img" src="img/intro-img.png" alt="Craft and data drive your merchandising decisions.">
+          <div class="site-container intro-block__container">
+            <img class="intro-block__img js-anim-img" src="img/intro-img.png" alt="Craft and data drive your merchandising decisions.">
+            <div class="intro-block__content-container intro-block__content js-content-anim">
+              <div class="intro-block_left">
+                <h1>	The World’s First Low Code Retail Optimization Platform</h1>
+                <button class="intro-block__btn button button-reset">
+                  <span data-text="Request A Demo">	Request A Demo</span>
+                  <svg class="icon icon-plus button__icon button__icon-plus" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="intro-block_right">
+                <p>	Craft and data drive your merchandising decisions. Better pricing to Higher Profits.</p>
+              </div>
             </div>
           </div>
         </section>
-        <section class="contact-us">
+        <section class="contact-us js-start-anim-contacts">
           <div class="site-container contact-us__container">
-            <div class="contact-us__feautures-block">
-              <video class="contact-us__video-bg" src=""></video>
+            <div class="contact-us__feautures-block lazy" data-bg="img/contact-us-bg-vid.webp" data-bg-fallback="img/contact-us-bg-vid.png">
+              <div class="contact-us__video-wrapper">
+                <video class="contact-us__video-bg" src="resourses/vid.mp4"></video>
+              </div>
               <button class="button-reset contact-us__play-btn">
                 <svg class="icon icon-triangle contact-us__play-btn-icon" width="85" height="85">
                   <use xlink:href="img/sprite.svg#triangle"></use>
@@ -90,7 +96,8 @@
                   <p>	By clicking 'Send' you agree to the
                     <a href="/">	 Privacy Policy</a>
                   </p>
-                  <button class="button-reset button form__button">	Send
+                  <button class="button-reset button form__button">
+                    <span data-text="Send">	Send</span>
                     <svg class="icon icon-button-arrow form__button-icon button__icon" width="20" height="20">
                       <use xlink:href="img/sprite.svg#button-arrow"></use>
                     </svg>
@@ -108,15 +115,16 @@
               </div>
               <div class="retailers__right-block">
                 <p><b>	GoalProfit is a suite of SaaS applications for category</b>	managers, pricing analysts, trade marketing, and merchandising executives.</p>
-                <button class="button-reset button button_white-black retailers__btn">	Read More
+                <button class="button-reset button button_white-black retailers__btn">
+                  <span data-text="Read More">	Read More</span>
                   <svg class="icon icon-button-arrow button__icon" width="20" height="20">
                     <use xlink:href="img/sprite.svg#button-arrow"></use>
                   </svg>
                 </button>
               </div>
             </div>
-            <ul class="cards">
-              <li class="cards__item">
+            <ul class="cards first">
+              <li class="cards__item first__item">
                 <div class="cards__item-left">
                   <h3>	Business intelligence for Retailers</h3>
                   <p>	Get full visibility on business performance</p>
@@ -126,8 +134,9 @@
                     <li>	Predictive and Prescriptive Recommendations</li>
                     <li>	Anticipate what is changing and how it impacts your business</li>
                   </ul>
-                  <button class="button-reset button cards__item-btn">	Request A Demo
-                    <svg class="icon icon-plus button__icon" width="20" height="20">
+                  <button class="button-reset button cards__item-btn">
+                    <span data-text="Request A Demo">	Request A Demo</span>
+                    <svg class="icon icon-plus button__icon button__icon-plus" width="20" height="20">
                       <use xlink:href="img/sprite.svg#plus"></use>
                     </svg>
                   </button>
@@ -139,7 +148,7 @@
                   <span class="cards__item-legend">Business intelligence for Retailers</span>
                 </div>
               </li>
-              <li class="cards__item">
+              <li class="cards__item first__item">
                 <div class="cards__item-left">
                   <h3>	Business intelligence for Retailers</h3>
                   <p>	Get full visibility on business performance</p>
@@ -149,8 +158,9 @@
                     <li>	Predictive and Prescriptive Recommendations</li>
                     <li>	Anticipate what is changing and how it impacts your business</li>
                   </ul>
-                  <button class="button-reset button cards__item-btn">	Request A Demo
-                    <svg class="icon icon-plus button__icon" width="20" height="20">
+                  <button class="button-reset button cards__item-btn">
+                    <span data-text="Request A Demo">	Request A Demo</span>
+                    <svg class="icon icon-plus button__icon button__icon-plus" width="20" height="20">
                       <use xlink:href="img/sprite.svg#plus"></use>
                     </svg>
                   </button>
@@ -162,7 +172,7 @@
                   <span class="cards__item-legend">Dynamic Rules-Based Pricing</span>
                 </div>
               </li>
-              <li class="cards__item">
+              <li class="cards__item first__item">
                 <div class="cards__item-left">
                   <h3>	Business intelligence for Retailers</h3>
                   <p>	Get full visibility on business performance</p>
@@ -172,8 +182,9 @@
                     <li>	Predictive and Prescriptive Recommendations</li>
                     <li>	Anticipate what is changing and how it impacts your business</li>
                   </ul>
-                  <button class="button-reset button cards__item-btn">	Request A Demo
-                    <svg class="icon icon-plus button__icon" width="20" height="20">
+                  <button class="button-reset button cards__item-btn">
+                    <span data-text="Request A Demo">	Request A Demo</span>
+                    <svg class="icon icon-plus button__icon button__icon-plus" width="20" height="20">
                       <use xlink:href="img/sprite.svg#plus"></use>
                     </svg>
                   </button>
@@ -185,7 +196,7 @@
                   <span class="cards__item-legend">Price optimization</span>
                 </div>
               </li>
-              <li class="cards__item">
+              <li class="cards__item first__item">
                 <div class="cards__item-left">
                   <h3>	Business intelligence for Retailers</h3>
                   <p>	Get full visibility on business performance</p>
@@ -195,8 +206,9 @@
                     <li>	Predictive and Prescriptive Recommendations</li>
                     <li>	Anticipate what is changing and how it impacts your business</li>
                   </ul>
-                  <button class="button-reset button cards__item-btn">	Request A Demo
-                    <svg class="icon icon-plus button__icon" width="20" height="20">
+                  <button class="button-reset button cards__item-btn">
+                    <span data-text="Request A Demo">	Request A Demo</span>
+                    <svg class="icon icon-plus button__icon button__icon-plus" width="20" height="20">
                       <use xlink:href="img/sprite.svg#plus"></use>
                     </svg>
                   </button>
@@ -211,7 +223,7 @@
             </ul>
           </div>
         </section>
-        <section class="feautures">
+        <section class="feautures parallax">
           <div class="site-container feautures__container">
             <div class="feautures__item _transparent">
               <div class="feautures__content">
@@ -256,12 +268,102 @@
             </div>
             <div class="feautures__item _request-demo">
               <span class="feautures__item-request-heading">	It’s a retail revolution.</span>
-              <button class="button-reset button button_white feautures__item-button">	Request A Demo
+              <button class="button-reset button button_white feautures__item-button">
+                <span data-text="Request A Demo">	Request A Demo</span>
                 <svg class="icon icon-button-arrow button__icon" width="20" height="20">
                   <use xlink:href="img/sprite.svg#button-arrow"></use>
                 </svg>
               </button>
             </div>
+          </div>
+        </section>
+        <section class="customers parallax">
+          <div class="site-container customers__container">
+            <div class="customers__heading-wrapper customers__content">
+              <div class="customers__left-block">
+                <h2>	Our customers are seeing the impact</h2>
+              </div>
+              <div class="customers__right-block">
+                <div class="customers__count-block">
+                  <div class="customers__count-block-item">
+                    <span>	1B<sup>	$</sup></span>
+                    <p>	Revenue under management</p>
+                  </div>
+                  <div class="customers__count-block-item">
+                    <span>	20B</span>
+                    <p>	Data points analyzed</p>
+                  </div>
+                </div>
+                <button class="button-reset button button_white-black">
+                  <span data-text="All Customers">	All Customers</span>
+                  <svg class="icon icon-button-arrow button__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#button-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <ul class="cards">
+              <li class="cards__item cards__item-customers">
+                <div class="cards__item-left">
+                  <img class="cards__item-img-logo" src="img/customers-logo.png" alt="">
+                  <p>	500+ pre-configured analytical metrics to better understand your performance and identify gaps</p>
+                  <p>	Get a helicopter view on your products, prices, and sales channels intel with actionable insights</p>
+                  <p>	Predictive and Prescriptive Recommendations</p>
+                  <p>	Anticipate what is changing and how it impacts your business</p>
+                  <a class="cards__item-link" href="/">	Read More
+                    <svg class="icon icon-button-arrow cards__item-link-icon" width="20" height="20">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="cards__item-right">
+                  <img class="cards__item-img" src="img/customers-cards-img.png" alt="Business intelligence for Retailers">
+                </div>
+                <div class="cards__item-bottom">
+                  <span class="cards__item-legend">Azbuka Vkusa</span>
+                </div>
+              </li>
+              <li class="cards__item cards__item-customers">
+                <div class="cards__item-left">
+                  <img class="cards__item-img-logo" src="img/customers-logo.png" alt="">
+                  <p>	500+ pre-configured analytical metrics to better understand your performance and identify gaps</p>
+                  <p>	Get a helicopter view on your products, prices, and sales channels intel with actionable insights</p>
+                  <p>	Predictive and Prescriptive Recommendations</p>
+                  <p>	Anticipate what is changing and how it impacts your business</p>
+                  <a class="cards__item-link" href="/">	Read More
+                    <svg class="icon icon-button-arrow cards__item-link-icon" width="20" height="20">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="cards__item-right">
+                  <img class="cards__item-img" src="img/customers-cards-img.png" alt="Business intelligence for Retailers">
+                </div>
+                <div class="cards__item-bottom">
+                  <span class="cards__item-legend">Dynamic Rules-Based Pricing </span>
+                </div>
+              </li>
+              <li class="cards__item cards__item-customers">
+                <div class="cards__item-left">
+                  <img class="cards__item-img-logo" src="img/customers-logo.png" alt="">
+                  <p>	500+ pre-configured analytical metrics to better understand your performance and identify gaps</p>
+                  <p>	Get a helicopter view on your products, prices, and sales channels intel with actionable insights</p>
+                  <p>	Predictive and Prescriptive Recommendations</p>
+                  <p>	Anticipate what is changing and how it impacts your business</p>
+                  <a class="cards__item-link" href="/">	Read More
+                    <svg class="icon icon-button-arrow cards__item-link-icon" width="20" height="20">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="cards__item-right">
+                  <img class="cards__item-img" src="img/customers-cards-img.png" alt="Business intelligence for Retailers">
+                </div>
+                <div class="cards__item-bottom">
+                  <span class="cards__item-legend">Price optimization</span>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
       </main>
@@ -313,7 +415,8 @@
                     <p>	By clicking 'Send' you agree to the
                       <a href="/">	 Privacy Policy</a>
                     </p>
-                    <button class="button-reset button form__button">	Send
+                    <button class="button-reset button form__button">
+                      <span data-text="Send">	Send</span>
                       <svg class="icon icon-button-arrow form__button-icon button__icon" width="20" height="20">
                         <use xlink:href="img/sprite.svg#button-arrow"></use>
                       </svg>

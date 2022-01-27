@@ -109,4 +109,9 @@
 	height: 4rem;
 	margin-left: auto;
 	cursor: pointer;
+	transition: fill 200ms;
+
+	&:hover {
+		fill: var(--color-light-blue);
+	}
 }

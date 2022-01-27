@@ -1,8 +1,11 @@
 .intro-block {
 	padding-top: 7.4rem;
-	margin-bottom: 9.4rem;
 
 	&__container {
+		position: relative;
+	}
+
+	&__content-container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-column: 20px;
@@ -10,9 +13,11 @@
 
 	&_left {
 		grid-column: 6 span;
+		margin-bottom: 33rem;
 	}
 
 	&_right {
+		position: relative;
 		grid-column: 6 span;
 	}
 
@@ -34,6 +39,9 @@
 	}
 
 	&__img {
+		position: absolute;
+		bottom: 9.4rem;
+		right: 0;
 		display: block;
 		width: 71.4rem;
 		height: 54.5rem;

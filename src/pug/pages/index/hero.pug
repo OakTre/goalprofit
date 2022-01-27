@@ -1,13 +1,15 @@
 section.intro-block
-	.site-container.intro-block__container.intro-block__content
-		.intro-block_left
-			h1
-				|	The World’s First Low Code Retail Optimization Platform
+	.site-container.intro-block__container
+		img.intro-block__img.js-anim-img(src="img/intro-img.png", alt="Craft and data drive your merchandising decisions.")
+		.intro-block__content-container.intro-block__content.js-content-anim
+			.intro-block_left
+				h1
+					|	The World’s First Low Code Retail Optimization Platform
 
-			button.intro-block__btn.button.button-reset
-				|	Request A Demo
-				+icon("plus")(width="20" height="20" class="button__icon")
-		.intro-block_right
-			p
-				|	Craft and data drive your merchandising decisions. Better pricing to Higher Profits.
-			img.intro-block__img(src="img/intro-img.png", alt="Craft and data drive your merchandising decisions.")
+				button.intro-block__btn.button.button-reset
+					span(data-text="Request A Demo")
+						|	Request A Demo
+					+icon("plus")(width="20" height="20" class="button__icon button__icon-plus")
+			.intro-block_right
+				p
+					|	Craft and data drive your merchandising decisions. Better pricing to Higher Profits.

@@ -1,7 +1,9 @@
-section.contact-us
+section.contact-us.js-start-anim-contacts
 	.site-container.contact-us__container
-		.contact-us__feautures-block
-			video(src="" class="contact-us__video-bg")
+		.contact-us__feautures-block.lazy(data-bg="img/contact-us-bg-vid.webp" data-bg-fallback="img/contact-us-bg-vid.png")
+			.contact-us__video-wrapper
+				video(src="resourses/vid.mp4" class="contact-us__video-bg")
+
 			button.button-reset.contact-us__play-btn
 				+icon("triangle")(width="85" height="85" class="contact-us__play-btn-icon")
 			.contact-us__content
@@ -27,5 +29,6 @@ section.contact-us
 						a(href="/")
 							|	 Privacy Policy
 					button.button-reset.button.form__button
-						|	Send
+						span(data-text="Send")
+							|	Send
 						+icon("button-arrow")(width="20" height="20" class="form__button-icon button__icon")

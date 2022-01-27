@@ -1,0 +1,48 @@
+- let customers_arr = ["Azbuka Vkusa", "Dynamic Rules-Based Pricing ", "Price optimization"]
+
+section.customers.parallax
+	.site-container.customers__container
+		.customers__heading-wrapper.customers__content
+			.customers__left-block
+				h2
+					|	Our customers are seeing the impact
+			.customers__right-block
+				.customers__count-block
+					.customers__count-block-item
+						span
+							|	1B
+							sup
+								|	$
+						p
+							|	Revenue under management
+					.customers__count-block-item
+						span
+							|	20B
+						p
+							|	Data points analyzed
+				button.button-reset.button.button_white-black
+					span(data-text="All Customers")
+						|	All Customers
+					+icon("button-arrow")(width="20" height="20" class="button__icon")
+		ul.cards
+			for item in customers_arr
+				li.cards__item.cards__item-customers
+					.cards__item-left
+						img(src="img/customers-logo.png", alt="" class="cards__item-img-logo")
+
+						p
+							|	500+ pre-configured analytical metrics to better understand your performance and identify gaps
+						p
+							|	Get a helicopter view on your products, prices, and sales channels intel with actionable insights
+						p
+							|	Predictive and Prescriptive Recommendations
+						p
+							|	Anticipate what is changing and how it impacts your business
+
+						a.cards__item-link(href="/")
+							|	Read More
+							+icon("button-arrow")(width="20" height="20" class="cards__item-link-icon")
+					.cards__item-right
+						img.cards__item-img(src="img/customers-cards-img.png", alt="Business intelligence for Retailers")
+					.cards__item-bottom
+						span.cards__item-legend=item
