@@ -199,6 +199,15 @@
 		display: block;
 		width: 100%;
 		margin-bottom: 2rem;
+
+		ul {
+			position: absolute;
+			bottom: 0.2rem;
+			right: 0.5rem;
+			font-weight: 500;
+			font-size: 1.2rem;
+			color: red;
+		}
 	}
 
 	&__input {
@@ -218,6 +227,10 @@
 			line-height: 1.5rem;
 			text-transform: uppercase;
 			color: var(--color-dark);
+		}
+
+		&.parsley-error {
+			border-color: red !important;
 		}
 	}
 

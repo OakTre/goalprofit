@@ -1,6 +1,7 @@
 import documentReady from "./helpers/documentReady";
 import lazyImages from "./modules/lazyImages";
 import contactUsVideoInit from "./modules/contactUsVideoInit.js";
+import validation from "./modules/validation.js";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,6 +32,7 @@ window.onload = function () {
 documentReady(() => {
 	lazyImages();
 	contactUsVideoInit();
+	validation();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
@@ -56,22 +58,22 @@ documentReady(() => {
 		}
 	});
 
-	gsap.utils.toArray(".parallax").forEach(layer => {
-		gsap.set(layer, { y: 75 })
-	});
+	// gsap.utils.toArray(".parallax").forEach(layer => {
+	// 	gsap.set(layer, { y: 75 })
+	// });
 
-	gsap.utils.toArray(".parallax").forEach(layer => {
-		gsap.to(layer, {
-			y: 0,
-			duration: 0.5,
-			// ease: "power4.out",
-			scrollTrigger: {
-				trigger: layer,
-				start: "top 90%",
-				end: "bottom top",
-			}
-		});
-	});
+	// gsap.utils.toArray(".parallax").forEach(layer => {
+	// 	gsap.to(layer, {
+	// 		y: 0,
+	// 		duration: 0.5,
+	// 		// ease: "power4.out",
+	// 		scrollTrigger: {
+	// 			trigger: layer,
+	// 			start: "top 90%",
+	// 			end: "bottom top",
+	// 		}
+	// 	});
+	// });
 
 	let cardTmln = gsap.timeline({
 		scrollTrigger: {
@@ -79,8 +81,8 @@ documentReady(() => {
 			scrub: true,
 			scrub: 2,
 			pin: true,
-			fastScrollEnd: true,
-			preventOverlaps: true,
+			// fastScrollEnd: true,
+			// preventOverlaps: true,
 			snap: 0.1,
 			//   pinSpacing: false
 		},
@@ -88,6 +90,6 @@ documentReady(() => {
 	})
 
 	gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-		cardTmln.to(card, { y: "-100%"});
+		cardTmln.to(card, { y: "-170%"});
 	});
 });

@@ -260,6 +260,15 @@
   margin-bottom: 2rem;
 }
 
+.form__input-container ul {
+  position: absolute;
+  bottom: .2rem;
+  right: .5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: red;
+}
+
 .form__input {
   width: 100%;
   background-color: transparent;
@@ -310,6 +319,10 @@
   line-height: 1.5rem;
   text-transform: uppercase;
   color: var(--color-dark);
+}
+
+.form__input.parsley-error {
+  border-color: red!important;
 }
 
 .form__textarea {
@@ -564,9 +577,9 @@ h6 {
 
 .site-container {
   width: 100%;
-  max-width: 1460px;
+  max-width: 1504px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 .page-wrapper {
@@ -1016,7 +1029,6 @@ h6 {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
-  margin-left: 4rem;
   -webkit-filter: drop-shadow(10px 10px 54px rgba(0, 0, 0, .15));
   filter: drop-shadow(10px 10px 54px rgba(0, 0, 0, .15));
   border: 4px solid #282828;
@@ -1102,6 +1114,9 @@ h6 {
   border-radius: 2rem;
   min-height: 70rem;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-us__feautures-block::before {
@@ -1133,6 +1148,9 @@ h6 {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-us__video-wrapper {
@@ -1471,5 +1489,45 @@ h6 {
   line-height: 1.7rem;
   font-family: var(--second-ff);
   max-width: 12.5rem;
+}
+
+@media screen and (min-width:2100px) {
+  html {
+    font-size: 14px;
+  }
+
+  .site-container {
+    max-width: 1920px;
+  }
+}
+
+@media screen and (max-width:1536px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  html {
+    font-size: 9px;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */
