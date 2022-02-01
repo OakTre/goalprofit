@@ -17,18 +17,18 @@ section.contact-us.js-start-anim-contacts
 			p.contact-us__form-text
 				|	If you are a retailer, we will prepare a free tailored-made demonstration.
 			form.form._white.contact-us__form(action="/" data-need-validation)
-				label.form__input-container
+				label.form__input-container._mb10
 					input.form__input(type="text" name="name" placeholder="name" data-parsley-required)
-				label.form__input-container
+				label.form__input-container._mb10
 					input.form__input(type="email" name="email" placeholder="Email" data-parsley-required)
-				label.form__input-container
+				label.form__input-container._mb10
 					textarea.form__textarea(name="qusetion" placeholder="Question")
 				.form__button-wrapper
 					p
 						|	By clicking 'Send' you agree to the
 						a(href="/")
 							|	 Privacy Policy
-					button.button-reset.button.form__button
+					button.button-reset.button.form__button._width
 						span(data-text="Send")
 							|	Send
 						+icon("button-arrow")(width="20" height="20" class="form__button-icon button__icon")

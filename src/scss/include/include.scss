@@ -87,7 +87,7 @@
 		color: transparent;
 		position: relative;
 		line-height: 1;
-		padding: 1.6rem 0 1.6rem 1.5rem;
+		padding: 1.9rem 0 1.9rem 1.5rem;
 		flex-shrink: 0;
 
 		&::before {
@@ -208,6 +208,10 @@
 			font-size: 1.2rem;
 			color: red;
 		}
+
+		&._mb10 {
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__input {
@@ -280,6 +284,10 @@
 	&__button {
 		font-weight: 600;
 		min-width: 14.9rem;
+
+		&._width {
+			min-width: 17.2rem;
+		}
 	}
 
 	&._white {
@@ -303,6 +311,7 @@
 
 		.form__button-wrapper p {
 			color: var(--color-white);
+			max-width: 17.5rem;
 		}
 
 		.form__button {

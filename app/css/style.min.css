@@ -152,7 +152,7 @@
   color: transparent;
   position: relative;
   line-height: 1;
-  padding: 1.6rem 0 1.6rem 1.5rem;
+  padding: 1.9rem 0 1.9rem 1.5rem;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -267,6 +267,10 @@
   font-weight: 500;
   font-size: 1.2rem;
   color: red;
+}
+
+.form__input-container._mb10 {
+  margin-bottom: 1rem;
 }
 
 .form__input {
@@ -411,6 +415,10 @@
   min-width: 14.9rem;
 }
 
+.form__button._width {
+  min-width: 17.2rem;
+}
+
 .form._white .form__input {
   border-color: var(--color-white);
   color: var(--color-white);
@@ -463,6 +471,7 @@
 
 .form._white .form__button-wrapper p {
   color: var(--color-white);
+  max-width: 17.5rem;
 }
 
 .form._white .form__button {
@@ -1048,8 +1057,9 @@ h6 {
   display: grid;
   -ms-grid-columns: (1fr)[12];
   grid-template-columns: repeat(12,1fr);
-  -ms-grid-column: 20;
-  grid-column: 20px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 
 .intro-block_left {
@@ -1290,6 +1300,10 @@ h6 {
   display: block;
 }
 
+.retailers__btn {
+  min-width: 22.1rem;
+}
+
 .feautures {
   margin-bottom: 9rem;
 }
@@ -1491,6 +1505,10 @@ h6 {
   max-width: 12.5rem;
 }
 
+.customers__btn {
+  min-width: 22.1rem;
+}
+
 @media screen and (min-width:2100px) {
   html {
     font-size: 14px;
@@ -1530,4 +1548,3 @@ h6 {
     font-size: 9px;
   }
 }
-/*# sourceMappingURL=style.min.css.map */
