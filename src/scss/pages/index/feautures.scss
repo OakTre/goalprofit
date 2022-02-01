@@ -24,6 +24,10 @@
 			background-color: transparent;
 			padding: 0;
 			cursor: default;
+
+			p {
+				max-width: 22rem;
+			}
 		}
 
 		&._request-demo {

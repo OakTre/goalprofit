@@ -1347,6 +1347,10 @@ h6 {
   cursor: default;
 }
 
+.feautures__item._transparent p {
+  max-width: 22rem;
+}
+
 .feautures__item._request-demo {
   background: var(--color-btn-bg);
   cursor: default;
@@ -1548,3 +1552,4 @@ h6 {
     font-size: 9px;
   }
 }
+/*# sourceMappingURL=style.min.css.map */
