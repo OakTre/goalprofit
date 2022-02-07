@@ -1,0 +1,78 @@
+section.how-it-works
+	.site-container.how-it-works__container.how-it-works__content
+		h2
+			|	How does
+			br
+			|	the platform work?
+		.how-it-works__steps.steps
+			.steps__row
+				.steps__left-block
+					span.steps__legend
+						|	1 STEP
+					.steps__content
+						h3
+							| Collection Of Data From Various Sources
+						p
+							|	From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value
+
+				.steps__right-block
+					ul.steps__blocks
+						- for (let i = 0; i<4; i++)
+							li.steps__blocks-item
+								img(src="img/steps/svg-icon1.svg", alt="" class="steps__blocks-item-icon")
+
+			.steps__row
+				.steps__left-block
+					span.steps__legend
+						|	2 STEP
+					.steps__content
+						h3
+							| All data is connected to the platform
+						p
+							|	From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value
+
+				.steps__right-block
+					.steps__rotated-block
+						- for (let i = 0; i<4; i++)
+							.steps__rotated-block-item
+								img.steps__rotated-block-item-icon(src="img/steps/step2-icon.svg", alt="")
+								span.steps__rotated-block-item-text
+									|	Self tuning
+
+			.steps__row
+				.steps__left-block
+					span.steps__legend
+						|	3 STEP
+					.steps__content
+						h3
+							| Optimize your business with data-rich solutions
+						p
+							|	From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value
+
+						button.button-reset.button.button_white.steps__button
+							span(data-text="Request A Demo")
+								|	Request A Demo
+							+icon("plus")(width="20" height="20" class="button__icon")
+
+
+				.steps__right-block
+					- let num = 5;
+					.steps__card-wrapper
+						- for (let i = 0; i<4; i++)
+							- num--
+								.steps__card
+									span.steps__card-heading
+										|	#{num} Business intelligence for Retailers
+									ul
+										li
+											|	500+ pre-configured analytical metrics to better understand your performance and identify gaps
+										li
+											|	Get a helicopter view on your products, prices, and sales channels intel with actionable insights
+										li
+											|	Predictive and Prescriptive Recommendations
+										li
+											|	Anticipate what is changing and how it impacts your business
+					button.button-reset.button._mobile.button_white.steps__button
+						span(data-text="Request A Demo")
+							|	Request A Demo
+						+icon("plus")(width="20" height="20" class="button__icon")

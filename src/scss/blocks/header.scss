@@ -1,6 +1,10 @@
 .header {
 	padding-top: 3rem;
 
+	@include mq(sm) {
+		padding-top: 2rem;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -9,6 +13,12 @@
 
 	&_left {
 		grid-column: 6 span;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		flex-shrink: 0;
 	}
 
 	&_right {
@@ -31,5 +41,29 @@
 		padding: 0.6rem 1rem;
 		border-radius: 2rem;
 		cursor: pointer;
+	}
+
+	&__nav {
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	&__mobile-btn {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 4rem;
+		height: 4rem;
+		margin-right: 2rem;
+
+		&-icon {
+			width: 2rem;
+			height: 2rem;
+		}
+
+		@include mq(lg) {
+			display: flex;
+		}
 	}
 }

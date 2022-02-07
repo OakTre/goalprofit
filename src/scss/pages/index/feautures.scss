@@ -1,6 +1,11 @@
 .feautures {
 	margin-bottom: 9rem;
 
+
+	@include mq(sm) {
+		margin-bottom: 10rem;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -20,6 +25,10 @@
 		cursor: pointer;
 		transition: box-shadow 200ms;
 
+		@include mq(sm) {
+			grid-column: 12 span;
+		}
+
 		&._transparent {
 			background-color: transparent;
 			padding: 0;
@@ -27,6 +36,10 @@
 
 			p {
 				max-width: 22rem;
+			}
+
+			@include mq(sm) {
+				height: auto;
 			}
 		}
 
@@ -50,12 +63,23 @@
 			font-size: 4rem;
 			line-height: 4.5rem;
 			margin-bottom: 2.5rem;
+
+			@include mq(sm) {
+				font-size: 2.5rem;
+				line-height: 3rem;
+				margin-bottom: 3rem;
+			}
 		}
 
 		p {
 			font-size: 1.6rem;
 			line-height: 2.1rem;
 			color: #A6A6B0;
+
+
+			@include mq(sm) {
+				max-width: 100% !important;
+			}
 		}
 	}
 
@@ -67,6 +91,12 @@
 		width: 10rem;
 		height: 8rem;
 		transition: transform 200ms;
+
+		@include mq(md) {
+			top: auto;
+			right: 2rem;
+			bottom: 2rem;
+		}
 	}
 
 	&__item-heading {
@@ -83,6 +113,10 @@
 		font-size: 1.4rem;
 		line-height: 1.6rem;
 		margin-top: auto;
+
+		@include mq(md) {
+			margin-top: 2rem;
+		}
 	}
 
 	&__item-request-heading {

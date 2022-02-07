@@ -15,6 +15,15 @@
 		border-radius: 2rem;
 		align-items: flex-end;
 
+		@include mq(md) {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		@include mq(sm) {
+			padding: 2.5rem 1.5rem 1.2rem 1.5rem;
+		}
+
 		&:not(:first-child) {
 			position: absolute;
 		}
@@ -63,6 +72,11 @@
 			line-height: 1.5rem;
 			counter-increment: section;
 			content: counter(section);
+
+			@include mq(sm) {
+				left: 2rem;
+				bottom: 1.3rem;
+			}
 		}
 
 		h3 {
@@ -71,6 +85,12 @@
 			line-height: 3.5rem;
 			font-family: var(--second-ff);
 			margin-bottom: 6rem;
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 2.5rem;
+				margin-bottom: 3.5rem;
+			}
 		}
 
 		p {
@@ -79,11 +99,29 @@
 			line-height: 2.5rem;
 			margin-bottom: 3.2rem;
 			max-width: 38.3rem;
+
+			@include mq(md) {
+				max-width: 100%;
+			}
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 2.5rem;
+				margin-bottom: 2.5rem;
+			}
 		}
 
 		ul {
 			max-width: 34rem;
 			margin-bottom: 3.7rem;
+
+			@include mq(md) {
+				max-width: 100%;
+			}
+
+			@include mq(sm) {
+				margin-bottom: 4.5rem;
+			}
 
 			li {
 				position: relative;
@@ -115,10 +153,18 @@
 
 		.cards__item-left {
 			grid-column: 6 span;
+
+			@include mq(md) {
+				grid-column: 12 span;
+			}
 		}
 
 		.cards__item-right {
 			grid-column: 6 span;
+
+			@include mq(md) {
+				display: none;
+			}
 		}
 
 		.cards__item-bottom {
@@ -197,17 +243,29 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__item-right {
 		grid-column: 8 span;
 		display: block;
 		align-items: center;
+
+		@include mq(md) {
+			display: none;
+		}
 	}
 
 	&__item-bottom {
 		grid-column: 12 span;
 		padding-top: 6.3rem;
+
+		@include mq(sm) {
+			padding-top: 4.1rem;
+		}
 	}
 
 	&__item-legend {

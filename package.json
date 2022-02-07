@@ -39,6 +39,8 @@
         "jquery": "^3.6.0",
         "node-sass": "^6.0.0",
         "parsleyjs": "^2.9.2",
+        "scrollmagic": "^2.0.8",
+        "scrollmagic-plugin-gsap": "^1.0.4",
         "stylelint": "^13.13.1",
         "stylelint-config-rational-order": "^0.1.2",
         "stylelint-config-standard": "^22.0.0",

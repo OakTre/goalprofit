@@ -1,6 +1,10 @@
 .contact-us {
 	margin-bottom: 15rem;
 
+	@include mq(sm) {
+		margin-bottom: 10rem;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -30,6 +34,19 @@
 			background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 			content: "";
 		}
+
+		@include mq(lg) {
+			grid-column: 12 span;
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			min-height: 52rem;
+			padding: 1.5rem;
+			background-position: 40% 30%;
+    		background-size: 230%;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__form-block {
@@ -43,6 +60,15 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+
+		@include mq(lg) {
+			grid-column: 12 span;
+		}
+
+		@include mq(sm) {
+			min-height: 57.8rem;
+			padding: 1.5rem;
+		}
 	}
 
 	&__video-wrapper {
@@ -86,6 +112,10 @@
 		&:active {
 			transform: translate(-50%, -50%) scale(0.9);
 		}
+
+		@include mq(sm) {
+			top: 60%;
+		}
 	}
 
 	&__form {
@@ -97,6 +127,12 @@
 		font-weight: 700;
 		margin-bottom: 2.5rem;
 		color: var(--color-white);
+
+		@include mq(sm) {
+			font-size: 2.5rem;
+			line-height: 3.2rem;
+			margin-bottom: 1.9rem;
+		}
 	}
 
 	&__form-text {
@@ -104,6 +140,7 @@
 		font-size: 2rem;
 		line-height: 2.4rem;
 		color: var(--color-white);
+		margin-bottom: 2.4rem;
 	}
 
 	&__content {
@@ -123,6 +160,19 @@
 			line-height: 2.4rem;
 			max-width: 33.7rem;
 			color: var(--color-white);
+		}
+
+		@include mq(sm) {
+			h2 {
+				font-size: 2.5rem;
+				line-height: 3rem;
+				margin-bottom: 2.5rem;
+			}
+
+			p {
+				font-size: 1.5rem;
+				line-height: 1.8rem;
+			}
 		}
 	}
 }

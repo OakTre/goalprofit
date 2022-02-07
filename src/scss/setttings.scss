@@ -86,6 +86,10 @@ h6 {
 	@include mq(custom, min, 2100) {
 		max-width: 1920px;
 	}
+
+	@include mq(sm) {
+		padding: 0 16px;
+	}
 }
 
 .page-wrapper {

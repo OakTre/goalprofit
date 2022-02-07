@@ -1,15 +1,32 @@
 .customers {
 	margin-bottom: 20.2rem;
 
+	@include mq(sm) {
+		margin-bottom: 13.5rem;
+	}
+
 	&__heading-wrapper {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 20px;
 		margin-bottom: 7.1rem;
+
+		@include mq(md) {
+			display: block;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 5.5rem;
+		}
 	}
 
 	&__left-block {
 		grid-column: 6 span;
+
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
 	}
 
 
@@ -18,6 +35,10 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__content {
@@ -25,11 +46,20 @@
 			font-size: 4rem;
 			line-height: 4.5rem;
 			max-width: 46rem;
+
+			@include mq(sm) {
+				font-size: 2rem;
+				line-height: 3rem;
+			}
 		}
 	}
 
 	&__count-block {
 		display: flex;
+
+		@include mq(sm) {
+			margin-bottom: 5.5rem;
+		}
 	}
 
 	&__count-block-item {

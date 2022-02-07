@@ -3,10 +3,12 @@
 header.header
 	.site-container.header__container.js-start-anim-header
 		.header_left
-			a.logo(href="/")
+			button.button-reset.header__mobile-btn
+				+icon("mobile-btn-icon")(width="16" height="16" class="header__mobile-btn-icon")
+			a.header__logo.logo(href="/")
 				img(src="img/logo.svg", alt="Logo")
 		.header_right
-			nav.nav
+			nav.nav.header__nav
 				ul
 					for item in nav_arr
 						li

@@ -2,6 +2,8 @@ import documentReady from "./helpers/documentReady";
 import lazyImages from "./modules/lazyImages";
 import contactUsVideoInit from "./modules/contactUsVideoInit.js";
 import validation from "./modules/validation.js";
+import howItWorks from "./modules/howItWorks.js";
+import cardsAnim from "./modules/cardsAnim.js";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -33,6 +35,8 @@ documentReady(() => {
 	lazyImages();
 	contactUsVideoInit();
 	validation();
+	howItWorks();
+	cardsAnim();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
@@ -40,7 +44,7 @@ documentReady(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 
-	gsap.registerPlugin(ScrollTrigger);
+	// gsap.registerPlugin(ScrollTrigger);
 
 	gsap.set(".js-anim-img", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-content-anim", { y: 75, autoAlpha: 0 });
@@ -49,14 +53,14 @@ documentReady(() => {
 
 
 	// paralax
-	const tmln = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".parallax",
-			start: "top 85%",
-			end: "bottom 30%",
-			scrub: true
-		}
-	});
+	// const tmln = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: ".parallax",
+	// 		start: "top 85%",
+	// 		end: "bottom 30%",
+	// 		scrub: true
+	// 	}
+	// });
 
 	// gsap.utils.toArray(".parallax").forEach(layer => {
 	// 	gsap.set(layer, { y: 75 })
@@ -74,22 +78,4 @@ documentReady(() => {
 	// 		}
 	// 	});
 	// });
-
-	let cardTmln = gsap.timeline({
-		scrollTrigger: {
-			trigger: ".first",
-			scrub: true,
-			scrub: 2,
-			pin: true,
-			// fastScrollEnd: true,
-			// preventOverlaps: true,
-			snap: 0.1,
-			//   pinSpacing: false
-		},
-		defaults: { duration: 8 }
-	})
-
-	gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-		cardTmln.to(card, { y: "-170%"});
-	});
 });
