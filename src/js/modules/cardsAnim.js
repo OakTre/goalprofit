@@ -4,21 +4,55 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default () => {
 	gsap.registerPlugin(ScrollTrigger);
 
+	const playAnim = () => {
+		const timeline = gsap.timeline();
+
+		gsap.set(".steps__rotated-block", {opacity: 0});
+
+		ScrollTrigger.create({
+			animation: timeline,
+			trigger: ".steps__blocks",
+			start: "+100px 20%",
+			end: "+=" + (window.innerHeight * 2),
+			scrub: true,
+			pin: true,
+			// pinSpacing: false,
+		})
+
+		timeline
+			.to(".steps__blocks", {
+				rotation: 45,
+				x: "-63rem",
+				y: "67rem",
+				width: "42.2rem",
+				height: "42.2rem",
+				autoAlpha: 0
+			})
+			.to(".steps__rotated-block", {
+				opacity: 1
+			})
+			.from(".steps__rotated-block-item", {
+				opacity: 0
+			})
+	};
+
+
 	let cardTmln = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".first",
-			scrub: true,
-			scrub: 2,
+			start: "top top",
+			end: "+=" + (window.innerHeight * 2.5),
 			pin: true,
-			// fastScrollEnd: true,
-			// preventOverlaps: true,
-			snap: 0.1,
-			//   pinSpacing: false
-		},
-		defaults: { duration: 8 }
+			anticipatePin: true,
+			scrub: true,
+			toggleActions: "none none reverse none",
+			onLeave: () => {
+				playAnim();
+			}
+		}
 	})
 
 	gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-		cardTmln.to(card, { y: "-170%"});
+		cardTmln.to(card, { yPercent: -100 });
 	});
 };
