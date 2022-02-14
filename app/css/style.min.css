@@ -1501,6 +1501,13 @@ h6 {
   margin-bottom: 29.9rem;
 }
 
+.steps__row._order {
+  grid-template-areas: "b b b b b b a a a a a a";
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .steps__row:last-child {
   margin-bottom: 0;
 }
@@ -1530,6 +1537,7 @@ h6 {
   display: flex;
 }
 
+.steps__row._order>.steps__left-block,
 .steps__row:nth-child(even)>.steps__left-block {
   -ms-grid-row: 1;
   -ms-grid-column: 7;
@@ -1544,6 +1552,7 @@ h6 {
   grid-area: b;
 }
 
+.steps__row._order>.steps__right-block,
 .steps__row:nth-child(even)>.steps__right-block {
   -ms-grid-row: 1;
   -ms-grid-column: 1;

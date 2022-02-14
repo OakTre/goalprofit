@@ -21,8 +21,8 @@ section.how-it-works
 							li.steps__blocks-item
 								img(src="img/steps/svg-icon1.svg", alt="" class="steps__blocks-item-icon")
 
-			.steps__row
-				.steps__left-block
+			.steps__row.js-rotated-block._order
+				.steps__left-block.js-text-block2
 					span.steps__legend
 						|	2 STEP
 					.steps__content
@@ -61,17 +61,18 @@ section.how-it-works
 						- for (let i = 0; i<4; i++)
 							- num--
 								.steps__card
-									span.steps__card-heading
-										|	#{num} Business intelligence for Retailers
-									ul
-										li
-											|	500+ pre-configured analytical metrics to better understand your performance and identify gaps
-										li
-											|	Get a helicopter view on your products, prices, and sales channels intel with actionable insights
-										li
-											|	Predictive and Prescriptive Recommendations
-										li
-											|	Anticipate what is changing and how it impacts your business
+									.steps__card-content-wrapper
+										span.steps__card-heading
+											|	#{num} Business intelligence for Retailers
+										ul
+											li
+												|	500+ pre-configured analytical metrics to better understand your performance and identify gaps
+											li
+												|	Get a helicopter view on your products, prices, and sales channels intel with actionable insights
+											li
+												|	Predictive and Prescriptive Recommendations
+											li
+												|	Anticipate what is changing and how it impacts your business
 					button.button-reset.button._mobile.button_white.steps__button
 						span(data-text="Request A Demo")
 							|	Request A Demo

@@ -41,6 +41,12 @@
 		justify-content: space-between;
 		margin-bottom: 29.9rem;
 
+		&._order {
+			grid-template-areas:
+			"b b b b b b a a a a a a";
+			align-items: center;
+		}
+
 		@include mq(md) {
 			display: block;
 			margin-bottom: 5rem;
