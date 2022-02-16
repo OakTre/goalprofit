@@ -1,6 +1,5 @@
 import gsap, { to } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {TweenMax, TimelineMax} from 'gsap';
 import { TimelineLite } from "gsap/gsap-core";
 
 export default () => {
@@ -138,4 +137,22 @@ export default () => {
 	gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
 		cardTmln.to(card, { yPercent: -100 });
 	});
+
+	let test = () => {
+		let cardTmln2 = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".second",
+				start: "top 2rem",
+				end: "+=" + (window.innerHeight * 2.5),
+				pin: true,
+				anticipatePin: true,
+				scrub: true,
+				toggleActions: "none none reverse none",
+			}
+		})
+
+		gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+			cardTmln2.to(card, { yPercent: -100 });
+		});
+	}
 };

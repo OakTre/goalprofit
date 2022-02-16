@@ -1,6 +1,7 @@
 section.intro-block
 	.site-container.intro-block__container
-		img.intro-block__img.js-anim-img(src="img/intro-img.png", alt="Craft and data drive your merchandising decisions.")
+		.intro-block__img.js-anim-img
+			include svg-intro.svg
 		.intro-block__content-container.intro-block__content.js-content-anim
 			.intro-block_left
 				h1
@@ -14,7 +15,7 @@ section.intro-block
 						|	Request A Demo
 					+icon("plus")(width="20" height="20" class="button__icon button__icon-plus")
 
-				img.intro-block__img._mobile.js-anim-img(src="img/intro-img.png", alt="Craft and data drive your merchandising decisions.")
+				//- img.intro-block__img._mobile.js-anim-img(src="img/intro-img.png", alt="Craft and data drive your merchandising decisions.")
 
 			.intro-block_right
 				p
