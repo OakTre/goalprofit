@@ -1128,11 +1128,12 @@ h6 {
 
 .intro-block__img {
   position: absolute;
-  bottom: 9.4rem;
+  bottom: 0;
   right: 0;
+  z-index: 2243;
   display: block;
-  width: 71.4rem;
-  height: 54.5rem;
+  width: 86.4rem;
+  height: 58.5rem;
   -o-object-fit: cover;
   object-fit: cover;
 }
