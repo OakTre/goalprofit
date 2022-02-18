@@ -44,7 +44,18 @@
 		&._order {
 			grid-template-areas:
 			"b b b b b b a a a a a a";
-			align-items: center;
+
+			@include mq(custom, max, 1366) {
+				.steps__right-block {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+
+		@include mq(custom, max, 1366) {
+			margin-bottom: 20rem;
 		}
 
 		@include mq(md) {
@@ -188,6 +199,10 @@
 		grid-template-columns: repeat(4, 1fr);
 		gap: 2rem;
 
+		@include mq(lg) {
+			width: 59.8rem;
+		}
+
 		@include mq(sm) {
 			max-width: 100%;
 			width: 100%;
@@ -274,6 +289,18 @@
 		background-color: #3383C3;
 		padding: 1.6rem 1.9rem;
 
+		@include mq(sm) {
+			position: relative !important;
+			top: auto !important;
+			left: auto !important;
+			flex-shrink: 0;
+			margin-right: 2rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
 		&:nth-child(2) {
 			position: absolute;
 			top: 5rem;
@@ -347,6 +374,11 @@
 		&._mobile {
 			display: none;
 			align-self: flex-end;
+
+			@include mq(sm) {
+				align-self: flex-start;
+				margin-top: 4rem;
+			}
 		}
 
 		@include mq(md) {
@@ -363,6 +395,17 @@
 
 		@include mq(md) {
 			align-self: flex-start;
+		}
+
+		@include mq(sm) {
+			display: flex;
+			align-items: center;
+			overflow: auto;
+			width: 100%;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
 }

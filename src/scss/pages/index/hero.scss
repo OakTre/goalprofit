@@ -88,7 +88,7 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		z-index: 2243;
+		// z-index: 2243;
 		display: block;
 		width: 86.4rem;
 		height: 58.5rem;
@@ -97,10 +97,6 @@
 		svg {
 			width: 100%;
 			height: 100%;
-
-			#e9qsK2tyHQk467 {
-
-			}
 		}
 
 		@include mq(md) {

@@ -29,6 +29,12 @@
 			grid-column: 12 span;
 		}
 
+		@include mq(sm) {
+			&:not(._transparent) {
+				display: none;
+			}
+		}
+
 		&._transparent {
 			background-color: transparent;
 			padding: 0;
@@ -130,5 +136,53 @@
 
 	&__item-button {
 		margin-top: auto;
+	}
+}
+
+.feautures-mobile {
+	display: none;
+	margin-top: 3.2rem;
+
+	@include mq(sm) {
+		display: block;
+	}
+
+	.site-container {
+		margin: 0 -16px;
+		width: auto;
+	}
+
+	&__scroll-row {
+		overflow-x: scroll;
+		display: flex;
+		align-items: center;
+		padding: 0 16px;
+		margin-bottom: 2.4rem;
+		padding-bottom: 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__item {
+		display: flex !important;
+		flex-shrink: 0;
+		margin-right: 2rem;
+		grid-column: none;
+		width: 94%;
+		height: 28rem;
+
+		&._request-demo {
+			width: 100%;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 }

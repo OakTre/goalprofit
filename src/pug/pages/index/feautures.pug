@@ -1,24 +1,124 @@
-- let feautures_arr = [{name: "In-memory technology", text: "Innovative in-memory algorithms enable large amounts of data to be processed in the main memory for dramatically faster access times."},{name: "Column-based storage", text: "Columnar storage and compression reduce the number of I/O operations and amount of data needed for processing in main memory and accelerate analytical performance."}, {name: "Massively Parallel Processing", text: "GoalProfit is the high-performance, in-memory MPP (Massively Parallel Processing) database specifically designed for analytics."}, {name: "Advanced data science analytics", text: "Alongside out-of-the-box support for R, Python, Java, and Lua, Exasol allows you to integrate the analytics programming language of your choice and use it for in-database analytics."}, {name: "High user concurrency", text: "Thousands of users can simultaneously access and analyze large amounts of data without compromising query performance."}, {name: "Scalability", text: "Linear scalability lets you extend your system and increase performance by adding additional nodes."},{name: "Business-critical data", text: "From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value"}]
+-
+	let feautures_arr = [
+		{
+			name: "In-memory technology",
+			text: "Innovative in-memory algorithms enable large amounts of data to be processed in the main memory for dramatically faster access times."
+		},
+		{
+			name: "Column-based storage",
+			text: "Columnar storage and compression reduce the number of I/O operations and amount of data needed for processing in main memory and accelerate analytical performance."
+		},
+		{
+			name: "Massively Parallel Processing",
+			text: "GoalProfit is the high-performance, in-memory MPP (Massively Parallel Processing) database specifically designed for analytics."
+		},
+		{
+			name: "Advanced data science analytics",
+			text: "Alongside out-of-the-box support for R, Python, Java, and Lua, Exasol allows you to integrate the analytics programming language of your choice and use it for in-database analytics."
+		},
+		{
+			name: "High user concurrency",
+			text: "Thousands of users can simultaneously access and analyze large amounts of data without compromising query performance."
+		},
+		{
+			name: "Scalability",
+			text: "Linear scalability lets you extend your system and increase performance by adding additional nodes."
+		},
+		{
+			name: "Business-critical data",
+			text: "From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value"
+		}
+	]
+
+	let feautures_arr_mob = [
+		{
+			name: "In-memory technology",
+			text: "Innovative in-memory algorithms enable large amounts of data to be processed in the main memory for dramatically faster access times."
+		},
+		{
+			name: "Column-based storage",
+			text: "Columnar storage and compression reduce the number of I/O operations and amount of data needed for processing in main memory and accelerate analytical performance."
+		}
+	]
+
+	let feautures_arr_mob1 = [
+		{
+			name: "Massively Parallel Processing",
+			text: "GoalProfit is the high-performance, in-memory MPP (Massively Parallel Processing) database specifically designed for analytics."
+		},
+		{
+			name: "Advanced data science analytics",
+			text: "Alongside out-of-the-box support for R, Python, Java, and Lua, Exasol allows you to integrate the analytics programming language of your choice and use it for in-database analytics."
+		},
+		{
+			name: "High user concurrency",
+			text: "Thousands of users can simultaneously access and analyze large amounts of data without compromising query performance."
+		}
+	]
+
+	let feautures_arr_mob2 = [
+		{
+			name: "Scalability",
+			text: "Linear scalability lets you extend your system and increase performance by adding additional nodes."
+		},
+		{
+			name: "Business-critical data",
+			text: "From business-critical data applications to advanced analytics, GoalProfit helps you analyze large volumes of data faster than ever before, helping you to accelerate your reporting, build intelligence applications, and to turn data into value"
+		}
+	]
+
+
+
 
 section.feautures.parallax
-	.site-container.feautures__container
-		.feautures__item._transparent
-			.feautures__content
-				h2
-					|	GoalProfit is the high-performance database
-				p
-					|	Managers, pricing analysts, trade marketing, and merchandising executives.
-		for item, index in feautures_arr
-			.feautures__item
-				img.feautures__item-img(src=`img/feautures/img${index}.svg`, alt=item.name)
-				span.feautures__item-heading=item.name
-				p.feautures__item-text=item.text
-		.feautures__item._request-demo
-			span.feautures__item-request-heading
-				|	It’s a retail revolution.
+	.site-container
+		.feautures__container
+			.feautures__item._transparent
+				.feautures__content
+					h2
+						|	GoalProfit is the high-performance database
+					p
+						|	Managers, pricing analysts, trade marketing, and merchandising executives.
+			for item, index in feautures_arr
+				.feautures__item
+					img.feautures__item-img(src=`img/feautures/img${index}.svg`, alt=item.name)
+					span.feautures__item-heading=item.name
+					p.feautures__item-text=item.text
+			.feautures__item._request-demo
+				span.feautures__item-request-heading
+					|	It’s a retail revolution.
 
-			button.button-reset.button.button_white.feautures__item-button
-				span(data-text="Request A Demo")
-					|	Request A Demo
-				+icon("plus")(width="20" height="20" class="button__icon")
+				button.button-reset.button.button_white.feautures__item-button
+					span(data-text="Request A Demo")
+						|	Request A Demo
+					+icon("plus")(width="20" height="20" class="button__icon")
 
+	.feautures-mobile
+		.site-container
+			.feautures-mobile__scroll-row
+				for item, index in feautures_arr_mob
+					.feautures__item.feautures-mobile__item
+						img.feautures__item-img(src=`img/feautures/img${index}.svg`, alt=item.name)
+						span.feautures__item-heading=item.name
+						p.feautures__item-text=item.text
+			.feautures-mobile__scroll-row
+				for item, index in feautures_arr_mob1
+					.feautures__item.feautures-mobile__item
+						img.feautures__item-img(src=`img/feautures/img${index}.svg`, alt=item.name)
+						span.feautures__item-heading=item.name
+						p.feautures__item-text=item.text
+			.feautures-mobile__scroll-row
+				for item, index in feautures_arr_mob2
+					.feautures__item.feautures-mobile__item
+						img.feautures__item-img(src=`img/feautures/img${index}.svg`, alt=item.name)
+						span.feautures__item-heading=item.name
+						p.feautures__item-text=item.text
+			.feautures-mobile__scroll-row
+				.feautures-mobile__item.feautures__item._request-demo
+					span.feautures__item-request-heading
+						|	It’s a retail revolution.
+
+					button.button-reset.button.button_white.feautures__item-button
+						span(data-text="Request A Demo")
+							|	Request A Demo
+						+icon("plus")(width="20" height="20" class="button__icon")
