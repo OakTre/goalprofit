@@ -7,11 +7,45 @@
 	--color-dark: #000;
 	--color-white: #fff;
 	--color-btn-bg: linear-gradient(91.83deg, #095092 0%, #00a7e5 100%);
-	--color-light-blue: #00a7e5;
 	--color-blue: #0578B9;
+	--color-light-blue: #00a7e5;
+	--color-lighter-blue: #D1EBFF;
 	--color-card-grey: #CDCDD1;
 	--color-bg: #DDDDE2;
 	--border-color: #E1E1E1;
+	--color-blue-secondary: #095092;
+	--color-grey: #AAAAAD;
+	--color-grey2: #CDCDD1;
+	--color-grey3: #DDDDE2;
+
+
+	// fonts
+	--regular: 400;
+	--bold: 700;
+
+	// hero
+	--title-hero: var(--regular) 7.6rem/100% var(--second-ff);
+
+	// title
+	--title-XL: var(--bold) 6rem/100% var(--second-ff);
+	--title-L: var(--regular) 4rem/115% var(--second-ff);
+	--title-L-bold: var(--bold) 4rem/110% var(--second-ff);
+	--title-M: var(--regular) 3rem/120% var(--second-ff);
+	--title-M-bold: var(--bold) 3rem/120% var(--second-ff);
+	--title-S: var(--regular) 2rem/120% var(--second-ff);
+	--title-S-bold: var(--bold) 2rem/120% var(--second-ff);
+	--title-XS: var(--regular) 1.6rem/120% var(--second-ff);
+	--title-XS-bold: var(--bold) 1.6rem/120% var(--second-ff);
+	--title-XXS: var(--regular) 1.2rem/120% var(--second-ff);
+
+	// body
+	--body-XL: var(--regular) 2rem/125% var(--main-ff);
+	--body-XL-bold: var(--bold) 2rem/125% var(--main-ff);
+	--body-L: var(--regular) 1.6rem/120% var(--main-ff);
+	--body-M: var(--regular) 1.4rem/120% var(--main-ff);
+	--body-M-semibold: 600 1.4rem/120% var(--main-ff);
+	--body-S: var(--regular) 1.2rem/auto var(--main-ff);
+
 }
 
 $breakpoint-xxs: 480px;

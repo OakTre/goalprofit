@@ -2,7 +2,9 @@
     "name": "gulp-project",
     "version": "1.0.0",
     "description": "gulp project",
-    "scripts": {},
+    "scripts": {
+        "gulp": "gulp"
+    },
     "lint-staged": {
         "*.scss": "stylelint"
     },
