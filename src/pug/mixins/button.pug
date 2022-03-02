@@ -1,0 +1,7 @@
+mixin button(text, mod)
+    - let isWhite = mod == "white" ? "button_white" : null
+
+    button.button-reset.button(class=isWhite)&attributes(attributes)
+        span(data-text=text)
+            |   #{text}
+        +icon("plus")(width="20" height="20" class="button__icon")

@@ -1,5 +1,24 @@
 .header {
 	padding-top: 3rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	--txt-color: var(--color-dark);
+
+	&._secondary {
+		--txt-color: var(--color-white);
+
+		.header__logo {
+			display: none;
+		}
+		
+		.header__logo._mobile {
+			display: block;
+		}
+	}
 
 	@include mq(sm) {
 		padding-top: 2rem;
@@ -19,6 +38,10 @@
 
 	&__logo {
 		flex-shrink: 0;
+
+		&._mobile {
+			display: none;
+		}
 	}
 
 	&_right {
@@ -46,6 +69,14 @@
 	&__nav {
 		@include mq(lg) {
 			display: none;
+		}
+
+		ul {
+			li {
+				a {
+					color: var(--txt-color);
+				}
+			}
 		}
 	}
 

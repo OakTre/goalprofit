@@ -4,12 +4,15 @@ import contactUsVideoInit from "./modules/contactUsVideoInit.js";
 import validation from "./modules/validation.js";
 import howItWorks from "./modules/howItWorks.js";
 import cardsAnim from "./modules/cardsAnim.js";
+import partnersSlider from "./modules/partnersSlider.js";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function startAnim() {
 	const tmln1 = gsap.timeline();
+
+	if (!document.querySelector(".js-anim-img")) return;
 
 	tmln1
 		.to(".js-anim-img", { y: 0, autoAlpha: 1, duration: 1, ease: "power4.out", clearProps: "all" })
@@ -37,6 +40,7 @@ documentReady(() => {
 	validation();
 	howItWorks();
 	cardsAnim();
+	partnersSlider();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
@@ -45,7 +49,8 @@ documentReady(() => {
 	});
 
 	// gsap.registerPlugin(ScrollTrigger);
-
+	if (!document.querySelector(".js-anim-img")) return;
+	
 	gsap.set(".js-anim-img", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-content-anim", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-start-anim-header", { y: -35, opacity: 0 });

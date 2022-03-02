@@ -1,0 +1,32 @@
+section.partners
+    .site-container.partners__container.grid-container  
+        .partners__left-block
+            h2 
+                |   Partners
+            .slider-nav 
+                button.slider-nav__btn.button-reset.js-swiper-button-prev
+                    +icon('arow-left')(width="25" heigth="25" class="slider-nav__btn-icon")
+                button.slider-nav__btn.button-reset.js-swiper-button-next
+                    +icon('arow-right')(width="25" heigth="25" class="slider-nav__btn-icon")
+        .partners__right-block
+            .swiper.js-parners-slider.partners__slider
+                .swiper-wrapper
+                    - for (let i =0; i<32; i++)
+                        .swiper-slide.partners__slider-item 
+                            img(src="img/partners/img.png", alt="")
+section.partners.grey-bg
+    .site-container.partners__container.grid-container  
+        .partners__left-block
+            h2 
+                |   Public clients
+            .slider-nav 
+                button.slider-nav__btn.button-reset.js-swiper-button-prev2
+                    +icon('arow-left')(width="25" heigth="25" class="slider-nav__btn-icon")
+                button.slider-nav__btn.button-reset.js-swiper-button-next2
+                    +icon('arow-right')(width="25" heigth="25" class="slider-nav__btn-icon")
+        .partners__right-block
+            .swiper.js-parners-slider2.partners__slider
+                .swiper-wrapper
+                    - for (let i =0; i<32; i++)
+                        .swiper-slide.partners__slider-item 
+                            img(src="img/partners/img.png", alt="")

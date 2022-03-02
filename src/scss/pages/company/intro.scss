@@ -1,0 +1,32 @@
+.intro {
+    padding-top: 13.5rem;
+    height: 69.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 14rem;
+
+    &__block {
+        grid-column: 6 span;
+    }
+
+    &__content {
+
+        &.mod-title-max-width {
+            h1 {
+                max-width: 39.3rem;
+            }
+        }
+
+        h1 {
+            font: var(--title-XL);
+            color: var(--color-white);
+        }
+
+        P {
+            font: var(--title-S);
+            color: var(--color-white);
+            max-width: 44.1rem;
+        }
+    }
+}

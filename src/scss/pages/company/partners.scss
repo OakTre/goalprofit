@@ -1,0 +1,23 @@
+.partners {
+    padding: 8.7rem 0 8rem;
+    background-color: #F4F4F4;
+
+    &__left-block {
+        grid-column: 4 span;
+
+        h2 {
+            font: var(--title-L);
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__right-block {
+        grid-column: 8 span;
+        overflow: hidden;
+    }
+
+    &.grey-bg {
+        background-color: #EEEEEE;
+        margin-bottom: 14rem;
+    }
+}

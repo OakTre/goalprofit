@@ -166,7 +166,7 @@ const watchFiles = () => {
 	watch("./src/img/sprite/*.svg", svgSprites)
 	watch("./src/resourses/**", resourses)
 	watch("./src/js/**/*.js", scripts)
-	watch("./src/img/*.{png,jpg,jpeg}", toWebp)
+	watch("src/img/**/*.{png,jpg,jpeg}", toWebp)
 }
 
 exports.styles = styles;

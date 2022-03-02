@@ -11,6 +11,8 @@ export default () => {
 				if (window.matchMedia("(min-width: 992px)").matches) {
 					const timeline = new TimelineLite();
 
+					if (!document.querySelector(".steps__rotated-block")) return;
+
 					gsap.set(".steps__rotated-block", { opacity: 0 });
 					gsap.set(".js-text-block2", { opacity: 0 });
 					gsap.utils.toArray(".steps__rotated-block-item").forEach((item) => {
@@ -127,6 +129,8 @@ export default () => {
 				if (window.matchMedia("(min-width: 992px)").matches) {
 					const timeline = new TimelineLite();
 
+					if (!document.querySelector(".steps__rotated-block")) return;
+
 					gsap.set(".steps__rotated-block", { opacity: 0 });
 					gsap.set(".js-text-block2", { opacity: 0 });
 					gsap.utils.toArray(".steps__rotated-block-item").forEach((item) => {
@@ -240,6 +244,8 @@ export default () => {
 			});
 		},
 		"(max-width: 992px)": function () {
+			if (!document.querySelector(".first")) return;
+
 			let cardTmln = gsap.timeline({
 				scrollTrigger: {
 					trigger: ".first",

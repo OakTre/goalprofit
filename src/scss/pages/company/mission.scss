@@ -1,0 +1,63 @@
+.mission {
+    margin-bottom: 16.5rem;
+
+    &__content {
+        margin-bottom: 14.1rem;
+
+        p {
+            max-width: 94rem;
+            font: var(--title-L);
+            margin-bottom: 2rem;
+
+            &:nth-last-of-type(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__section-name {
+        margin-bottom: 3rem;
+    }
+
+    &__content-info {
+        flex-shrink: 0;
+
+        p {
+            font: var(--body-XL);
+            max-width: 28.5rem;
+            margin-right: 7.5rem;
+        }
+    }
+
+    &__content-info-second {
+        p {
+            max-width: 100%;
+        }
+    }
+
+    &__left-block {
+        grid-column: 3 span;
+    }
+
+    &__right-block {
+        grid-column: 9 span;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__nubmer {
+        position: relative;
+        display: block;
+        font: var(--title-hero);
+        background: linear-gradient(91.83deg, #095092 0%, #00A7E5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-right: 5.7rem;
+    }
+
+    &__nubmer-plus {
+        position: absolute;
+        top: 1rem;
+        right: -2rem;
+    }
+}

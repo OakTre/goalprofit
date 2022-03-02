@@ -1,0 +1,30 @@
+.proposition {
+    margin-bottom: 14rem;
+
+    &__content {
+        position: relative;
+        background-color: var(--color-white);
+        padding: 3rem;
+        border-radius: 2rem;
+        min-height: 50.5rem;
+
+        p {
+            font: var(--body-XL);
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font: var(--title-L);
+            max-width: 81rem;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 4.5rem;
+        right: 10rem;
+        display: block;
+        width: 34rem;
+        height: 34rem;
+    }
+}

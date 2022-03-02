@@ -1,0 +1,83 @@
+.ceo {
+    padding: 10rem 0 8.8rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16.9rem;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        h2 {
+            font: var(--title-L-bold);
+            margin-bottom: 7.1rem;
+            color: var(--color-white);
+        }
+
+        p {
+            font: var(--body-L);
+            color: var(--color-white);
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+
+            b {
+                font: var(--title-M);
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: auto;
+    }
+
+    &__block {
+        grid-column: 6 span;
+
+        &:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__image {
+        display: block;
+        width: 46rem;
+        height: 63.7rem;
+        border-radius: 2rem;
+        object-fit: cover;
+    }
+
+    &__name {
+        text-align: right;
+        color: var(--color-white);
+        font: var(--title-M);
+        margin-bottom: 1.5rem;
+    }
+
+    &__position {
+        text-align: right;
+        color: var(--color-white);
+        font: var(--body-L);
+        max-width: 22rem;
+        margin-bottom: 6rem;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__social-item {
+        margin-bottom: 2.4rem;
+    }
+
+    &__social-link {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        fill: rgba($color: #fff, $alpha: 0.4);
+    }
+}

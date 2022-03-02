@@ -3,6 +3,8 @@ export default () => {
 	const playBtn = document.querySelector(".contact-us__play-btn");
 	const vidWrapper = document.querySelector(".contact-us__video-wrapper");
 
+	if (!video) return;
+
 	playBtn.addEventListener("click", ()=>{
 		video.closest(".contact-us__video-wrapper").classList.add("is-active");
 

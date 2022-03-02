@@ -393,3 +393,48 @@
 		visibility: hidden;
 	}
 }
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px;
+}
+
+.section-name {
+	display: block;
+	font: var(--body-XL);
+}
+
+.slider-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 13.4rem;
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 5.6rem;
+		height: 5.6rem;
+		border-radius: 50%;
+		border: 1px solid rgba($color: #2D3040, $alpha: 0.1);
+		cursor: pointer;
+		transition: background-color 200ms;
+
+		&:hover {
+			background-color: rgba($color: #2D3040, $alpha: 0.1);
+		}
+
+		&:active {
+			transform: scale(0.99);
+		}
+	}
+
+	&__btn-icon {
+		width: 2.5rem;
+		height: 2.5rem;
+		fill: var(--color-dark);
+	}
+}
