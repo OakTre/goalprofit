@@ -5,6 +5,8 @@ import validation from "./modules/validation.js";
 import howItWorks from "./modules/howItWorks.js";
 import cardsAnim from "./modules/cardsAnim.js";
 import partnersSlider from "./modules/partnersSlider.js";
+import historySlider from "./modules/historySlider.js";
+import map from "./modules/map.js";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -41,6 +43,8 @@ documentReady(() => {
 	howItWorks();
 	cardsAnim();
 	partnersSlider();
+	historySlider();
+	map();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 

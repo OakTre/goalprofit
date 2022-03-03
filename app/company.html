@@ -132,6 +132,140 @@
             </div>
           </div>
         </section>
+        <section class="history">
+          <div class="site-container history__container grid-container">
+            <div class="history__left-block history__content"> 
+              <h2>
+                   Сompany History</h2>
+              <p>
+                   We are a young company, our history is not yet rich in events, but we have already achieved significant results</p>
+              <div class="slider-nav history__slider-nav">
+                <button class="slider-nav__btn button-reset js-history-button-prev">
+                  <svg class="icon icon-arow-left slider-nav__btn-icon" width="25" heigth="25">
+                    <use xlink:href="img/sprite.svg#arow-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-nav__btn button-reset js-history-button-next">
+                  <svg class="icon icon-arow-right slider-nav__btn-icon" width="25" heigth="25">
+                    <use xlink:href="img/sprite.svg#arow-right"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="history__right-block">
+              <div class="history__slider js-history-slider"> 
+                <div class="history__slider-item history-item">
+                  <div class="history-item__top">
+                    <div class="history-item__left-block">
+                      <div class="history-item__heading"> <span class="history-item__date">
+                             2000</span>
+                        <div class="history-item__date-text"> 
+                          <p>
+                               At the beginning</p>
+                          <P>
+                               The road will be mastered by the walking</P>
+                        </div>
+                      </div>
+                      <div class="history-item__content"> 
+                        <ul> 
+                          <li>
+                               GoalProfit Inc. is incorporated</li>
+                          <li>
+                               Founder Institute acceleration is completed</li>
+                          <li>
+                               20B data points reached      </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="history-item__right-block"> 
+                      <picture>
+                        <source type="image/webp" data-srcset="img/history-item-img.webp" srcset="img/placeholder.png"/><img class="lazy history-item__img" data-src="img/history-item-img.jpg"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="history-item__bottom"> 
+                    <div class="history-item__bottom-block"><span>
+                           2020</span></div>
+                    <div class="history-item__bottom-block"><span>
+                           At the beginning</span></div>
+                  </div>
+                </div>
+                <div class="history__slider-item history-item">
+                  <div class="history-item__top">
+                    <div class="history-item__left-block">
+                      <div class="history-item__heading"> <span class="history-item__date">
+                             2010</span>
+                        <div class="history-item__date-text"> 
+                          <p>
+                               At the beginning</p>
+                          <P>
+                               The road will be mastered by the walking</P>
+                        </div>
+                      </div>
+                      <div class="history-item__content"> 
+                        <ul> 
+                          <li>
+                               GoalProfit Inc. is incorporated</li>
+                          <li>
+                               Founder Institute acceleration is completed</li>
+                          <li>
+                               20B data points reached      </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="history-item__right-block"> 
+                      <picture>
+                        <source type="image/webp" data-srcset="img/history-item-img.webp" srcset="img/placeholder.png"/><img class="lazy history-item__img" data-src="img/history-item-img.jpg"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="history-item__bottom"> 
+                    <div class="history-item__bottom-block"><span>
+                           2020</span></div>
+                    <div class="history-item__bottom-block"><span>
+                           At the beginning</span></div>
+                  </div>
+                </div>
+                <div class="history__slider-item history-item">
+                  <div class="history-item__top">
+                    <div class="history-item__left-block">
+                      <div class="history-item__heading"> <span class="history-item__date">
+                             2020</span>
+                        <div class="history-item__date-text"> 
+                          <p>
+                               At the beginning</p>
+                          <P>
+                               The road will be mastered by the walking</P>
+                        </div>
+                      </div>
+                      <div class="history-item__content"> 
+                        <ul> 
+                          <li>
+                               GoalProfit Inc. is incorporated</li>
+                          <li>
+                               Founder Institute acceleration is completed</li>
+                          <li>
+                               20B data points reached      </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="history-item__right-block"> 
+                      <picture>
+                        <source type="image/webp" data-srcset="img/history-item-img.webp" srcset="img/placeholder.png"/><img class="lazy history-item__img" data-src="img/history-item-img.jpg"/>
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="history-item__bottom"> 
+                    <div class="history-item__bottom-block"><span>
+                           2020</span></div>
+                    <div class="history-item__bottom-block"><span>
+                           At the beginning</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="partners">
           <div class="site-container partners__container grid-container"> 
             <div class="partners__left-block">
@@ -344,8 +478,11 @@
           </div>
         </section>
         <section class="map">
-          <div class="map-container"></div>
+          <div class="map__container" id="contact-us-map" data-map-icon="img/marker.svg">
+            <input type="hidden" name="coordinates" value="[{name:'first', coords: [26.035092346155736, -80.16586537262737]}, {name:'second', coords: [50.05842801181518, 19.93552068166105]}]">
+          </div>
         </section>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM-QwzS2G0X_PiDPqQX9v4p1a66oHG2cE"></script>
       </main>
       <footer class="footer">
         <div class="site-container">
