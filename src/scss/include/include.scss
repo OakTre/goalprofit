@@ -438,3 +438,51 @@
 		fill: var(--color-dark);
 	}
 }
+
+.mark {
+	padding: 1.6rem 2.4rem;
+	background-color: var(--color-white);
+	width: 28.8rem;
+
+	&__heading {
+		display: flex;
+		align-items: flex-start;
+		font-weight: 600;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		text-transform: uppercase;
+		margin-bottom: 2.4rem;
+
+		span {
+			display: block;
+			font-weight: 400;
+			font-size: 1.2rem;
+			line-height: 150%;
+			text-transform: none;
+			color: #ADADAD;
+			padding-left: 0.4rem;	
+		}
+	}
+
+	&__coordinates {
+		font: var(--body-M);
+		margin-bottom: 2.5rem;
+	}
+
+	&__legend {
+		display: block;
+		font: var(--body-S);
+		color: #ADADAD;
+		margin-top: 2.5rem;
+		margin-bottom: 0.4rem;
+	}
+
+	&__link {
+		display: inline-block;
+		font: var(--body-M);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
