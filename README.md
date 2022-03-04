@@ -3,6 +3,7 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/goalprofit/app/)
+1. [О компании](https://oaktre.github.io/goalprofit/app/company.html)
 
 
 

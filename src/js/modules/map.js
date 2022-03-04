@@ -16,8 +16,6 @@ export default () => {
 	let coordinates;
 	let markerImage = document.querySelector("#contact-us-map").getAttribute("data-map-icon");
 
-    console.log(inptCoords);
-
 	let styles = [{
 			"stylers": [{
 					"hue": "#007fff"
