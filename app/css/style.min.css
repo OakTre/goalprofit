@@ -1717,7 +1717,6 @@ h6 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 29.9rem;
 }
 
 .steps__row._order {
@@ -1728,8 +1727,12 @@ h6 {
   margin-bottom: 0;
 }
 
+.steps__row:nth-child(1) {
+  padding-bottom: 80rem;
+}
+
 .steps__row:nth-child(2) {
-  margin-bottom: 17.5rem;
+  padding-bottom: 80rem;
 }
 
 .steps__row:nth-child(3) .steps__left-block {
@@ -1809,7 +1812,8 @@ h6 {
 }
 
 .steps__blocks {
-  max-width: 49.8rem;
+  width: 50rem;
+  height: 50rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1832,17 +1836,18 @@ h6 {
   border-radius: 2rem;
   background-color: rgba(255,255,255,.1);
   width: 100%;
-  height: 22.9rem;
+}
+
+.steps__rotated-block-wrapper {
+  position: relative;
+  width: 42.2rem;
+  height: 42.2rem;
 }
 
 .steps__rotated-block {
+  position: relative;
   width: 42.2rem;
   height: 42.2rem;
-  border-radius: 2rem;
-  background-color: rgba(255,255,255,.1);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1851,27 +1856,85 @@ h6 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  overflow: hidden;
+}
+
+.steps__rotated-block::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42.2rem;
+  height: 42.2rem;
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
+  -ms-transform: translate(-50%,-50%) rotate(45deg);
+  transform: translate(-50%,-50%) rotate(45deg);
+  border-radius: 2rem;
+  background-color: rgba(255,255,255,.1);
+  content: "";
 }
 
 .steps__rotated-block-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%) translateY(-4rem);
+  -ms-transform: translate(-50%,-50%) translateY(-4rem);
+  transform: translate(-50%,-50%) translateY(-4rem);
   width: 50%;
+  --angle: 60deg;
+  --num: calc(360 / var(--angle));
+  --rotate: calc( 120deg / 2);
+}
+
+.steps__rotated-block-item:nth-child(1) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item:nth-child(2) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item:nth-child(3) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item:nth-child(4) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item:nth-child(5) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item:nth-child(6) {
+  -webkit-transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
+  -ms-transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
+  transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
+}
+
+.steps__rotated-block-item_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }
 
 .steps__rotated-block-item-icon {

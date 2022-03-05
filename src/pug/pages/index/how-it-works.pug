@@ -21,6 +21,7 @@ section.how-it-works
 							li.steps__blocks-item
 								img(src="img/steps/svg-icon1.svg", alt="" class="steps__blocks-item-icon")
 
+			//- .steps__row-wrapper
 			.steps__row.js-rotated-block._order
 				.steps__left-block.js-text-block2
 					span.steps__legend
@@ -33,11 +34,12 @@ section.how-it-works
 
 				.steps__right-block
 					.steps__rotated-block
-						- for (let i = 0; i<4; i++)
+						- for (let i = 0; i<6; i++)
 							.steps__rotated-block-item
-								img.steps__rotated-block-item-icon(src="img/steps/step2-icon.svg", alt="")
-								span.steps__rotated-block-item-text
-									|	Self tuning
+								.steps__rotated-block-item_wrapper
+									img.steps__rotated-block-item-icon(src="img/steps/step2-icon.svg", alt="")
+									span.steps__rotated-block-item-text
+										|	Self tuning
 
 			.steps__row
 				.steps__left-block
