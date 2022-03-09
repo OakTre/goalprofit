@@ -1723,16 +1723,16 @@ h6 {
   grid-template-areas: "b b b b b b a a a a a a";
 }
 
+.steps__row.js-rotated-block {
+  padding-bottom: 50rem;
+}
+
 .steps__row:last-child {
   margin-bottom: 0;
 }
 
 .steps__row:nth-child(1) {
-  padding-bottom: 80rem;
-}
-
-.steps__row:nth-child(2) {
-  padding-bottom: 80rem;
+  padding-bottom: 30rem;
 }
 
 .steps__row:nth-child(3) .steps__left-block {
@@ -1812,8 +1812,8 @@ h6 {
 }
 
 .steps__blocks {
-  width: 50rem;
-  height: 50rem;
+  width: 47rem;
+  height: 47rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1879,49 +1879,22 @@ h6 {
   -webkit-transform: translate(-50%,-50%) translateY(-4rem);
   -ms-transform: translate(-50%,-50%) translateY(-4rem);
   transform: translate(-50%,-50%) translateY(-4rem);
-  width: 50%;
-  --angle: 60deg;
-  --num: calc(360 / var(--angle));
-  --rotate: calc( 120deg / 2);
-}
-
-.steps__rotated-block-item:nth-child(1) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg));
-}
-
-.steps__rotated-block-item:nth-child(2) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg));
-}
-
-.steps__rotated-block-item:nth-child(3) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg));
-}
-
-.steps__rotated-block-item:nth-child(4) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg));
-}
-
-.steps__rotated-block-item:nth-child(5) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg));
-}
-
-.steps__rotated-block-item:nth-child(6) {
-  -webkit-transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
-  -ms-transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
-  transform: translate(-50%,-50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg));
+  width: 12rem;
+  height: 10rem;
 }
 
 .steps__rotated-block-item_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.steps__rotated-block-item_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1935,6 +1908,11 @@ h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .steps__rotated-block-item-icon {
@@ -2040,6 +2018,102 @@ h6 {
 
 .steps__card-wrapper {
   position: relative;
+}
+
+.steps__rotated-block-item:nth-of-type(1) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(0 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(0 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(0 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(1) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(0 * var(--angle) * -1));
+  -ms-transform: rotate(calc(0 * var(--angle) * -1));
+  transform: rotate(calc(0 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(2) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(1 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(1 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(1 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(2) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(1 * var(--angle) * -1));
+  -ms-transform: rotate(calc(1 * var(--angle) * -1));
+  transform: rotate(calc(1 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(3) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(2 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(2 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(2 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(3) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(2 * var(--angle) * -1));
+  -ms-transform: rotate(calc(2 * var(--angle) * -1));
+  transform: rotate(calc(2 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(4) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(3 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(3 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(3 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(4) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(3 * var(--angle) * -1));
+  -ms-transform: rotate(calc(3 * var(--angle) * -1));
+  transform: rotate(calc(3 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(5) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(4 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(4 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(4 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(5) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(4 * var(--angle) * -1));
+  -ms-transform: rotate(calc(4 * var(--angle) * -1));
+  transform: rotate(calc(4 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(6) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(5 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(5 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(5 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(6) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(5 * var(--angle) * -1));
+  -ms-transform: rotate(calc(5 * var(--angle) * -1));
+  transform: rotate(calc(5 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(7) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(6 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(6 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(6 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(7) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(6 * var(--angle) * -1));
+  -ms-transform: rotate(calc(6 * var(--angle) * -1));
+  transform: rotate(calc(6 * var(--angle) * -1));
+}
+
+.steps__rotated-block-item:nth-of-type(8) .steps__rotated-block-item_wrapper {
+  -webkit-transform: rotate(calc(7 * var(--angle))) translateY(-8rem);
+  -ms-transform: rotate(calc(7 * var(--angle))) translateY(-8rem);
+  transform: rotate(calc(7 * var(--angle))) translateY(-8rem);
+}
+
+.steps__rotated-block-item:nth-of-type(8) .steps__rotated-block-item_inner {
+  -webkit-transform: rotate(calc(7 * var(--angle) * -1));
+  -ms-transform: rotate(calc(7 * var(--angle) * -1));
+  transform: rotate(calc(7 * var(--angle) * -1));
 }
 
 .customers {
@@ -2669,11 +2743,7 @@ h6 {
   }
 }
 
-@media screen and (max-width:1366px) {
-  html {
-    font-size: 8px;
-  }
-
+@media screen and (max-width:1440px) {
   .steps__row._order .steps__right-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2686,8 +2756,23 @@ h6 {
     justify-content: center;
   }
 
-  .steps__row {
-    margin-bottom: 20rem;
+  .steps__row.js-rotated-block {
+    padding-bottom: 30rem;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  html {
+    font-size: 8px;
+  }
+
+  .steps__row:nth-child(1) {
+    padding-bottom: 20rem;
+  }
+
+  .steps__blocks-item-icon {
+    width: 6.4rem;
+    height: 6.4rem;
   }
 }
 
@@ -2719,14 +2804,9 @@ h6 {
     grid-column: 12 span;
   }
 
-  .steps__row:nth-child(1) .steps__right-block,
-  .steps__row:nth-child(2) .steps__right-block {
+  .steps__row:nth-child(1) .steps__right-block {
     -ms-grid-column-align: center;
     justify-self: center;
-  }
-
-  .steps__blocks {
-    width: 59.8rem;
   }
 }
 
@@ -2899,7 +2979,6 @@ h6 {
 
   .steps__row {
     display: block;
-    margin-bottom: 5rem;
   }
 
   .steps__row .steps__right-block {
@@ -2915,6 +2994,18 @@ h6 {
     align-items: center;
   }
 
+  .steps__row.js-rotated-block {
+    padding-bottom: 0;
+  }
+
+  .steps__row.js-rotated-block .steps__left-block {
+    margin-bottom: 14rem;
+  }
+
+  .steps__row:nth-child(1) {
+    padding-bottom: 7rem;
+  }
+
   .steps__row:nth-child(2) {
     margin-bottom: 5rem;
   }
@@ -2924,7 +3015,7 @@ h6 {
   }
 
   .steps__left-block {
-    margin-bottom: 3.2rem;
+    margin-bottom: 6rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3165,8 +3256,12 @@ h6 {
     margin-bottom: 5.5rem;
   }
 
-  .steps__row:nth-child(2) .steps__left-block {
-    margin-bottom: 9.5rem;
+  .steps__row.js-rotated-block .steps__left-block {
+    margin-bottom: 4rem;
+  }
+
+  .steps__row:nth-child(3) .steps__left-block {
+    padding-top: 0;
   }
 
   .steps__content h3 {
@@ -3183,25 +3278,31 @@ h6 {
   .steps__blocks {
     max-width: 100%;
     width: 100%;
+    height: auto;
   }
 
   .steps__blocks-item {
     height: 16.4rem;
   }
 
-  .steps__blocks-item-icon {
-    width: 6.4rem;
-    height: 6.4rem;
+  .steps__rotated-block::before {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    top: 0;
+    left: 0;
   }
 
   .steps__rotated-block {
-    width: 26.5rem;
-    height: 26.5rem;
+    width: 100%;
+    height: 32rem;
   }
 
   .steps__rotated-block-item-icon {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
   }
 
   .steps__rotated-block-item-text {
@@ -3241,6 +3342,54 @@ h6 {
 
   .steps__card-wrapper::-webkit-scrollbar {
     display: none;
+  }
+
+  .steps__rotated-block-item:nth-of-type(1) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(0 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(0 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(0 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(2) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(1 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(1 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(1 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(3) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(2 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(2 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(2 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(4) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(3 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(3 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(3 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(5) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(4 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(4 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(4 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(6) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(5 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(5 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(5 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(7) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(6 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(6 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(6 * var(--angle))) translateY(-5rem);
+  }
+
+  .steps__rotated-block-item:nth-of-type(8) .steps__rotated-block-item_wrapper {
+    -webkit-transform: rotate(calc(7 * var(--angle))) translateY(-5rem);
+    -ms-transform: rotate(calc(7 * var(--angle))) translateY(-5rem);
+    transform: rotate(calc(7 * var(--angle))) translateY(-5rem);
   }
 
   .customers {

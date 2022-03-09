@@ -42,9 +42,9 @@
 
 		&._order {
 			grid-template-areas:
-			"b b b b b b a a a a a a";
+				"b b b b b b a a a a a a";
 
-			@include mq(custom, max, 1366) {
+			@include mq(custom, max, 1440) {
 				.steps__right-block {
 					display: flex;
 					align-items: center;
@@ -53,18 +53,35 @@
 			}
 		}
 
-		@include mq(custom, max, 1366) {
-			margin-bottom: 20rem;
-		}
-
 		@include mq(md) {
 			display: block;
-			margin-bottom: 5rem;
 
 			.steps__right-block {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+			}
+		}
+
+		&.js-rotated-block {
+			padding-bottom: 50rem;
+
+			@include mq(custom, max, 1440) {
+				padding-bottom: 30rem;
+			}
+			
+			@include mq(md) {
+				padding-bottom: 0;
+
+				.steps__left-block {
+					margin-bottom: 14rem;
+				}
+			}
+
+			@include mq(sm) {
+				.steps__left-block {
+					margin-bottom: 4rem;
+				}
 			}
 		}
 
@@ -79,12 +96,19 @@
 				}
 			}
 
-			padding-bottom: 80rem;
+			padding-bottom: 30rem;
+
+
+			@include mq(custom, max, 1366) {
+				padding-bottom: 20rem;
+			}
+
+			@include mq(md) {
+				padding-bottom: 7rem;
+			}
 		}
 
 		&:nth-child(2) {
-			padding-bottom: 80rem;
-
 			@include mq(md) {
 				margin-bottom: 5rem;
 
@@ -92,31 +116,21 @@
 					margin-bottom: 11rem;
 				}
 			}
-
-			@include mq(sm) {
-				.steps__left-block {
-					margin-bottom: 9.5rem;
-				}
-			}
-
-			.steps__right-block {
-				@include mq(lg) {
-					justify-self: center;
-				}
-			}
 		}
 
 		&:nth-child(3) {
 			.steps__left-block {
 				padding-top: 7rem;
+
+				@include mq(sm) {
+					padding-top: 0;
+				}
 			}
-
-
 		}
 
 		&:nth-child(even) {
 			grid-template-areas:
-			"b b b b b b a a a a a a";
+				"b b b b b b a a a a a a";
 			align-items: center;
 		}
 	}
@@ -126,7 +140,7 @@
 		display: flex;
 
 		@include mq(md) {
-			margin-bottom: 3.2rem;
+			margin-bottom: 6rem;
 			flex-direction: column;
 		}
 	}
@@ -195,19 +209,16 @@
 	}
 
 	&__blocks {
-		width: 50rem;
-		height: 50rem;
+		width: 47rem;
+		height: 47rem;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 2rem;
 
-		@include mq(lg) {
-			width: 59.8rem;
-		}
-
 		@include mq(sm) {
 			max-width: 100%;
 			width: 100%;
+			height: auto;
 		}
 	}
 
@@ -227,7 +238,7 @@
 	}
 
 	&__blocks-item-icon {
-		@include mq(sm) {
+		@include mq(custom, max, 1366) {
 			width: 6.4rem;
 			height: 6.4rem;
 		}
@@ -243,7 +254,7 @@
 		position: relative;
 		width: 42.2rem;
 		height: 42.2rem;
-		display: flex; 
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 
@@ -258,53 +269,52 @@
 			border-radius: 2rem;
 			background-color: rgba($color: #fff, $alpha: 0.1);
 			content: "";
+
+			@include mq(sm) {
+				width: 100%;
+				height: 100%;
+				transform: none;
+				top: 0;
+				left: 0;
+			}
 		}
 
 		@include mq(sm) {
-			width: 26.5rem;
-			height: 26.5rem;
+			width: 100%;
+			height: 32rem;
 		}
 	}
-
 
 	&__rotated-block-item {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) translateY(-4rem);
-		width: 50%;
-
-		--angle: 60deg;
-		--num: calc(360 / var(--angle));
-		--rotate: calc( 120deg / 2);
-
-		&:nth-child(1) {
-			transform: translate(-50%, -50%) rotate(calc(1 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (1 * var(--angle)))) - 45deg ));
-		}
-		&:nth-child(2) {
-			transform: translate(-50%, -50%) rotate(calc(2 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (2 * var(--angle)))) - 45deg ));
-
-		}
-		&:nth-child(3) {
-			transform: translate(-50%, -50%) rotate(calc(3 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (3 * var(--angle)))) - 45deg ));
-		}
-		&:nth-child(4) {
-			transform: translate(-50%, -50%) rotate(calc(4 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (4 * var(--angle)))) - 45deg ));
-		}
-		&:nth-child(5) {
-			transform: translate(-50%, -50%) rotate(calc(5 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (5 * var(--angle)))) - 45deg ));
-		}
-		&:nth-child(6) {
-			transform: translate(-50%, -50%) rotate(calc(6 * var(--angle))) translateX(62%) rotate(calc((calc(360deg - (6 * var(--angle)))) - 45deg ));
-		}
+		width: 12rem;
+		height: 10rem; 
 	}
 
 	&__rotated-block-item_wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform-origin: center bottom;
+	}
+
+	&__rotated-block-item_inner {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
 	}
+
 
 	&__rotated-block-item-icon {
 		display: block;
@@ -313,8 +323,8 @@
 		height: 4rem;
 
 		@include mq(sm) {
-			font-size: 2.5rem;
-			line-height: 2.5rem;
+			width: 2.6rem;
+			height: 2.6rem;
 		}
 	}
 
@@ -356,24 +366,28 @@
 			left: 5rem;
 			background-color: #3E8BC9;
 		}
+
 		&:nth-child(3) {
 			position: absolute;
 			top: 10rem;
 			left: 10rem;
 			background-color: #4695D0;
 		}
+
 		&:nth-child(4) {
 			position: absolute;
 			top: 15rem;
 			left: 15rem;
 			background-color: #55A1DA;
 		}
+
 		&:nth-child(5) {
 			position: absolute;
 			top: 20rem;
 			left: 20rem;
 			background: #55A1DA;
 		}
+
 		&:nth-child(6) {
 			position: absolute;
 			top: 25rem;
@@ -457,4 +471,30 @@
 			}
 		}
 	}
+}
+
+$n: 0;
+
+@mixin item($num0, $num1) {
+	.steps__rotated-block-item {
+		&:nth-of-type(#{$num1}) {
+			.steps__rotated-block-item_wrapper {
+				transform: rotate(calc(#{$num0} * var(--angle))) translateY(-8rem);
+
+				@include mq(sm) {
+					transform: rotate(calc(#{$num0} * var(--angle))) translateY(-5rem);
+				}
+			}
+
+			.steps__rotated-block-item_inner {
+				transform: rotate(calc(#{$num0} * var(--angle) * -1));
+			}
+		}
+	}
+}
+
+@for $i from 0 to 8 {
+	$n: $n + 1;
+
+	@include item($i, $n);
 }

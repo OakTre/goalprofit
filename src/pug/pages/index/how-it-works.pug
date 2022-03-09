@@ -34,15 +34,16 @@ section.how-it-works
 
 				.steps__right-block
 					.steps__rotated-block
-						- for (let i = 0; i<6; i++)
+						- for (let i = 0; i<5; i++)
 							.steps__rotated-block-item
 								.steps__rotated-block-item_wrapper
-									img.steps__rotated-block-item-icon(src="img/steps/step2-icon.svg", alt="")
-									span.steps__rotated-block-item-text
-										|	Self tuning
+									.steps__rotated-block-item_inner
+										img.steps__rotated-block-item-icon(src="img/steps/step2-icon.svg", alt="")
+										span.steps__rotated-block-item-text
+											|	Self tuning
 
-			.steps__row
-				.steps__left-block
+			.steps__row.js-steps-row3
+				.steps__left-block.js-text-block3
 					span.steps__legend
 						|	3 STEP
 					.steps__content
