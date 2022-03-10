@@ -1845,6 +1845,20 @@ h6 {
   height: 42.2rem;
 }
 
+.steps__rotated-block-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42.2rem;
+  height: 42.2rem;
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
+  -ms-transform: translate(-50%,-50%) rotate(45deg);
+  transform: translate(-50%,-50%) rotate(45deg);
+  border-radius: 2rem;
+  background-color: rgba(255,255,255,.1);
+  content: "";
+}
+
 .steps__rotated-block {
   position: relative;
   width: 42.2rem;
@@ -1859,18 +1873,17 @@ h6 {
   justify-content: space-between;
 }
 
-.steps__rotated-block::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.steps__rotated-block-inner2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 42.2rem;
   height: 42.2rem;
-  -webkit-transform: translate(-50%,-50%) rotate(45deg);
-  -ms-transform: translate(-50%,-50%) rotate(45deg);
-  transform: translate(-50%,-50%) rotate(45deg);
-  border-radius: 2rem;
-  background-color: rgba(255,255,255,.1);
-  content: "";
 }
 
 .steps__rotated-block-item {
@@ -2439,7 +2452,10 @@ h6 {
   display: block;
   width: 3rem;
   height: 3rem;
-  fill: rgba(255,255,255,.4);
+}
+
+.ceo__social-icon {
+  fill: #fff;
 }
 
 .team {
@@ -3286,7 +3302,7 @@ h6 {
     height: 16.4rem;
   }
 
-  .steps__rotated-block::before {
+  .steps__rotated-block-inner {
     width: 100%;
     height: 100%;
     -webkit-transform: none;

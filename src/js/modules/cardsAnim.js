@@ -18,6 +18,9 @@ export default () => {
 	}
 
 	const items = document.querySelectorAll(".steps__rotated-block-item");
+
+	if (!items.length) return;
+
 	let root = document.querySelector(".steps__rotated-block");
 
 	root.style.setProperty('--angle', 360 / items.length + "deg");
@@ -118,7 +121,8 @@ export default () => {
 			});
 
 			const block1 = document.querySelector(".steps__blocks");
-			const block2 = document.querySelector(".steps__rotated-block");
+			const blockRotated = document.querySelector(".steps__rotated-block");
+			const block2 = document.querySelector(".steps__rotated-block-inner2");
 			const block3 = document.querySelector(".steps__card:nth-child(1)");
 
 			gsap.set(block2, {
@@ -136,6 +140,9 @@ export default () => {
 				autoAlpha: 0,
 				y: "+2rem"
 			});
+			gsap.set(".steps__rotated-block-inner", {
+				autoAlpha: 0
+			})
 
 			const tl = gsap.timeline({
 				scrollTrigger: {
@@ -153,10 +160,19 @@ export default () => {
 				},
 			});
 
+			const tl1Icons = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".steps__row:nth-child(1)",
+					start: "top-=50 top",
+					end: "bottom center",
+					scrub: true,
+				},
+			});
+
 			const tl2 = gsap.timeline({
 				scrollTrigger: {
 					trigger: ".steps__row:nth-child(2)",
-					start: "top 30%",
+					start: "top 20%",
 					end: "bottom bottom",
 					endTrigger: ".js-steps-row3",
 					scrub: true,
@@ -195,30 +211,41 @@ export default () => {
 				.to(block1, {
 					x: () => {
 						const x1 = getCoords(block1).left + (block1.offsetWidth / 2);
-						const x2 = getCoords(block2).left + (block2.offsetWidth / 2);
+						const x2 = getCoords(blockRotated).left + (blockRotated.offsetWidth / 2);
 
 						return x2 - x1;
 					},
 					y: () => {
 						const y1 = getCoords(block1).top + (block1.offsetHeight / 2);
-						const y2 = getCoords(block2).top + (block2.offsetHeight / 2);
+						const y2 = getCoords(blockRotated).top + (blockRotated.offsetHeight / 2);
 
 						return y2 - y1;
 					},
 					scale: () => {
-						return block2.offsetWidth / block1.offsetWidth;
+						return blockRotated.offsetWidth / block1.offsetWidth;
 					},
 					rotate: "45deg",
 					duration: 1
 				})
-				.to(block1, {
+				.to(".steps__blocks", {
 					autoAlpha: 0,
 					duration: 1
-				}, 0.2)
+				})
+				.to(".steps__rotated-block-inner", {
+					autoAlpha: 1,
+				})
+
+
+			tl1Icons
+				.to(".steps__blocks-item-icon", {
+					rotate: "-45deg"
+				})
+
+
 			tl2
 				.to(block2, {
 					autoAlpha: 1
-				}, 0.2)
+				})
 				.to(".js-text-block2", {
 					autoAlpha: 1,
 					y: 0,
@@ -233,7 +260,8 @@ export default () => {
 					autoAlpha: 0,
 				})
 
-			tl3.to(block2, {
+
+			tl3.to(blockRotated, {
 				x: () => {
 					const xx1 = getCoords(block2).left + (block2.offsetWidth / 2);
 					const xx2 = getCoords(block3).left + (block3.offsetWidth / 2);
