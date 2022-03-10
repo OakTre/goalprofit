@@ -24,6 +24,78 @@ export default () => {
 
 
 	ScrollTrigger.matchMedia({
+		"(max-width: 767px)": function () {
+			let cardTmln = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".first",
+					start: "top 10%",
+					end: "+=" + (window.innerHeight * 2.5),
+					pin: true,
+					scrub: true,
+					onLeave: () => {
+						ScrollTrigger.refresh()
+					}
+				}
+			})
+
+			gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
+				cardTmln.to(card, {
+					yPercent: -100
+				});
+			});
+
+			let cardTmln2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".second",
+					start: "top 20%",
+					end: "+=" + (window.innerHeight * 2.5),
+					pin: true,
+					scrub: true,
+				}
+			})
+
+			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+				cardTmln2.to(card, {
+					yPercent: -100
+				});
+			});
+		},
+		"(max-width: 992px)": function () {
+			let cardTmln = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".first",
+					start: "top 20%",
+					end: "+=" + (window.innerHeight * 2.5),
+					pin: true,
+					scrub: true,
+					onLeave: () => {
+						ScrollTrigger.refresh()
+					}
+				}
+			})
+
+			gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
+				cardTmln.to(card, {
+					yPercent: -100
+				});
+			});
+
+			let cardTmln2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".second",
+					start: "top 30%",
+					end: "+=" + (window.innerHeight * 2.5),
+					pin: true,
+					scrub: true,
+				}
+			})
+
+			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+				cardTmln2.to(card, {
+					yPercent: -100
+				});
+			});
+		},
 		"(min-width: 992px)": function () {
 
 			let cardTmln = gsap.timeline({
@@ -34,11 +106,8 @@ export default () => {
 					pin: true,
 					scrub: true,
 					onLeave: () => {
-						restAnim();
-					},
-					onToggle: scrollTrigger => {
-						scrollTrigger.refresh()
-					},
+						ScrollTrigger.refresh()
+					}
 				}
 			})
 
@@ -68,147 +137,149 @@ export default () => {
 				y: "+2rem"
 			});
 
-			const restAnim = () => {
-				const tl = gsap.timeline({
-					scrollTrigger: {
-						trigger: ".steps__row:nth-child(1)",
-						start: "top 50%",
-						onToggle: scrollTrigger => {
-							scrollTrigger.refresh()
-						},
-					},
-				});
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".steps__row:nth-child(1)",
+					start: "top 50%",
+				},
+			});
 
-				const tl1 = gsap.timeline({
-					scrollTrigger: {
-						trigger: ".steps__row:nth-child(1)",
-						start: "top-=50 top",
-						end: "bottom center",
-						scrub: true,
-						invalidateOnRefresh: true,
-						onToggle: scrollTrigger => {
-							scrollTrigger.refresh()
-						},
-					},
-				});
+			const tl1 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".steps__row:nth-child(1)",
+					start: "top-=50 top",
+					end: "bottom center",
+					scrub: true,
+				},
+			});
 
-				const tl2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: ".steps__row:nth-child(2)",
-						start: "top 30%",
-						end: "bottom bottom",
-						endTrigger: ".js-steps-row3",
-						scrub: true,
-						pin: ".steps__row:nth-child(2)",
-						onToggle: scrollTrigger => {
-							scrollTrigger.refresh()
-						},
-					},
-				});
+			const tl2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".steps__row:nth-child(2)",
+					start: "top 30%",
+					end: "bottom bottom",
+					endTrigger: ".js-steps-row3",
+					scrub: true,
+					pin: ".steps__row:nth-child(2)",
+				},
+			});
 
-				const tl3 = gsap.timeline({
-					scrollTrigger: {
-						trigger: ".js-steps-row3",
-						start: "top 90%",
-						end: "bottom bottom",
-						endTrigger: ".js-steps-row3",
-						scrub: true,
-						onToggle: scrollTrigger => {
-							scrollTrigger.refresh()
-						},
-					},
-				});
+			const tl3 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".js-steps-row3",
+					start: "top 90%",
+					end: "bottom bottom",
+					endTrigger: ".js-steps-row3",
+					scrub: true,
+				},
+			});
 
-				const tl4 = gsap.timeline({
-					scrollTrigger: {
-						trigger: ".js-steps-row3",
-						start: "top 50%",
-						onToggle: scrollTrigger => {
-							scrollTrigger.refresh()
-						},
-					},
-				});
+			const tl4 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".js-steps-row3",
+					start: "top 50%",
+					onLeave: () => {
+						ScrollTrigger.refresh()
+					}
+				},
+			});
 
-				tl
-					.to(".steps__row:nth-child(1)", {
-						autoAlpha: 1,
-						y: 0,
-						duration: 1.5,
-					})
-
-				tl1
-					.to(block1, {
-						x: () => {
-							const x1 = getCoords(block1).left + (block1.offsetWidth / 2);
-							const x2 = getCoords(block2).left + (block2.offsetWidth / 2);
-
-							return x2 - x1;
-						},
-						y: () => {
-							const y1 = getCoords(block1).top + (block1.offsetHeight / 2);
-							const y2 = getCoords(block2).top + (block2.offsetHeight / 2);
-
-							return y2 - y1;
-						},
-						scale: () => {
-							return block2.offsetWidth / block1.offsetWidth;
-						},
-						rotate: "45deg",
-						duration: 1
-					})
-					.to(block1, {
-						autoAlpha: 0,
-						duration: 1
-					}, 0.2)
-				tl2
-					.to(block2, {
-						autoAlpha: 1
-					}, 0.2)
-					.to(".js-text-block2", {
-						autoAlpha: 1,
-						y: 0,
-						duration: 1,
-					}, "-=1")
-					.from(".steps__rotated-block-item", {
-						autoAlpha: 0,
-						duration: 0.4,
-						stagger: 0.4,
-					})
-					.to(".steps__rotated-block-item", {
-						autoAlpha: 0,
-					})
-
-				tl3.to(block2, {
-					x: () => {
-						const xx1 = getCoords(block2).left + (block2.offsetWidth / 2);
-						const xx2 = getCoords(block3).left + (block3.offsetWidth / 2);
-
-						return xx2 - xx1;
-					},
-					y: () => {
-						const yy1 = getCoords(block2).top + (block2.offsetHeight / 2);
-						const yy2 = getCoords(block3).top + (block3.offsetHeight / 2);
-
-						return yy2 - yy1;
-					},
-					scale: () => {
-						return block3.offsetWidth / block2.offsetWidth;
-					},
-					rotate: "-45deg",
+			tl
+				.to(".steps__row:nth-child(1)", {
+					autoAlpha: 1,
+					y: 0,
+					duration: 1.5,
 				})
 
-				tl4
-					.to(".js-text-block3", {
-						autoAlpha: 1,
-						y: 0,
-						duration: 1,
-					})
-					.from(".steps__card", {
-						autoAlpha: 0,
-						duration: 0.4,
-						stagger: 0.4,
-					}, "-=1")
-			}
+			tl1
+				.to(block1, {
+					x: () => {
+						const x1 = getCoords(block1).left + (block1.offsetWidth / 2);
+						const x2 = getCoords(block2).left + (block2.offsetWidth / 2);
+
+						return x2 - x1;
+					},
+					y: () => {
+						const y1 = getCoords(block1).top + (block1.offsetHeight / 2);
+						const y2 = getCoords(block2).top + (block2.offsetHeight / 2);
+
+						return y2 - y1;
+					},
+					scale: () => {
+						return block2.offsetWidth / block1.offsetWidth;
+					},
+					rotate: "45deg",
+					duration: 1
+				})
+				.to(block1, {
+					autoAlpha: 0,
+					duration: 1
+				}, 0.2)
+			tl2
+				.to(block2, {
+					autoAlpha: 1
+				}, 0.2)
+				.to(".js-text-block2", {
+					autoAlpha: 1,
+					y: 0,
+					duration: 1,
+				}, "-=1")
+				.from(".steps__rotated-block-item", {
+					autoAlpha: 0,
+					duration: 0.4,
+					stagger: 0.4,
+				})
+				.to(".steps__rotated-block-item", {
+					autoAlpha: 0,
+				})
+
+			tl3.to(block2, {
+				x: () => {
+					const xx1 = getCoords(block2).left + (block2.offsetWidth / 2);
+					const xx2 = getCoords(block3).left + (block3.offsetWidth / 2);
+
+					return xx2 - xx1;
+				},
+				y: () => {
+					const yy1 = getCoords(block2).top + (block2.offsetHeight / 2);
+					const yy2 = getCoords(block3).top + (block3.offsetHeight / 2);
+
+					return yy2 - yy1;
+				},
+				scale: () => {
+					return block3.offsetWidth / block2.offsetWidth;
+				},
+				rotate: "-45deg",
+			})
+
+			tl4
+				.to(".js-text-block3", {
+					autoAlpha: 1,
+					y: 0,
+					duration: 1,
+				})
+				.from(".steps__card", {
+					autoAlpha: 0,
+					duration: 0.4,
+					stagger: 0.4,
+				}, "-=1")
+
+
+			let cardTmln2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".second",
+					start: "top 30%",
+					end: "+=" + (window.innerHeight * 2.5),
+					pin: true,
+					scrub: true,
+				}
+			})
+
+			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+				cardTmln2.to(card, {
+					yPercent: -100
+				});
+			});
 		},
 		"all": function () {
 
