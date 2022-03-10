@@ -1292,14 +1292,14 @@ h6 {
 }
 
 .intro-block__img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   display: block;
   width: 86.4rem;
   height: 58.5rem;
   -o-object-fit: cover;
   object-fit: cover;
+  position: relative;
+  right: 8rem;
+  top: 3rem;
 }
 
 .intro-block__img svg {
@@ -1307,14 +1307,9 @@ h6 {
   height: 100%;
 }
 
-.intro-block__img._mobile {
-  display: none;
-  position: static;
-  bottom: auto;
-  right: auto;
-  width: 62.1rem;
-  height: 48.8rem;
-  margin-left: auto;
+.intro-block__img svg * {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .contact-us {
@@ -2941,6 +2936,11 @@ h6 {
   }
 
   .intro-block_right {
+    -ms-grid-column-span: 12;
+    grid-column: 12 span;
+  }
+
+  .intro-block_right p {
     display: none;
   }
 
@@ -2959,13 +2959,11 @@ h6 {
   }
 
   .intro-block__img {
-    display: none;
-  }
-
-  .intro-block__img._mobile {
-    display: block;
     width: 100%;
     height: 39.8rem;
+    margin: 5rem auto 0;
+    right: auto;
+    top: auto;
   }
 
   .retailers__heading-wrapper {
@@ -3173,6 +3171,10 @@ h6 {
   .intro-block__content p {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .intro-block__img {
+    height: 28.8rem;
   }
 
   .contact-us {
