@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "gulp project",
     "scripts": {
-        "gulp": "gulp"
+        "gulp": "gulp",
+        "build": "gulp build"
     },
     "lint-staged": {
         "*.scss": "stylelint"

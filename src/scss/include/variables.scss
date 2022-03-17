@@ -36,6 +36,7 @@
 	--title-XS: var(--regular) 1.6rem/120% var(--second-ff);
 	--title-XS-bold: var(--bold) 1.6rem/120% var(--second-ff);
 	--title-XXS: var(--regular) 1.2rem/120% var(--second-ff);
+	--title-mobile: var(--bold) 2.4rem/2.7rem var(--second-ff);
 
 	// body
 	--body-XL: var(--regular) 2rem/125% var(--main-ff);
@@ -43,7 +44,7 @@
 	--body-L: var(--regular) 1.6rem/120% var(--main-ff);
 	--body-M: var(--regular) 1.4rem/120% var(--main-ff);
 	--body-M-semibold: 600 1.4rem/120% var(--main-ff);
-	--body-S: var(--regular) 1.2rem/auto var(--main-ff);
+	--body-S: var(--regular) 1.2rem/1.5rem var(--main-ff);
 
 }
 

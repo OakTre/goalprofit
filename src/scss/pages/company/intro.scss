@@ -6,8 +6,23 @@
     background-size: cover;
     margin-bottom: 14rem;
 
+	@include mq(md) {
+		margin-bottom: 7rem;
+	}
+
+	@include mq(sm) {
+		padding-top: 9rem;
+		height: 44rem;
+		background-position: 60% 100%;
+		margin-bottom: 4rem;
+	}
+
     &__block {
         grid-column: 6 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
     }
 
     &__content {
@@ -15,18 +30,31 @@
         &.mod-title-max-width {
             h1 {
                 max-width: 39.3rem;
+
+				@include mq(md) {
+					max-width: 100%;
+				}
             }
         }
 
         h1 {
             font: var(--title-XL);
             color: var(--color-white);
+
+			@include mq(sm) {
+				font-size: 2.8rem;
+				margin-bottom: 0.8rem;
+			}
         }
 
         P {
             font: var(--title-S);
             color: var(--color-white);
             max-width: 44.1rem;
+
+			@include mq(sm) {
+				font: var(--body-M);
+			}
         }
     }
 }

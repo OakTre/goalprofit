@@ -399,11 +399,19 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap: 20px;
+
+	@include mq(sm) {
+		gap: 20px 0;
+	}
 }
 
 .section-name {
 	display: block;
 	font: var(--body-XL);
+
+	@include mq(sm) {
+		font: var(--body-S);
+	}
 }
 
 .slider-nav {
@@ -460,7 +468,7 @@
 			line-height: 150%;
 			text-transform: none;
 			color: #ADADAD;
-			padding-left: 0.4rem;	
+			padding-left: 0.4rem;
 		}
 	}
 

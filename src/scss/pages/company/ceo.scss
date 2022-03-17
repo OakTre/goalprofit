@@ -5,15 +5,29 @@
     background-position: center;
     margin-bottom: 16.9rem;
 
+	@include mq(md) {
+		margin-bottom: 10rem;
+	}
+
+	@include mq(sm) {
+		padding: 4rem 0 5.2rem;
+		margin-bottom: 4rem;
+	}
+
     &__content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
+
         h2 {
             font: var(--title-L-bold);
             margin-bottom: 7.1rem;
             color: var(--color-white);
+
+			@include mq(sm) {
+				font: var(--title-mobile);
+				margin-bottom: 2.4rem;
+			}
         }
 
         p {
@@ -22,18 +36,42 @@
             margin-bottom: 2.5rem;
             max-width: 90%;
 
+			@include mq(sm) {
+				font: var(--title-XXS);
+				margin-bottom: 2.4rem;
+			}
+
             b {
                 font: var(--title-M);
+
+				@include mq(sm) {
+					font: var(--title-XS);
+					margin-bottom: 2.4rem;
+				}
             }
         }
     }
 
     &__btn {
         margin-top: auto;
+
+		@include mq(md) {
+			display: none;
+
+			&._mobile {
+				display: flex;
+
+				margin-top: 1.3rem;
+			}
+		}
     }
 
     &__block {
         grid-column: 6 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 
         &:nth-child(2) {
             display: flex;
@@ -47,6 +85,18 @@
         height: 63.7rem;
         border-radius: 2rem;
         object-fit: cover;
+
+		@include mq(md) {
+			width: 46rem;
+			height: 53.7rem;
+			object-position: top;
+		}
+
+		@include mq(sm) {
+			width: 21.5rem;
+			height: 29.7rem;
+			object-position: top;
+		}
     }
 
     &__name {
@@ -54,7 +104,20 @@
         color: var(--color-white);
         font: var(--title-M);
         margin-bottom: 1.5rem;
+
+		@include mq(sm) {
+			font: var(--body-L);
+			margin-bottom: 0.9rem;
+		}
     }
+
+	&__contacts {
+		@include mq(sm) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
 
     &__position {
         text-align: right;
@@ -62,12 +125,21 @@
         font: var(--body-L);
         max-width: 22rem;
         margin-bottom: 6rem;
+
+		@include mq(sm) {
+			font: var(--body-S);
+			margin-bottom: 0;
+		}
     }
 
     &__social {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+		@include mq(sm) {
+			margin-top: auto;
+		}
     }
 
     &__social-item {
@@ -79,7 +151,7 @@
         width: 3rem;
         height: 3rem;
     }
-    
+
     &__social-icon {
         fill: #fff;
     }

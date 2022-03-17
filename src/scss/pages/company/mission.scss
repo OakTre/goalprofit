@@ -1,8 +1,20 @@
 .mission {
     margin-bottom: 16.5rem;
 
+	@include mq(md) {
+		margin-bottom: 7rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+
     &__content {
         margin-bottom: 14.1rem;
+
+		@include mq(sm) {
+			margin-bottom: 5.2rem;
+		}
 
         p {
             max-width: 94rem;
@@ -12,11 +24,24 @@
             &:nth-last-of-type(1) {
                 margin-bottom: 0;
             }
+
+			@include mq(sm) {
+				font-size: 2.4rem;
+				line-height: 2.7rem;
+			}
         }
+
+		@include mq(md) {
+			margin-bottom: 7rem;
+		}
     }
 
     &__section-name {
         margin-bottom: 3rem;
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+		}
     }
 
     &__content-info {
@@ -26,23 +51,52 @@
             font: var(--body-XL);
             max-width: 28.5rem;
             margin-right: 7.5rem;
+
+			@include mq(md) {
+				margin-right: 3rem;
+			}
+
+			@include mq(sm) {
+				margin-right: 0;
+				max-width: 100%;
+				font: var(--body-L);
+			}
         }
+
+		@include mq(sm) {
+			margin-bottom: 3.6rem;
+		}
     }
 
     &__content-info-second {
         p {
             max-width: 100%;
+			@include mq(sm) {
+				font: var(--body-L);
+			}
         }
     }
 
     &__left-block {
         grid-column: 3 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
     }
 
     &__right-block {
         grid-column: 9 span;
         display: flex;
         align-items: flex-start;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
     }
 
     &__nubmer {
@@ -50,9 +104,16 @@
         display: block;
         font: var(--title-hero);
         background: linear-gradient(91.83deg, #095092 0%, #00A7E5 100%);
+		background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-right: 5.7rem;
+
+		@include mq(sm) {
+			margin-bottom: 3.6rem;
+			font-size: 10rem;
+			line-height: 0.8;
+		}
     }
 
     &__nubmer-plus {

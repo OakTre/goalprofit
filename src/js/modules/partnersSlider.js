@@ -17,6 +17,18 @@ export default () => {
             nextEl: '.js-swiper-button-next',
             prevEl: '.js-swiper-button-prev',
         },
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+			  slidesPerView: 2.5,
+			  spaceBetween: 20
+			},
+			// when window width is >= 480px
+			767: {
+			  slidesPerView: 4,
+			  spaceBetween: 84,
+			},
+		}
     });
 
     let partersSlider2 = new Swiper(partner2, {
@@ -30,5 +42,17 @@ export default () => {
             nextEl: '.js-swiper-button-next2',
             prevEl: '.js-swiper-button-prev2',
         },
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+			  slidesPerView: 2.5,
+			  spaceBetween: 20
+			},
+			// when window width is >= 480px
+			767: {
+			  slidesPerView: 4,
+			  spaceBetween: 84,
+			},
+		}
     });
 };

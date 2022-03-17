@@ -2,22 +2,52 @@
     padding: 8.7rem 0 8rem;
     background-color: #F4F4F4;
 
+	@include mq(sm) {
+		padding: 4rem 0;
+	}
+
     &__left-block {
         grid-column: 4 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+
+			.slider-nav {
+				display: none;
+			}
+		}
 
         h2 {
             font: var(--title-L);
             margin-bottom: 4rem;
+
+			@include mq(sm) {
+				margin-bottom: 2.4rem;
+				font: var(--title-mobile);
+				font-weight: 400;
+			}
         }
     }
 
     &__right-block {
         grid-column: 8 span;
         overflow: hidden;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
     }
 
     &.grey-bg {
         background-color: #EEEEEE;
         margin-bottom: 14rem;
+
+		@include mq(md) {
+			margin-bottom: 7rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 4rem;
+		}
     }
 }
