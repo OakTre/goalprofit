@@ -7,6 +7,7 @@ import cardsAnim from "./modules/cardsAnim.js";
 import partnersSlider from "./modules/partnersSlider.js";
 import historySlider from "./modules/historySlider.js";
 import map from "./modules/map.js";
+import initAccordion from "./modules/initAccordion";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -45,6 +46,7 @@ documentReady(() => {
 	partnersSlider();
 	historySlider();
 	map();
+	initAccordion();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
@@ -54,7 +56,7 @@ documentReady(() => {
 
 	// gsap.registerPlugin(ScrollTrigger);
 	if (!document.querySelector(".js-anim-img")) return;
-	
+
 	gsap.set(".js-anim-img", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-content-anim", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-start-anim-header", { y: -35, opacity: 0 });

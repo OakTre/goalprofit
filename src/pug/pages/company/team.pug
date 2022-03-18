@@ -1,67 +1,71 @@
 -
-    let team_arr = [
-        {
-            name: "Paul Walker" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Dominic Toretto" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "John McClane" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Keira Knightley" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Ewan McGregor" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Tom Hiddleston" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Tom Hardy" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-        {
-            name: "Emilia Clarke" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        }
-    ]
+	let team_arr = [
+		{
+			name: "Paul Walker" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Dominic Toretto" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "John McClane" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Keira Knightley" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Ewan McGregor" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Tom Hiddleston" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Tom Hardy" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+		{
+			name: "Emilia Clarke" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		}
+	]
 
-    let team_arr2 = [
-        {
-            name: "Paul Walker" ,
-            position: "ex-Nielsen Managing Director, UK & Ireland" 
-        },
-    ]
+	let team_arr2 = [
+		{
+			name: "Paul Walker" ,
+			position: "ex-Nielsen Managing Director, UK & Ireland"
+		},
+	]
 
 section.team
-    .site-container 
-        .team__container
-            h2
-                |   Meet the team
-            .team__list.grid-container
-                for item, index in team_arr
-                    .team__item
-                        +pictureLazy(`team${index}.jpg`)(class="team__item-img")
-                        a.team__item-link-name(href="/")
-                            span=item.name
-                            +icon("in")(width="20" height="20" class="team__item-icon")
-                        p.team__item-position=item.position 
-        .team__container
-            h2
-                |   Meet the Advisory Board
-            .team__list.grid-container
-                for item, index in team_arr2
-                    .team__item
-                        +pictureLazy(`team${index}.jpg`)(class="team__item-img")
-                        a.team__item-link-name(href="/")
-                            span=item.name
-                            +icon("in")(width="20" height="20" class="team__item-icon")
-                        p.team__item-position=item.position 
+	.site-container
+		.team__container
+			h2
+				|   Meet the team
+			.team__list.grid-container
+				for item, index in team_arr
+					a.team__item(href="/")
+						.team__item-img-wrapper
+							+icon("in")(width="20" height="20" class="team__item-icon _mobile")
+							+pictureLazy(`team${index}.jpg`)(class="team__item-img")
+						span.team__item-link-name
+							span=item.name
+							+icon("in")(width="20" height="20" class="team__item-icon")
+						p.team__item-position=item.position
+		.team__container
+			h2
+				|   Meet the Advisory Board
+			.team__list.grid-container
+				for item, index in team_arr2
+					a.team__item(href="/")
+						.team__item-img-wrapper
+							+icon("in")(width="20" height="20" class="team__item-icon _mobile")
+							+pictureLazy(`team${index}.jpg`)(class="team__item-img")
+						span.team__item-link-name
+							span=item.name
+							+icon("in")(width="20" height="20" class="team__item-icon")
+						p.team__item-position=item.position

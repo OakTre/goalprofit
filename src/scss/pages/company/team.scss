@@ -52,6 +52,12 @@
     &__item {
         grid-column: 3 span;
 
+		&:hover {
+            .icon {
+                fill: #0e76a8;
+            }
+        }
+
 		@include mq(md) {
 			grid-column: 4 span;
 		}
@@ -60,8 +66,17 @@
 			flex-shrink: 0;
 			grid-column: none;
 			width: 16.6rem;
+			margin-right: 0.8rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
     }
+
+	&__item-img-wrapper {
+		position: relative;
+	}
 
     &__item-img {
         display: block;
@@ -82,12 +97,6 @@
         align-items: center;
         margin-bottom: 1.6rem;
         font: var(--title-S);
-
-        &:hover {
-            .icon {
-                fill: #0e76a8;
-            }
-        }
 
 		@include mq(sm) {
 			font: var(--title-XS);
@@ -112,6 +121,18 @@
         fill: var(--color-dark);
         margin-left: 1.2rem;
         transition: fill 200ms;
+
+		&._mobile {
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
+			display: none;
+
+			@include mq(sm) {
+				display: block;
+				fill: #0e76a8;
+			}
+		}
 
 		@include mq(sm) {
 			display: none;

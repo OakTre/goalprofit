@@ -1,5 +1,22 @@
-section.map
-    .map__container(id="contact-us-map" data-map-icon="img/marker.svg")
-        input(type="hidden" name="coordinates" value='[{"name": "Austin", "country": "USA", "street":"2700 N 29th Ave, STE 109, Hollywood, FL 33020", "email":"hello@goalprofit.com", "tel":"+0 (525) 156 548 1258", "coords": [26.035092346155736, -80.16586537262737]}, {"name": "KRAKOW", "country": "Finland", "street":"2700 N 29th Ave, STE 109, Hollywood, FL 33020", "email":"hello@goalprofit.com", "tel":"+0 (525) 156 548 1258", "coords": [50.05842801181518, 19.93552068166105]}]')
+section.map.offices
+	.site-container.offices__container
+		h2.offices__title Our offices
+		ul.offices__list
+			- for (let i = 0; i<3; i++)
+				li.offices__item
+					button.offices__heading.button-reset.js-drop-menu-btn
+						span.offices__city KRAKOW
+						span.offices__location Finland
+						+icon("shevron-top")(width="24" height="24" class="offices__shevron-icon")
+					.drop-menu-container.js-drop-menu-container
+						.offices__body.drop-menu.js-drop-menu
+							p.offices__adres
+								|	2700 N 29th Ave, STE 109, Hollywood, FL 33020
+							span.offices__small-legend Email
+							a.offices__link(href="mailto:hello@goalprofit.com") hello@goalprofit.com
+							span.offices__small-legend Phone Number
+							a.offices__link(href="tel:+05251565481258") +0 (525) 156 548 1258
+	.map__container(id="contact-us-map" data-map-icon="img/marker.svg")
+		input(type="hidden" name="coordinates" value='[{"name": "Austin", "country": "USA", "street":"2700 N 29th Ave, STE 109, Hollywood, FL 33020", "email":"hello@goalprofit.com", "tel":"+0 (525) 156 548 1258", "coords": [26.035092346155736, -80.16586537262737]}, {"name": "KRAKOW", "country": "Finland", "street":"2700 N 29th Ave, STE 109, Hollywood, FL 33020", "email":"hello@goalprofit.com", "tel":"+0 (525) 156 548 1258", "coords": [50.05842801181518, 19.93552068166105]}]')
 
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM-QwzS2G0X_PiDPqQX9v4p1a66oHG2cE")

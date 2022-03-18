@@ -5,6 +5,11 @@
     background-color: var(--color-grey2);
     margin-bottom: 6rem;
 
+	@include mq(sm) {
+		background-color: transparent;
+		height: auto;
+	}
+
     &__container {
         position: absolute;
         top: 0;
@@ -34,4 +39,86 @@
             content: none;
         }
     }
+}
+
+
+.offices {
+	&__container {
+		display: none;
+
+		@include mq(sm) {
+			display: block;
+		}
+	}
+
+	&__title {
+		font: var(--title-mobile);
+		font-weight: 400;
+		margin-bottom: 2.4rem;
+	}
+
+	&__list {
+		width: 100%;
+	}
+
+	&__item {
+		width: 100%;
+		background-color: var(--color-white);
+		border-radius: 1.5rem;
+		overflow: hidden;
+		margin-bottom: 0.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__heading {
+		padding: 1.6rem 2rem;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__city {
+		font: var(--body-L);
+		margin-right: 1rem;
+	}
+
+	&__location {
+		font: var(--body-S);
+	}
+
+	&__shevron-icon {
+		width: 2.4rem;
+		height: 2.4rem;
+		fill: none;
+		stroke: var(--color-dark);
+		margin-left: auto;
+	}
+
+	&__body {
+		padding: 2.6rem 2.5rem;
+	}
+
+	&__adres {
+		font: var(--body-XL);
+		margin-bottom: 3.8rem;
+	}
+
+	&__small-legend {
+		display: block;
+		margin-bottom: 0.2rem;
+		font: var(--body-S);
+	}
+
+	&__link {
+		display: inline-block;
+		font: var(--body-L);
+		margin-bottom: 1.6rem;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 0;
+		}
+	}
 }

@@ -494,3 +494,10 @@
 		}
 	}
 }
+
+.drop-menu-container {
+	overflow: hidden;
+	max-height: 0;
+
+	transition: max-height 200ms;
+}
