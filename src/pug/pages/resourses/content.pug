@@ -1,0 +1,41 @@
+-
+	let arr_news = [
+		"All",
+		"News",
+		"Case studies",
+		"Webinars",
+		"Whitepapers",
+		"Decks",
+		"Blog posts",
+		"Media"
+	]
+
+	let arr_news1 = [
+		"Dynamic Pricing in Retail",
+		"Build or Buy: Strategic dilemma in IT",
+		"Rapid Application Development: Fastest time to value",
+		"Build or Buy: Strategic dilemma in IT",
+		"Rapid Application Development: Fastest time to value",
+		"GoalProfit Pricing Talks - special guest Lukasz Szala - Project manager Marketing Investment Group"
+	]
+
+
+section.news-content
+	.site-container.news-content__container
+		.news-content__links
+			for item,index in arr_news
+				- let isActive = index === 1 ? "is-active" : null
+				a.news-content__category(href="/" class=isActive)= item
+
+		.news-content__list
+			for item,index in arr_news1
+				a.news-content__item(href="/")
+					img(src="img/news-content/img1.jpg" class="news-content__item-img" alt="")
+					.news-content__tags
+						span.news-content__item-category News
+						span.news-content__item-time 05.05.2021
+					h3.news-content__item-heading= item
+					p.news-content__item-txt GoalProfit Price Optimization 1 slide fits all.
+
+		include ../../parts/pagination.pug
+		include ../../parts/subscribe.pug

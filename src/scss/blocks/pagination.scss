@@ -1,0 +1,47 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 10rem;
+
+	@include mq(sm) {
+		margin-bottom: 4.6rem;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		margin-right: 0.8rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 5rem;
+		height: 5rem;
+		font: var(--body-M-semibold);
+		border-radius: 1rem;
+		background-color: var(--color-white);
+
+		&:hover {
+			color: var(--color-light-blue);
+		}
+
+		&.isActive {
+			color: var(--color-light-blue);
+		}
+
+		&.isEmpty {
+			background-color: transparent;
+			pointer-events: none;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+section.subscribe
+	.site-container.subscribe__container.lazy(data-bg="img/subcribe-form-bg.png" data-bg-fallback="img/subcribe-form-bg.png")
+		form.subscribe__form(action="")
+			h2.subscribe__heading Subscribe to important news
+			label.subscribe__form-label
+				input.subscribe__form-input(type="text" name="subscribe" placeholder="email")
+			+button("Subscribe", "white")(class="subscribe__form-btn")
+			p.subscribe__form-agreement
+				|	By clicking 'Send' you agree to the
+				a(href="/")
+					|	 Privacy Policy

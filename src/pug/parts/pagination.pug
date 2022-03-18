@@ -1,0 +1,7 @@
+.pagination
+	ul.pagination__list
+		- for (let i = 1; i<6; i++ )
+			- let isEmpty = i === 4 ? "..." : i
+			- let isEmptyClass = i === 4 ? "isEmpty" : null
+			li.pagination__item
+				a.pagination__link(href="/" class=isEmptyClass)= isEmpty

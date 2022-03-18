@@ -326,6 +326,12 @@
 			}
 		}
 
+		.header__mobile-btn {
+			span {
+				background-color: var(--color-white);
+			}
+		}
+
 		.form__textarea {
 			border-color: var(--color-white);
 			color: var(--color-white);
