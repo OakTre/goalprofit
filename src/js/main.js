@@ -8,6 +8,7 @@ import partnersSlider from "./modules/partnersSlider.js";
 import historySlider from "./modules/historySlider.js";
 import map from "./modules/map.js";
 import initAccordion from "./modules/initAccordion";
+import newsDetailSwiper from "./modules/newsDetailSwiper";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -47,6 +48,7 @@ documentReady(() => {
 	historySlider();
 	map();
 	initAccordion();
+	newsDetailSwiper();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 

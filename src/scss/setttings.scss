@@ -97,6 +97,14 @@ h6 {
 	flex-direction: column;
 	min-height: 100vh;
 	overflow: hidden;
+
+	&.overflow-visible {
+		overflow: visible;
+
+		@include mq(sm) {
+			overflow: hidden;
+		}
+	}
 }
 
 .page-main {

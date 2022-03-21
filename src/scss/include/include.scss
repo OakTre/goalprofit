@@ -37,6 +37,22 @@
 				font-size: 1.4rem;
 				line-height: 1.7rem;
 			}
+
+			&.current-menu-item {
+				position: relative;
+
+				&::before {
+					position: absolute;
+					bottom: calc(100% + 0.5rem);
+					left: 50%;
+					transform: translateX(-50%);
+					width: 0.6rem;
+					height: 0.6rem;
+					background: linear-gradient(91.83deg, #095092 0%, #00A7E5 100%);
+					border-radius: 50%;
+					content: "";
+				}
+			}
 		}
 	}
 }
@@ -425,6 +441,20 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 13.4rem;
+
+	&._small {
+		width: 7.2rem;
+
+		.slider-nav__btn {
+			width: 3.2rem;
+			height: 3.2rem;
+
+			.slider-nav__btn-icon {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
 
 	&__btn {
 		display: flex;
