@@ -12,7 +12,7 @@
   <body>
     <div class="preloader"></div>
     <div class="page-wrapper">
-      <header class="header">
+      <header class="header fix-block">
         <div class="site-container header__container js-start-anim-header">
           <div class="header_left">
             <button class="button-reset header__mobile-btn">
@@ -170,6 +170,44 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="callback" style="background-image: url(img/modalBg.jpg)">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close">
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content-block">
+            <span class="modal__small-legend">Request A Demo</span>
+            <p class="modal__legend">If you are a retailer, we will prepare a free tailored-made demonstration.</p>
+          </div>
+          <div class="modal__content-block">
+            <form class="form _white" action="/" data-need-validation>
+              <label class="form__input-container">
+                <input class="form__input" type="text" name="name" placeholder="name" data-parsley-required>
+              </label>
+              <label class="form__input-container">
+                <input class="form__input" type="email" name="email" placeholder="Email" data-parsley-required>
+              </label>
+              <label class="form__input-container">
+                <textarea class="form__textarea" name="qusetion" placeholder="Question"></textarea>
+              </label>
+              <div class="form__button-wrapper">
+                <p>	By clicking 'Send' you agree to the
+                  <a href="/">	 Privacy Policy</a>
+                </p>
+                <button class="button-reset button form__button">
+                  <span data-text="Send">	Send</span>
+                  <svg class="icon icon-button-arrow form__button-icon button__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#button-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script src="js/main.js?v=0.0.0.2"></script>
