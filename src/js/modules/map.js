@@ -16,7 +16,6 @@ export default () => {
 	mapitems.forEach((item, index)=>{
 		let inptCoords = item.querySelector("input[name=coords]").value;
 		inptCoords = JSON.parse(inptCoords);
-		console.log(inptCoords);
 		let lat = inptCoords[0];
 		let lng = inptCoords[1];
 		let coordinates = {
@@ -29,8 +28,6 @@ export default () => {
 			map: map,
 			icon: markerImage
 		});
-
-		console.log(item.dataset.name);
 
 		bounds.extend(marker.position);
 
