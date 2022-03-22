@@ -118,6 +118,13 @@
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.7rem;
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
+}
+
+.nav ul li a:hover {
+  color: var(--color-light-blue);
 }
 
 .nav ul li.current-menu-item {
@@ -152,6 +159,13 @@
   font-size: 2.2rem;
   line-height: 3rem;
   font-family: var(--second-ff);
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--color-light-blue);
 }
 
 .second-font {
@@ -560,6 +574,16 @@
   fill: var(--color-dark);
 }
 
+.social__link .icon {
+  -webkit-transition: fill .2s;
+  -o-transition: fill .2s;
+  transition: fill .2s;
+}
+
+.social__link:hover .icon {
+  fill: var(--color-light-blue);
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -874,6 +898,13 @@ h6 {
   padding: .6rem 1rem;
   border-radius: 2rem;
   cursor: pointer;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.header__button:hover {
+  opacity: .7;
 }
 
 .header__nav ul li a {
