@@ -739,17 +739,18 @@
           <div class="site-container offices__container">
             <h2 class="offices__title">Our offices</h2>
             <ul class="offices__list">
-              <li class="offices__item">
+              <li class="offices__item js-map-item" data-name="Austin" data-location="USA" data-street="2700 N 29th Ave, STE 109, Hollywood, FL 33020" data-emal="hello@goalprofit.com" data-tel="+0 (525) 156 548 1258">
+                <input type="hidden" name="coords" value="[26.035092346155736,-80.16586537262737]">
                 <button class="offices__heading button-reset js-drop-menu-btn">
-                  <span class="offices__city">KRAKOW</span>
-                  <span class="offices__location">Finland</span>
+                  <span class="offices__city">Austin</span>
+                  <span class="offices__location">USA</span>
                   <svg class="icon icon-shevron-top offices__shevron-icon" width="24" height="24">
                     <use xlink:href="img/sprite.svg#shevron-top"></use>
                   </svg>
                 </button>
                 <div class="drop-menu-container js-drop-menu-container">
                   <div class="offices__body drop-menu js-drop-menu">
-                    <p class="offices__adres">	2700 N 29th Ave, STE 109, Hollywood, FL 33020</p>
+                    <p class="offices__adres">2700 N 29th Ave, STE 109, Hollywood, FL 33020</p>
                     <span class="offices__small-legend">Email</span>
                     <a class="offices__link" href="mailto:hello@goalprofit.com">hello@goalprofit.com</a>
                     <span class="offices__small-legend">Phone Number</span>
@@ -757,7 +758,8 @@
                   </div>
                 </div>
               </li>
-              <li class="offices__item">
+              <li class="offices__item js-map-item" data-name="KRAKOW" data-location="Finland" data-street="2700 N 29th Ave, STE 109, Hollywood, FL 33020" data-emal="hello@goalprofit.com" data-tel="+0 (525) 156 548 1258">
+                <input type="hidden" name="coords" value="[50.05842801181518,19.93552068166105]">
                 <button class="offices__heading button-reset js-drop-menu-btn">
                   <span class="offices__city">KRAKOW</span>
                   <span class="offices__location">Finland</span>
@@ -767,25 +769,7 @@
                 </button>
                 <div class="drop-menu-container js-drop-menu-container">
                   <div class="offices__body drop-menu js-drop-menu">
-                    <p class="offices__adres">	2700 N 29th Ave, STE 109, Hollywood, FL 33020</p>
-                    <span class="offices__small-legend">Email</span>
-                    <a class="offices__link" href="mailto:hello@goalprofit.com">hello@goalprofit.com</a>
-                    <span class="offices__small-legend">Phone Number</span>
-                    <a class="offices__link" href="tel:+05251565481258">+0 (525) 156 548 1258</a>
-                  </div>
-                </div>
-              </li>
-              <li class="offices__item">
-                <button class="offices__heading button-reset js-drop-menu-btn">
-                  <span class="offices__city">KRAKOW</span>
-                  <span class="offices__location">Finland</span>
-                  <svg class="icon icon-shevron-top offices__shevron-icon" width="24" height="24">
-                    <use xlink:href="img/sprite.svg#shevron-top"></use>
-                  </svg>
-                </button>
-                <div class="drop-menu-container js-drop-menu-container">
-                  <div class="offices__body drop-menu js-drop-menu">
-                    <p class="offices__adres">	2700 N 29th Ave, STE 109, Hollywood, FL 33020</p>
+                    <p class="offices__adres">2700 N 29th Ave, STE 109, Hollywood, FL 33020</p>
                     <span class="offices__small-legend">Email</span>
                     <a class="offices__link" href="mailto:hello@goalprofit.com">hello@goalprofit.com</a>
                     <span class="offices__small-legend">Phone Number</span>
@@ -795,9 +779,7 @@
               </li>
             </ul>
           </div>
-          <div class="map__container" id="contact-us-map" data-map-icon="img/marker.svg">
-            <input type="hidden" name="coordinates" value="[{&quot;name&quot;: &quot;Austin&quot;, &quot;country&quot;: &quot;USA&quot;, &quot;street&quot;:&quot;2700 N 29th Ave, STE 109, Hollywood, FL 33020&quot;, &quot;email&quot;:&quot;hello@goalprofit.com&quot;, &quot;tel&quot;:&quot;+0 (525) 156 548 1258&quot;, &quot;coords&quot;: [26.035092346155736, -80.16586537262737]}, {&quot;name&quot;: &quot;KRAKOW&quot;, &quot;country&quot;: &quot;Finland&quot;, &quot;street&quot;:&quot;2700 N 29th Ave, STE 109, Hollywood, FL 33020&quot;, &quot;email&quot;:&quot;hello@goalprofit.com&quot;, &quot;tel&quot;:&quot;+0 (525) 156 548 1258&quot;, &quot;coords&quot;: [50.05842801181518, 19.93552068166105]}]">
-          </div>
+          <div class="map__container" id="contact-us-map" data-map-icon="img/marker.svg"></div>
         </section>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM-QwzS2G0X_PiDPqQX9v4p1a66oHG2cE"></script>
       </main>
