@@ -158,17 +158,17 @@ export class Modal {
 		let pagePosition = window.scrollY;
 		this.lockPadding();
 		document.body.classList.add('disable-scroll');
-		document.body.dataset.position = pagePosition;
-		document.body.style.top = -pagePosition + 'px';
+		// document.body.dataset.position = pagePosition;
+		// document.body.style.top = -pagePosition + 'px';
 	}
 
 	enableScroll() {
-		let pagePosition = parseInt(document.body.dataset.position, 10);
+		// let pagePosition = parseInt(document.body.dataset.position, 10);
 		this.unlockPadding();
-		document.body.style.top = 'auto';
+		// document.body.style.top = 'auto';
 		document.body.classList.remove('disable-scroll');
-		window.scroll({ top: pagePosition, left: 0 });
-		document.body.removeAttribute('data-position');
+		// window.scroll({ top: pagePosition, left: 0 });
+		// document.body.removeAttribute('data-position');
 	}
 
 	lockPadding() {
