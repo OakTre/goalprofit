@@ -1,9 +1,9 @@
 section.history
     .site-container.history__container.grid-container
-        .history__left-block.history__content 
-            h2 
+        .history__left-block.history__content
+            h2
                 |   Сompany History
-            p 
+            p
                 |   We are a young company, our history is not yet rich in events, but we have already achieved significant results
 
             .slider-nav.history__slider-nav
@@ -13,33 +13,33 @@ section.history
                     +icon('arow-right')(width="25" heigth="25" class="slider-nav__btn-icon")
 
         .history__right-block
-            .history__slider.js-history-slider 
+            .history__slider.js-history-slider
                 - for (let i =0; i<3; i++)
                     .history__slider-item.history-item
                         .history-item__top
                             .history-item__left-block
-                                .history-item__heading 
-                                    span.history-item__date 
+                                .history-item__heading
+                                    span.history-item__date
                                         |   20#{i}0
-                                    .history-item__date-text 
-                                        p 
+                                    .history-item__date-text
+                                        p
                                             |   At the beginning
-                                        P 
+                                        P
                                             |   The road will be mastered by the walking
-                                .history-item__content 
-                                    ul 
-                                        li 
+                                .history-item__content
+                                    ul
+                                        li
                                             |   GoalProfit Inc. is incorporated
-                                        li 
+                                        li
                                             |   Founder Institute acceleration is completed
-                                        li 
-                                            |   20B data points reached      
-                            .history-item__right-block 
+                                        li
+                                            |   20B data points reached
+                            .history-item__right-block
                                 +pictureLazy("history-item-img.jpg")(class="history-item__img")
-                        .history-item__bottom 
+                        .history-item__bottom
                             .history-item__bottom-block
-                                span 
-                                    |   2020
+                                span
+                                    |   20#{i}0
                             .history-item__bottom-block
-                                span 
+                                span
                                     |   At the beginning

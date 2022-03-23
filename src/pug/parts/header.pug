@@ -14,8 +14,9 @@ header.header.fix-block(class=headerClass)
 		.header_right
 			nav.nav.header__nav
 				ul
-					for item in nav_arr
-						li.current-menu-item
+					for item,index in nav_arr
+						-let isActive = index == 0 ? "current-menu-item" : null
+						li(class=isActive)
 							a(href="/")=item
 			button.button-reset.header__button(data-path="callback" data-animation="fadeInUp")
 				|	Get In Touch

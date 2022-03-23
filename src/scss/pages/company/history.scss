@@ -97,7 +97,42 @@
     background-color: var(--color-white);
     border-radius: 2rem;
     padding-bottom: 0;
-    height: 40.8rem !important;
+    height: 40.8rem;
+	transition: all 400ms;
+	opacity: 0;
+	visibility: hidden;
+
+	$offset: -4rem;
+
+	&.active--1 {
+		transform: translateY(calc(4 * #{$offset}));
+	}
+
+	&.active-1 {
+		transform: translateY(calc(3 * #{$offset}));
+		opacity: 1;
+		visibility: visible;
+		z-index: 10;
+	}
+
+	&.active-2 {
+		transform: translateY(calc(2 * #{$offset}));
+		opacity: 1;
+		visibility: visible;
+		z-index: 8;
+	}
+
+	&.active-3 {
+		transform: translateY(calc(1 * #{$offset}));
+		opacity: 1;
+		visibility: visible;
+		z-index: 6;
+	}
+
+	&.active-last {
+		transform: translateY(0);
+		z-index: 4;
+	}
 
 	@include mq(md) {
 		position: static;
@@ -115,14 +150,6 @@
 		padding: 2rem;
 		height: auto !important;
 	}
-
-    &:nth-child(2) {
-        z-index: 8;
-    }
-
-    &:nth-child(3) {
-        z-index: 7;
-    }
 
     &:nth-child(2n) {
         background-color: #CDCDD1;
