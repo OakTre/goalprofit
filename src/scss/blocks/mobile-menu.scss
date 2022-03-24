@@ -1,0 +1,44 @@
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+
+	&__container {
+		padding-top: 14rem;
+		padding-bottom: 3rem;
+		background: var(--color-bg);
+		height: 100%;
+
+		@include mq(sm) {
+			padding-top: 10rem;
+		}
+	}
+
+	&__nav-container {
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			li {
+				margin-bottom: 2.4rem;
+
+				@include mq(sm) {
+					margin-bottom: 1.6rem;
+				}
+
+				a {
+					font: var(--title-L);
+					color: var(--color-dark);
+
+					@include mq(sm) {
+						font: var(--title-S);
+					}
+				}
+			}
+		}
+	}
+}

@@ -2,26 +2,14 @@ import gsap from "gsap";
 
 export default () => {
 	const slider = document.querySelector(".js-history-slider");
+
+	if (!slider) return;
+
 	const prevBtn = document.querySelector(".js-history-button-prev");
 	const nextBtn = document.querySelector(".js-history-button-next");
 	const initialSlides = Array.from(document.querySelectorAll(".history-item"));
 	const slidesLength = Number(initialSlides.length);
 	let activeIndex = slidesLength;
-
-	let arr = [];
-
-	initialSlides.forEach(elmnt=>{
-		let copy = elmnt.cloneNode(true);
-		copy.classList.add("copied");
-		slider.append(copy);
-	});
-
-	for (let i = slidesLength - 1; i>=0; i--) {
-		let copy = initialSlides[i].cloneNode(true);
-		copy.classList.add("copied");
-		slider.prepend(copy);
-	}
-
 
 	function setActive(i) {
 		const slides = document.querySelectorAll(".history-item");
@@ -56,25 +44,44 @@ export default () => {
 		};
 
 		slides.forEach((slide, index)=> {
-			if (index == i-1) {
-				slide.classList.remove("active-last", "active-3", "active-2", "active-1");
-				slide.classList.add("active--1");
-			} else if  (index == i) {
-				slide.classList.remove("active-last", "active-3", "active-2", "active--1");
-				slide.classList.add("active-1");
-			} else if (index == i+1) {
-				slide.classList.remove("active-last", "active-3", "active-1", "active--1");
-				slide.classList.add("active-2");
-			} else if (index == i+2) {
-				slide.classList.remove("active-last", "active-2", "active-1", "active--1");
-				slide.classList.add("active-3");
-			}else if (index == i+3) {
-				slide.classList.remove("active-3", "active-2", "active-1", "active--1");
-				slide.classList.add("active-last");
-			} else {
-				slide.classList.remove("active-3", "active-2", "active-1", "active--1", "active-last");
+			switch (index) {
+				case i-1:
+					slide.classList.remove("active-last", "active-3", "active-2", "active-1");
+					slide.classList.add("active--1");
+					break;
+				case i:
+					slide.classList.remove("active-last", "active-3", "active-2", "active--1");
+					slide.classList.add("active-1");
+					break;
+				case i+1:
+					slide.classList.remove("active-last", "active-3", "active-1", "active--1");
+					slide.classList.add("active-2");
+					break;
+				case i+2:
+					slide.classList.remove("active-last", "active-2", "active-1", "active--1");
+					slide.classList.add("active-3");
+					break;
+				case i+3:
+					slide.classList.remove("active-3", "active-2", "active-1", "active--1");
+					slide.classList.add("active-last");
+					break;
+				default:
+					slide.classList.remove("active-3", "active-2", "active-1", "active--1", "active-last");
+					break;
 			}
 		});
+	}
+
+	initialSlides.forEach(elmnt=>{
+		let copy = elmnt.cloneNode(true);
+		copy.classList.add("copied");
+		slider.append(copy);
+	});
+
+	for (let i = slidesLength- 1; i>=0 ; i--) {
+		let copy = initialSlides[i].cloneNode(true);
+		copy.classList.add("copied");
+		slider.prepend(copy);
 	}
 
 	setActive(activeIndex);

@@ -1,0 +1,9 @@
+- let nav_arr2 = ["About","Solutions","Customers","Blog & News","Contacts"]
+.mobile-menu
+	.mobile-menu__container.site-container
+		.mobile-menu__nav-container
+			ul
+				for item,index in nav_arr2
+					-let isActive = index == 0 ? "current-menu-item" : null
+					li(class=isActive)
+						a(href="/")=item

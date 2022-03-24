@@ -10,6 +10,7 @@ import map from "./modules/map.js";
 import initAccordion from "./modules/initAccordion";
 import newsDetailSwiper from "./modules/newsDetailSwiper";
 import initModal from "./modules/initModal";
+import openMenu from "./modules/openMenu";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -51,6 +52,7 @@ documentReady(() => {
 	initAccordion();
 	newsDetailSwiper();
 	initModal();
+	openMenu();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
