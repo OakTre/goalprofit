@@ -18,6 +18,12 @@
 		.header__logo._mobile {
 			display: block;
 		}
+
+		.header__mobile-btn {
+			span {
+				background-color: var(--color-white);
+			}
+		}
 	}
 
 	@include mq(sm) {
@@ -98,6 +104,8 @@
 
 		&.is-active {
 			span {
+				background-color: var(--color-dark) !important;
+
 				&:nth-child(1) {
 					top: 50%;
 					transform: translate(-50%, -50%) rotate(-45deg);

@@ -22,11 +22,11 @@
 
 section.news-content
 	.site-container.news-content__container
-		.news-content__links
-			for item,index in arr_news
-				- let isActive = index === 1 ? "is-active" : null
-				a.news-content__category(href="/" class=isActive)= item
-
+		.news-content__links.swiper
+			.swiper-wrapper
+				for item,index in arr_news
+					- let isActive = index === 3 ? "is-active" : null
+					a.news-content__category.swiper-slide(href="/" class=isActive)= item
 		.news-content__list
 			for item,index in arr_news1
 				a.news-content__item(href="/")

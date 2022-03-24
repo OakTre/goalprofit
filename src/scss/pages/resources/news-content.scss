@@ -5,17 +5,17 @@
 		margin-bottom: 8rem;
 
 		@include mq(sm) {
-			overflow: auto;
-			width: auto;
-			margin-left: -16px;
-			padding-left: 16px;
-			margin-right: -16px;
-			padding-right: 16px;
+			// overflow: auto;
+			// width: auto;
+			// margin-left: -16px;
+			// padding-left: 16px;
+			// margin-right: -16px;
+			// padding-right: 16px;
 			margin-bottom: 3.6rem;
 
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			// &::-webkit-scrollbar {
+			// 	display: none;
+			// }
 		}
 	}
 
@@ -30,6 +30,7 @@
 		font: var(--body-L);
 		transition: border-color 200ms;
 		flex-shrink: 0;
+		width: auto;
 
 		@include mq(sm) {
 			margin-right: 0.8rem;

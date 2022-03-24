@@ -11,6 +11,7 @@ import initAccordion from "./modules/initAccordion";
 import newsDetailSwiper from "./modules/newsDetailSwiper";
 import initModal from "./modules/initModal";
 import openMenu from "./modules/openMenu";
+import resoursesNav from "./modules/resoursesNav";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,6 +54,7 @@ documentReady(() => {
 	newsDetailSwiper();
 	initModal();
 	openMenu();
+	resoursesNav();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
