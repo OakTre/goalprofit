@@ -5,6 +5,8 @@ export default () => {
 
 	if (!slider) return;
 
+	if (window.matchMedia("(max-width: 767px)").matches) return;
+
 	const prevBtn = document.querySelector(".js-history-button-prev");
 	const nextBtn = document.querySelector(".js-history-button-next");
 	const initialSlides = Array.from(document.querySelectorAll(".history-item"));
@@ -28,8 +30,10 @@ export default () => {
 			for (let i = slidesLength * 3 - 1; i>=slidesLength * 2; i--) {
 				let elmntFirst = slides[i];
 				elmntFirst.classList.add("test-top");
-				slider.prepend(elmntFirst);
 
+				setTimeout(() => {
+					slider.prepend(elmntFirst);
+				}, 550);
 			}
 		} else if (i === slidesLength * 2 - 1) {
 
@@ -38,7 +42,10 @@ export default () => {
 
 				elmntFirst.classList.add("test-bottom");
 
-				slider.append(elmntFirst);
+				setTimeout(() => {
+					slider.append(elmntFirst);
+				}, 550);
+
 			}
 
 		};

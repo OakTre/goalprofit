@@ -102,14 +102,13 @@
 	opacity: 0;
 	visibility: hidden;
 
-	$offset: -4rem;
+	$offset: 2rem;
 
 	&.active--1 {
-		transform: translateY(calc(4 * #{$offset}));
+		transform: translateY(calc(4 * -#{$offset}));
 	}
 
 	&.active-1 {
-		transform: translateY(calc(3 * #{$offset}));
 		opacity: 1;
 		visibility: visible;
 		z-index: 10;
@@ -123,7 +122,7 @@
 	}
 
 	&.active-3 {
-		transform: translateY(calc(1 * #{$offset}));
+		transform: translateY(calc(4 * #{$offset}));
 		opacity: 1;
 		visibility: visible;
 		z-index: 6;
@@ -140,6 +139,8 @@
 		left: 0;
 		flex-shrink: 0;
 		margin-right: 0.8rem;
+		opacity: 1;
+		visibility: visible;
 
 		&:last-child {
 			margin-right: 0;
