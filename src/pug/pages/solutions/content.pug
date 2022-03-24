@@ -1,0 +1,46 @@
+-
+	let sol_arr = [
+		"Business intelligence for Retailers",
+		"Key Value Items",
+		"Price zones clustering",
+		"Dynamic & Rules-Based Pricing",
+		"Price optimization",
+	]
+
+section.solution-content
+	.site-container.solution-content__container
+		h2.solution-content__title Solutions
+		.solution-content__nav
+			for item in sol_arr
+				a.solution-content__link(href="/")= item
+		ul.solution-content__list
+			for item in sol_arr
+				li.solution-content__item
+					.solution-content__item-left-block
+						.solution-content__item-top
+							h3.solution-content__item-heading= item
+						.solution-content__item-mobile
+							.solution-content__item-imgs-wrapper
+								img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+								img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+								img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+						.solution-content__item-body
+							p Features:
+							ul
+								li 500+ pre-configured analytical metrics to better understand your performance and identify gaps
+								li Get a helicopter view on your products, prices, and sales channels intel with actionable insights
+								li Predictive and Prescriptive Recommendations
+								li Anticipate what is changing and how it impacts your business
+
+							p Benefits:
+
+							ul
+								li Get full visibility on business performance
+							+button("Request A Demo")
+
+					.solution-content__item-right-block
+						.solution-content__item-imgs-wrapper
+							img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+							img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+							img(src="img/card-img.jpg" data-src="img/card-img.jpg" alt="" class="lazy")
+

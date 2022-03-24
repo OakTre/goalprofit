@@ -1,0 +1,286 @@
+.solution-intro {
+	background-color: var(--color-light-blue);
+
+	@include mq(sm) {
+		margin-bottom: 8.4rem;
+	}
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		bottom: -10rem;
+		transform: translateX(-50%);
+		height: 49.1rem;
+		width: auto;
+
+		@include mq(md) {
+			position: static;
+			margin: 0 auto;
+			display: block;
+			height: 29.1rem;
+			transform: none;
+			margin-top: auto;
+		}
+
+		@include mq(md) {
+			height: 20rem;
+			margin-bottom: -3rem;
+		}
+	}
+
+	&__container {
+		height: 100%;
+
+		@include mq(md) {
+			display: flex;
+			flex-direction: column;
+
+			picture {
+				margin-top: auto;
+			}
+		}
+	}
+
+	.intro__content P {
+		max-width: 51.4rem;
+	}
+}
+
+.solution-content {
+	margin-bottom: 14.2rem;
+
+	@include mq(sm) {
+		margin-bottom: 6rem;
+	}
+
+	&__title {
+		font: var(--title-L);
+		margin-bottom: 3.2rem;
+
+		@include mq(sm) {
+			font: var(--title-mobile);
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		margin-bottom: 4.2rem;
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		flex-shrink: 0;
+		font: var(--body-L);
+		margin-right: 5.2rem;
+		color: var(--color-grey);
+
+		&.is-active {
+			color: var(--color-dark);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include mq(sm) {
+			margin-right: 2.4rem;
+			font: var(--body-S);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		counter-reset: section;
+	}
+
+	&__item {
+		margin-bottom: 6rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 20px;
+		border-radius: 2rem;
+		overflow: hidden;
+		background-color: var(--color-white);
+
+		@include mq(md) {
+			display: block;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item-left-block {
+		grid-column: 5 span;
+		padding: 3rem 3rem 5rem 3rem;
+
+		@include mq(md) {
+			padding: 0;
+		}
+	}
+
+	&__item-top {
+		@include mq(md) {
+			padding: 1.9rem 2rem;
+		}
+	}
+
+	&__item-right-block {
+		grid-column: 7 span;
+		background: var(--color-btn-bg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include mq(md) {
+			display: none;
+		}
+	}
+
+	&__item-heading {
+		font: var(--title-M-bold);
+		margin-bottom: 6rem;
+		display: flex;
+
+		@include mq(sm) {
+			font: var(--title-XS-bold);
+		}
+
+		&::before {
+			font: var(--title-hero);
+			margin-right: 2.1rem;
+			line-height: 0.8;
+			background: linear-gradient(91.83deg, #095092 0%, #00A7E5 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			counter-increment: section;
+			content: "0" counter(section);
+
+			@include mq(sm) {
+				font: var(--title-L);
+				line-height: 0.8;
+				margin-right: 1.6rem;
+			}
+		}
+
+		@include mq(md) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item-body {
+		padding-left: 11.5rem;
+
+		@include mq(md) {
+			padding-left: 0;
+			padding: 2.4rem 2rem;
+		}
+
+		p {
+			font: var(--title-S-bold);
+			font-weight: 600;
+			margin-bottom: 1.6rem;
+
+			@include mq(sm) {
+				font: var(--body-L);
+				font-weight: 600;
+			}
+		}
+
+		ul {
+			margin: 2.4rem 0 4rem;
+
+			@include mq(sm) {
+				font: var(--body-L);
+				font-weight: 600;
+				margin: 1.6rem 0 2.8rem;
+			}
+
+			li {
+				position: relative;
+				font: var(--body-L);
+				margin-bottom: 1.2rem;
+				padding-left: 1.8rem;
+
+				@include mq(sm) {
+					font: var(--body-S);
+					margin-bottom: 1rem;
+				}
+
+				&::before {
+					position: absolute;
+					top: 0.7rem;
+					left: 0;
+					width: 0.4rem;
+					height: 0.4rem;
+					background-color: var(--color-blue);
+					border-radius: 50%;
+					content: "";
+
+					@include mq(sm) {
+						top: 0.4rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__item-imgs-wrapper {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		gap: 24px;
+		width: 59.6rem;
+
+		@include mq(md) {
+			width: auto;
+		}
+
+		img {
+			grid-column: 5 span;
+			border-radius: 2rem;
+			filter: drop-shadow(4px 4px 11px rgba(0, 0, 0, 0.05)) drop-shadow(10px 10px 34px rgba(0, 0, 0, 0.25));
+			justify-self: center;
+
+			&:nth-child(1) {
+				grid-column: 10 span;
+			}
+
+			&:nth-child(4n) {
+				grid-column: 10 span;
+			}
+
+			@include mq(md) {
+				grid-column: 10 span !important;
+			}
+		}
+	}
+
+	&__item-mobile {
+		background: var(--color-btn-bg);
+		align-items: center;
+		justify-content: center;
+		padding: 4rem 3.2rem;
+		display: none;
+
+		@include mq(sm) {
+			display: flex;
+		}
+	}
+}

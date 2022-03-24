@@ -17,6 +17,10 @@
 		margin-bottom: 4rem;
 	}
 
+	&__container {
+		position: relative;
+	}
+
     &__block {
         grid-column: 6 span;
 
