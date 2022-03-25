@@ -62,6 +62,28 @@ documentReady(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 
+	// якори
+	const anchors = document.querySelectorAll('a[href*="#"]');
+
+	for (let anchor of anchors) {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			const blockID = anchor.getAttribute('href').substr(1)
+
+			document.getElementById(blockID).scrollIntoView({
+				behavior: 'smooth',
+				block: 'center'
+			});
+
+			anchors.forEach(elmt=>{
+				elmt.classList.remove("is-active");
+			});
+
+			anchor.classList.add("is-active");
+		})
+	}
+
 	// gsap.registerPlugin(ScrollTrigger);
 	if (!document.querySelector(".js-anim-img")) return;
 
@@ -69,32 +91,4 @@ documentReady(() => {
 	gsap.set(".js-content-anim", { y: 75, autoAlpha: 0 });
 	gsap.set(".js-start-anim-header", { y: -35, opacity: 0 });
 	gsap.set(".js-start-anim-contacts", { y: 75, opacity: 0 });
-
-
-	// paralax
-	// const tmln = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		trigger: ".parallax",
-	// 		start: "top 85%",
-	// 		end: "bottom 30%",
-	// 		scrub: true
-	// 	}
-	// });
-
-	// gsap.utils.toArray(".parallax").forEach(layer => {
-	// 	gsap.set(layer, { y: 75 })
-	// });
-
-	// gsap.utils.toArray(".parallax").forEach(layer => {
-	// 	gsap.to(layer, {
-	// 		y: 0,
-	// 		duration: 0.5,
-	// 		// ease: "power4.out",
-	// 		scrollTrigger: {
-	// 			trigger: layer,
-	// 			start: "top 90%",
-	// 			end: "bottom top",
-	// 		}
-	// 	});
-	// });
 });

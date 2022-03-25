@@ -67,6 +67,7 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 4.2rem;
+		overflow: auto;
 
 		@include mq(sm) {
 			margin-bottom: 2rem;
@@ -83,6 +84,7 @@
 		font: var(--body-L);
 		margin-right: 5.2rem;
 		color: var(--color-grey);
+		transition: color 200ms;
 
 		&.is-active {
 			color: var(--color-dark);
@@ -90,6 +92,10 @@
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&:hover {
+			color: var(--color-dark);
 		}
 
 		@include mq(sm) {

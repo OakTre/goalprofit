@@ -3946,6 +3946,7 @@ h6 {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 4.2rem;
+  overflow: auto;
 }
 
 .solution-content__link {
@@ -3954,6 +3955,9 @@ h6 {
   font: var(--body-L);
   margin-right: 5.2rem;
   color: var(--color-grey);
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
 }
 
 .solution-content__link.is-active {
@@ -3962,6 +3966,10 @@ h6 {
 
 .solution-content__link:last-child {
   margin-right: 0;
+}
+
+.solution-content__link:hover {
+  color: var(--color-dark);
 }
 
 .solution-content__list {
@@ -5730,3 +5738,4 @@ h6 {
     font-size: 9px;
   }
 }
+/*# sourceMappingURL=style.min.css.map */

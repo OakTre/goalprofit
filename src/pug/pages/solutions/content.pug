@@ -11,11 +11,11 @@ section.solution-content
 	.site-container.solution-content__container
 		h2.solution-content__title Solutions
 		.solution-content__nav
-			for item in sol_arr
-				a.solution-content__link(href="/")= item
+			for item, index in sol_arr
+				a.solution-content__link(href=`#${item}`)= item
 		ul.solution-content__list
-			for item in sol_arr
-				li.solution-content__item
+			for item, index in sol_arr
+				li.solution-content__item(id=item)
 					.solution-content__item-left-block
 						.solution-content__item-top
 							h3.solution-content__item-heading= item
