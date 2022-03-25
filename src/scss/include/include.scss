@@ -494,6 +494,10 @@
 		&:active {
 			transform: scale(0.99);
 		}
+
+		&.swiper-button-lock {
+			display: none;
+		}
 	}
 
 	&__btn-icon {

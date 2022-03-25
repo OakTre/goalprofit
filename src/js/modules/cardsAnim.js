@@ -47,21 +47,32 @@ export default () => {
 				});
 			});
 
-			let cardTmln2 = gsap.timeline({
-				scrollTrigger: {
-					trigger: ".second",
-					start: "top 20%",
-					end: "+=" + (window.innerHeight * 2.5),
-					pin: true,
-					scrub: true,
-				}
-			})
+			if (document.querySelectorAll(".second__item").length > 1) {
+				let cardTmln2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".second",
+						start: "top 20%",
+						end: "+=" + (window.innerHeight * 2.5),
+						pin: true,
+						scrub: true,
+					}
+				})
 
-			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-				cardTmln2.to(card, {
-					yPercent: -100
+				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+					cardTmln2.to(card, {
+						yPercent: -100
+					});
 				});
-			});
+			}
+
+			const stepCards = Array.from(document.querySelectorAll(".steps__card"));
+
+			document.querySelector(".steps__card-wrapper").innerHTML = "";
+
+			for (let i = stepCards.length - 1; i>=0 ; i--) {
+				let copy = stepCards[i].cloneNode(true);
+				document.querySelector(".steps__card-wrapper").append(copy);
+			}
 		},
 		"(max-width: 992px)": function () {
 			let cardTmln = gsap.timeline({
@@ -83,21 +94,23 @@ export default () => {
 				});
 			});
 
-			let cardTmln2 = gsap.timeline({
-				scrollTrigger: {
-					trigger: ".second",
-					start: "top 30%",
-					end: "+=" + (window.innerHeight * 2.5),
-					pin: true,
-					scrub: true,
-				}
-			})
+			if (document.querySelectorAll(".second__item").length > 1) {
+				let cardTmln2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".second",
+						start: "top 30%",
+						end: "+=" + (window.innerHeight * 2.5),
+						pin: true,
+						scrub: true,
+					}
+				})
 
-			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-				cardTmln2.to(card, {
-					yPercent: -100
+				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+					cardTmln2.to(card, {
+						yPercent: -100
+					});
 				});
-			});
+			}
 		},
 		"(min-width: 992px)": function () {
 
@@ -292,22 +305,24 @@ export default () => {
 					stagger: 0.4,
 				}, "-=1")
 
-
-			let cardTmln2 = gsap.timeline({
-				scrollTrigger: {
-					trigger: ".second",
-					start: "top 30%",
-					end: "+=" + (window.innerHeight * 2.5),
-					pin: true,
-					scrub: true,
-				}
-			})
-
-			gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-				cardTmln2.to(card, {
-					yPercent: -100
+			if (document.querySelectorAll(".second__item").length > 1) {
+				let cardTmln2 = gsap.timeline({
+					scrollTrigger: {
+						trigger: ".second",
+						start: "top 30%",
+						end: "+=" + (window.innerHeight * 2.5),
+						pin: true,
+						scrub: true,
+					}
 				});
-			});
+
+				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
+					cardTmln2.to(card, {
+						yPercent: -100
+					});
+				});
+			}
+
 		},
 		"all": function () {
 

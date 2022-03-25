@@ -13,12 +13,14 @@
 		background-color: var(--color-white);
 		padding: 3rem 2.7rem 1.5rem 2.7rem;
 		border-radius: 2rem;
-		align-items: flex-end;
 		width: 100%;
+		height: 66rem;
 
 		@include mq(md) {
 			width: 100%;
 			max-width: 100%;
+
+			height: 53.8rem;
 		}
 
 		@include mq(sm) {
@@ -120,10 +122,6 @@
 				max-width: 100%;
 			}
 
-			@include mq(sm) {
-				margin-bottom: 4.5rem;
-			}
-
 			li {
 				position: relative;
 				padding-left: 1.9rem;
@@ -133,6 +131,10 @@
 
 				&:last-child {
 					margin-bottom: 0;
+				}
+
+				&:nth-child(n + 4) {
+					display: none;
 				}
 
 				&::before {
@@ -151,6 +153,11 @@
 
 	&__item-customers {
 		align-items: stretch;
+		height: 52.4rem;
+
+		@include mq(sm) {
+			height: 59.8rem;
+		}
 
 		.cards__item-left {
 			grid-column: 6 span;
@@ -166,10 +173,6 @@
 			@include mq(md) {
 				display: none;
 			}
-		}
-
-		.cards__item-bottom {
-			padding-top: 1.4rem;
 		}
 
 		.cards__item-img {
@@ -225,7 +228,7 @@
 		font-size: 1.4rem;
 		line-height: 1.7rem;
 		color: var(--color-dark);
-		margin-bottom: 6.8rem;
+		margin-bottom: 4.8rem;
 	}
 
 	&__item-link-icon {
@@ -253,7 +256,8 @@
 	&__item-right {
 		grid-column: 8 span;
 		display: block;
-		align-items: center;
+		align-self: flex-end;
+		justify-self: center;
 
 		@include mq(md) {
 			display: none;
@@ -262,11 +266,7 @@
 
 	&__item-bottom {
 		grid-column: 12 span;
-		padding-top: 6.3rem;
-
-		@include mq(sm) {
-			padding-top: 4.1rem;
-		}
+		margin-top: auto;
 	}
 
 	&__item-legend {

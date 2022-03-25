@@ -17,14 +17,7 @@ export default () => {
 		const slides = document.querySelectorAll(".history-item");
 		let y = i % (slidesLength * 3);
 
-		console.log("y: " + y);
-
-		console.log("start: "+ i);
-
 		i = i % slidesLength + slidesLength;
-
-		console.log("end: "+ i);
-		console.log(slidesLength * 2 - 1);
 
 		if (y === slidesLength - 2) {
 			for (let i = slidesLength * 3 - 1; i>=slidesLength * 2; i--) {
