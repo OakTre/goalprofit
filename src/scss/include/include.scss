@@ -561,3 +561,21 @@
 
 	transition: max-height 200ms;
 }
+
+.markweber {
+	p {
+		font: var(--body-S);
+		margin-bottom: 0.7rem;
+		color: #A1A1A1;
+	}
+
+	&__logo {
+		display: block;
+	}
+
+	&:hover {
+		p {
+			color: var(--color-blue);
+		}
+	}
+}

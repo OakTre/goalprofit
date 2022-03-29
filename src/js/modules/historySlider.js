@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import lazyImages from './lazyImages';
 
 export default () => {
 	const slider = document.querySelector(".js-history-slider");
@@ -24,9 +24,8 @@ export default () => {
 				let elmntFirst = slides[i];
 				elmntFirst.classList.add("test-top");
 
-				setTimeout(() => {
-					slider.prepend(elmntFirst);
-				}, 550);
+				slider.prepend(elmntFirst);
+				lazyImages();
 			}
 		} else if (i === slidesLength * 2 - 1) {
 
@@ -35,10 +34,8 @@ export default () => {
 
 				elmntFirst.classList.add("test-bottom");
 
-				setTimeout(() => {
-					slider.append(elmntFirst);
-				}, 550);
-
+				slider.append(elmntFirst);
+				lazyImages();
 			}
 
 		};

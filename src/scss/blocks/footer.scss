@@ -130,7 +130,8 @@
 			align-items: flex-end;
 
 			@include mq(md) {
-				display: none;
+				margin-top: 3.2rem;
+				grid-column: 12 span;
 			}
 		}
 	}
@@ -175,6 +176,19 @@
 		@include mq(sm) {
 			font-size: 1.2rem;
 			line-height: 1.6rem;
+		}
+	}
+
+	&__socials {
+		margin-top: 4.8rem;
+
+		@include mq(sm) {
+			margin-top: 3.5rem;
+		}
+
+		.social__link {
+			width: 2.4rem;
+			height: 2.4rem;
 		}
 	}
 }
