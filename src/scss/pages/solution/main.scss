@@ -67,7 +67,6 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 4.2rem;
-		overflow: auto;
 
 		@include mq(sm) {
 			margin-bottom: 2rem;
@@ -85,6 +84,8 @@
 		margin-right: 5.2rem;
 		color: var(--color-grey);
 		transition: color 200ms;
+		display: inline-block;
+		width: auto !important;
 
 		&.is-active {
 			color: var(--color-dark);
@@ -288,5 +289,88 @@
 		@include mq(sm) {
 			display: flex;
 		}
+	}
+
+	&__nav-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 27;
+		padding: 2rem 0;
+		border-bottom: 1px solid var(--color-grey2);
+		background-color: var(--color-bg);
+		// transform: translateY(-110%);
+
+		// &.is-active {
+		// 	animation: totop 1s;
+		// }
+	}
+
+	&__nav-menu-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__nav-menu-title {
+		font: var(--title-S-bold);
+		margin-right: 3rem;
+
+		@include mq(sm) {
+			display: none;
+		}
+	}
+
+	&__nav-menu-list {
+		width: 70%;
+		overflow: hidden;
+		margin: 0;
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+
+	&__nav-menu-link {
+		width: auto !important;
+		margin-right: 1.6rem;
+
+		flex-shrink: 0;
+		font: var(--body-L);
+		color: var(--color-grey);
+		transition: color 200ms;
+		display: inline-block;
+
+		&.is-active {
+			color: var(--color-dark);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: var(--color-dark);
+		}
+
+		@include mq(sm) {
+			margin-right: 2.4rem;
+			font: var(--body-S);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@keyframes totop {
+	from {
+		transform: translateY(-110%);
+	}
+
+	to {
+		transform: translateY(0);
 	}
 }

@@ -3996,7 +3996,6 @@ h6 {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 4.2rem;
-  overflow: auto;
 }
 
 .solution-content__link {
@@ -4008,6 +4007,8 @@ h6 {
   -webkit-transition: color .2s;
   -o-transition: color .2s;
   transition: color .2s;
+  display: inline-block;
+  width: auto!important;
 }
 
 .solution-content__link.is-active {
@@ -4160,6 +4161,89 @@ h6 {
   justify-content: center;
   padding: 4rem 3.2rem;
   display: none;
+}
+
+.solution-content__nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 27;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-grey2);
+  background-color: var(--color-bg);
+}
+
+.solution-content__nav-menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.solution-content__nav-menu-title {
+  font: var(--title-S-bold);
+  margin-right: 3rem;
+}
+
+.solution-content__nav-menu-list {
+  width: 70%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.solution-content__nav-menu-link {
+  width: auto!important;
+  margin-right: 1.6rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font: var(--body-L);
+  color: var(--color-grey);
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
+  display: inline-block;
+}
+
+.solution-content__nav-menu-link.is-active {
+  color: var(--color-dark);
+}
+
+.solution-content__nav-menu-link:hover {
+  color: var(--color-dark);
+}
+
+.solution-content__nav-menu-link:last-child {
+  margin-right: 0;
+}
+
+@-webkit-keyframes totop {
+  from {
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes totop {
+  from {
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 .customers-intro {
@@ -5808,6 +5892,19 @@ h6 {
     display: -ms-flexbox;
     display: flex;
   }
+
+  .solution-content__nav-menu-title {
+    display: none;
+  }
+
+  .solution-content__nav-menu-list {
+    width: 100%;
+  }
+
+  .solution-content__nav-menu-link {
+    margin-right: 2.4rem;
+    font: var(--body-S);
+  }
 }
 
 @media screen and (max-width:320px) {
@@ -5815,4 +5912,3 @@ h6 {
     font-size: 9px;
   }
 }
-/*# sourceMappingURL=style.min.css.map */

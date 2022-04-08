@@ -12,6 +12,7 @@ import newsDetailSwiper from "./modules/newsDetailSwiper";
 import initModal from "./modules/initModal";
 import openMenu from "./modules/openMenu";
 import resoursesNav from "./modules/resoursesNav";
+import solutionsFixedMenu from "./modules/solutionsFixedMenu";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,6 +56,7 @@ documentReady(() => {
 	initModal();
 	openMenu();
 	resoursesNav();
+	solutionsFixedMenu();
 
 	const btnTop = document.querySelector(".button-scroll-top");
 
@@ -66,22 +68,41 @@ documentReady(() => {
 	const anchors = document.querySelectorAll('a[href*="#"]');
 
 	for (let anchor of anchors) {
-		anchor.addEventListener('click', function (e) {
-			e.preventDefault();
+		if (window.matchMedia("(min-width: 767px)").matches) {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
 
-			const blockID = anchor.getAttribute('href').substr(1)
+				const blockID = anchor.getAttribute('href').substr(1)
 
-			document.getElementById(blockID).scrollIntoView({
-				behavior: 'smooth',
-				block: 'center'
-			});
+				document.getElementById(blockID).scrollIntoView({
+					behavior: 'smooth',
+					block: 'center'
+				});
 
-			anchors.forEach(elmt=>{
-				elmt.classList.remove("is-active");
-			});
+				anchors.forEach(elmt=>{
+					elmt.classList.remove("is-active");
+				});
 
-			anchor.classList.add("is-active");
-		})
+				anchor.classList.add("is-active");
+			})
+		} else {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				const blockID = anchor.getAttribute('href').substr(1)
+
+				document.getElementById(blockID).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+
+				anchors.forEach(elmt=>{
+					elmt.classList.remove("is-active");
+				});
+
+				anchor.classList.add("is-active");
+			})
+		}
 	}
 
 	// gsap.registerPlugin(ScrollTrigger);

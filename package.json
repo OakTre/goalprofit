@@ -56,6 +56,6 @@
     "dependencies": {
         "normalize.css": "^8.0.1",
         "pug-include-glob": "^0.4.3",
-        "swiper": "^8.0.6"
+        "swiper": "^8.1.0"
     }
 }

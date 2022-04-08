@@ -5,14 +5,28 @@
 		"Price zones clustering",
 		"Dynamic & Rules-Based Pricing",
 		"Price optimization",
+		"Price optimization",
+		"Price optimization",
+		"Price optimization",
+		"Price optimization",
+		"Price optimization",
 	]
+
+.solution-content__nav-menu
+	.site-container.solution-content__nav-menu-container
+		p.solution-content__nav-menu-title Solutions
+		.solution-content__nav-menu-list.swiper
+			.swiper-wrapper
+				for item, index in sol_arr
+					a.solution-content__nav-menu-link.swiper-slide(href=`#${item}`)= item
 
 section.solution-content
 	.site-container.solution-content__container
 		h2.solution-content__title Solutions
-		.solution-content__nav
-			for item, index in sol_arr
-				a.solution-content__link(href=`#${item}`)= item
+		.solution-content__nav.swiper
+			.swiper-wrapper
+				for item, index in sol_arr
+					a.solution-content__link.swiper-slide(href=`#${item}`)= item
 		ul.solution-content__list
 			for item, index in sol_arr
 				li.solution-content__item(id=item)
