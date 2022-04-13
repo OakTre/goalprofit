@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap, { to } from "gsap";
 import {
 	ScrollTrigger
 } from "gsap/ScrollTrigger";
@@ -43,10 +43,10 @@ export default () => {
 				}
 			})
 
-			gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-				cardTmln.to(card, {
-					yPercent: -100
-				});
+			cardTmln.to(".first__item:not(:last-child)", {
+				yPercent: -110,
+				duration: 1,
+				stagger: 1,
 			});
 
 			if (document.querySelectorAll(".second__item").length > 1) {
@@ -62,10 +62,10 @@ export default () => {
 					}
 				})
 
-				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-					cardTmln2.to(card, {
-						yPercent: -100
-					});
+				cardTmln2.to(".second__item:not(:last-child)", {
+					yPercent: -110,
+					duration: 1,
+					stagger: 1,
 				});
 			}
 
@@ -81,7 +81,7 @@ export default () => {
 		"(max-width: 992px)": function () {
 			let cardTmln = gsap.timeline({
 				scrollTrigger: {
-					trigger: ".first",
+					trigger: ".retailers",
 					start: "top 20%",
 					end: "+=" + (window.innerHeight * 2.5),
 					pin: true,
@@ -94,10 +94,10 @@ export default () => {
 				}
 			})
 
-			gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-				cardTmln.to(card, {
-					yPercent: -100
-				});
+			cardTmln.to(".first__item:not(:last-child)", {
+				yPercent: -110,
+				duration: 1,
+				stagger: 1,
 			});
 
 			if (document.querySelectorAll(".second__item").length > 1) {
@@ -112,10 +112,10 @@ export default () => {
 					}
 				})
 
-				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-					cardTmln2.to(card, {
-						yPercent: -100
-					});
+				cardTmln2.to(".second__item:not(:last-child)", {
+					yPercent: -120,
+					duration: 1,
+					stagger: 1,
 				});
 			}
 		},
@@ -123,9 +123,9 @@ export default () => {
 
 			let cardTmln = gsap.timeline({
 				scrollTrigger: {
-					trigger: ".first",
+					trigger: ".retailers__container",
 					start: "top 20%",
-					end: "+=" + (window.innerHeight * 2.5),
+					end: "+=" + (window.innerHeight * 1.5),
 					pin: true,
 					scrub: true,
 					anticipatePin: 0,
@@ -135,11 +135,12 @@ export default () => {
 				}
 			})
 
-			cardTmln.to(".first__item:not(:last-child)", {
-				yPercent: -130,
-				duration: 1,
-				stagger: 1,
-			});
+			cardTmln
+				.to(".first__item:not(:last-child)", {
+					yPercent: -120,
+					duration: 1,
+					stagger: 1,
+				})
 			// gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
 			// });
 
@@ -327,10 +328,10 @@ export default () => {
 					}
 				});
 
-				gsap.utils.toArray(".second__item:not(:last-child)").forEach(card => {
-					cardTmln2.to(card, {
-						yPercent: -100
-					});
+				cardTmln2.to(".second__item:not(:last-child)", {
+					yPercent: -120,
+					duration: 1,
+					stagger: 1,
 				});
 			}
 

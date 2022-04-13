@@ -1895,10 +1895,6 @@ h6 {
   flex-shrink: 0;
 }
 
-.contact-us {
-  margin-bottom: 15rem;
-}
-
 .contact-us__container {
   display: -ms-grid;
   display: grid;
@@ -2007,6 +2003,11 @@ h6 {
   transform: translate(-50%,-50%) scale(.9);
 }
 
+.contact-us__play-btn-icon {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-us__form {
   margin-top: auto;
 }
@@ -2046,6 +2047,7 @@ h6 {
 
 .retailers {
   padding-bottom: 27rem;
+  padding-top: 15rem;
 }
 
 .retailers__heading-wrapper {
@@ -5109,10 +5111,6 @@ h6 {
     height: 28.8rem;
   }
 
-  .contact-us {
-    margin-bottom: 10rem;
-  }
-
   .contact-us__feautures-block {
     min-height: 52rem;
     padding: 1.5rem;
@@ -5149,6 +5147,7 @@ h6 {
 
   .retailers {
     padding-bottom: 17rem;
+    padding-top: 10rem;
   }
 
   .retailers__right-block {
