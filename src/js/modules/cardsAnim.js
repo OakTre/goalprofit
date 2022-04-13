@@ -34,7 +34,9 @@ export default () => {
 					start: "top 10%",
 					end: "+=" + (window.innerHeight * 2.5),
 					pin: true,
+
 					scrub: true,
+					anticipatePin: 1,
 					onLeave: () => {
 						ScrollTrigger.refresh()
 					}
@@ -54,7 +56,9 @@ export default () => {
 						start: "top 20%",
 						end: "+=" + (window.innerHeight * 2.5),
 						pin: true,
+
 						scrub: true,
+						anticipatePin: 1,
 					}
 				})
 
@@ -69,7 +73,7 @@ export default () => {
 
 			document.querySelector(".steps__card-wrapper").innerHTML = "";
 
-			for (let i = stepCards.length - 1; i>=0 ; i--) {
+			for (let i = stepCards.length - 1; i >= 0; i--) {
 				let copy = stepCards[i].cloneNode(true);
 				document.querySelector(".steps__card-wrapper").append(copy);
 			}
@@ -81,7 +85,9 @@ export default () => {
 					start: "top 20%",
 					end: "+=" + (window.innerHeight * 2.5),
 					pin: true,
+
 					scrub: true,
+					anticipatePin: 1,
 					onLeave: () => {
 						ScrollTrigger.refresh()
 					}
@@ -101,6 +107,7 @@ export default () => {
 						start: "top 30%",
 						end: "+=" + (window.innerHeight * 2.5),
 						pin: true,
+
 						scrub: true,
 					}
 				})
@@ -121,17 +128,20 @@ export default () => {
 					end: "+=" + (window.innerHeight * 2.5),
 					pin: true,
 					scrub: true,
+					anticipatePin: 0,
 					onLeave: () => {
 						ScrollTrigger.refresh()
 					}
 				}
 			})
 
-			gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
-				cardTmln.to(card, {
-					yPercent: -100
-				});
+			cardTmln.to(".first__item:not(:last-child)", {
+				yPercent: -130,
+				duration: 1,
+				stagger: 1,
 			});
+			// gsap.utils.toArray(".first__item:not(:last-child)").forEach(card => {
+			// });
 
 			const block1 = document.querySelector(".steps__blocks");
 			const blockRotated = document.querySelector(".steps__rotated-block");
@@ -313,6 +323,7 @@ export default () => {
 						end: "+=" + (window.innerHeight * 2.5),
 						pin: true,
 						scrub: true,
+						anticipatePin: 1,
 					}
 				});
 

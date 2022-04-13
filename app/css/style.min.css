@@ -2045,7 +2045,7 @@ h6 {
 }
 
 .retailers {
-  margin-bottom: 27rem;
+  padding-bottom: 27rem;
 }
 
 .retailers__heading-wrapper {
@@ -2056,7 +2056,7 @@ h6 {
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
-  margin-bottom: 5.1rem;
+  padding-bottom: 5.1rem;
 }
 
 .retailers__left-block {
@@ -2720,7 +2720,7 @@ h6 {
 }
 
 .customers {
-  margin-bottom: 20.2rem;
+  padding-bottom: 20.2rem;
 }
 
 .customers__heading-wrapper {
@@ -5148,7 +5148,7 @@ h6 {
   }
 
   .retailers {
-    margin-bottom: 17rem;
+    padding-bottom: 17rem;
   }
 
   .retailers__right-block {
@@ -5349,7 +5349,7 @@ h6 {
   }
 
   .customers {
-    margin-bottom: 13.5rem;
+    padding-bottom: 13.5rem;
   }
 
   .customers__heading-wrapper {
@@ -5912,3 +5912,4 @@ h6 {
     font-size: 9px;
   }
 }
+/*# sourceMappingURL=style.min.css.map */

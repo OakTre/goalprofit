@@ -13,6 +13,9 @@ import initModal from "./modules/initModal";
 import openMenu from "./modules/openMenu";
 import resoursesNav from "./modules/resoursesNav";
 import solutionsFixedMenu from "./modules/solutionsFixedMenu";
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

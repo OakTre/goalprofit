@@ -1,8 +1,8 @@
 .customers {
-	margin-bottom: 20.2rem;
+	padding-bottom: 20.2rem;
 
 	@include mq(sm) {
-		margin-bottom: 13.5rem;
+		padding-bottom: 13.5rem;
 	}
 
 	&__heading-wrapper {
